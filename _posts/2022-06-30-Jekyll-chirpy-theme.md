@@ -70,7 +70,7 @@ cd C:\Users\Nadud\Documents\GitHub\NadudAn.github.io
 그리고 번들을 설치한다.
 
 ```yaml
-& bundle
+$ bundle
 ```
 
 <br>
