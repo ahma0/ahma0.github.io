@@ -1,5 +1,5 @@
 ---
-title: "[Twitter API] 개발자 계정 외 자동봇의 액세스 토큰 발급(7자리 PIN이 뜨지 않는 경우)"
+title: Twitter API - 개발자 계정 외 자동봇의 액세스 토큰 발급(7자리 PIN이 뜨지 않는 경우)
 author: NadudAn
 date:   2022-04-04 15:00:00 +0900
 categories: [Portfolio, Projects, Twitter, Api]
