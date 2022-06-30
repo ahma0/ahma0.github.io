@@ -145,6 +145,6 @@ jobs:
 
 ## 동작 화면
 
-![Desktop View]("https://user-images.githubusercontent.com/84761609/168483987-c0f0af12-ef92-4ae1-806e-0fdedd2bd78e.jpg"){: style="max-width: 200px" .left}
-![Desktop View]("https://user-images.githubusercontent.com/84761609/168483989-9f98ecbb-21c4-4162-8671-525d17d639b6.jpg){: style="max-width: 200px" .left}
+![Desktop View](https://user-images.githubusercontent.com/84761609/168483987-c0f0af12-ef92-4ae1-806e-0fdedd2bd78e.jpg){: style="max-width: 200px" .left}
+![Desktop View](https://user-images.githubusercontent.com/84761609/168483989-9f98ecbb-21c4-4162-8671-525d17d639b6.jpg){: style="max-width: 200px" .left}
 
