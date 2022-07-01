@@ -1,5 +1,5 @@
 ---
-title: Jekyll chirpy 테마 적용 후기
+title: Jekyll chirpy 테마 적용
 author: NadudAn
 date:   2022-06-30 17:06:00 +0900
 categories: [Jekyll, Blog]
