@@ -28,21 +28,21 @@ tag: [Conference, Google, Daejeon, IOE]
 
 ### What is Extended io?
     
-    About this event
+About this event
         
-    I/O connects developers from around the world for thoughtful discussions, hands-on learning with Google experts, and a first look at Google's latest developer products.
+I/O connects developers from around the world for thoughtful discussions, hands-on learning with Google experts, and a first look at Google's latest developer products.
 
 <br>
 
 ### What is Google IO event?
 
-    Google I/O (or simply I/O) is an annual developer conference held by Google in Mountain View, California. "I/O" stands for Input/Output, as well as the slogan "Innovation in the Open". The event's format is similar to Google Developer Day. Google I/O. Date(s)
+Google I/O (or simply I/O) is an annual developer conference held by Google in Mountain View, California. "I/O" stands for Input/Output, as well as the slogan "Innovation in the Open". The event's format is similar to Google Developer Day. Google I/O. Date(s)
 
 <br>
 
 ### What do you expect out of the Google IO event?
 
-    During the event, the company is expected to reveal Android 13 and two new smart products. Read for details. Google's annual tech conference, the Google I/O 2022 is about to be held this month. As announced by the company, the event will take place on May 11 and May 12 in California.
+During the event, the company is expected to reveal Android 13 and two new smart products. Read for details. Google's annual tech conference, the Google I/O 2022 is about to be held this month. As announced by the company, the event will take place on May 11 and May 12 in California.
 
 <br><hr><br>
 
@@ -52,27 +52,27 @@ tag: [Conference, Google, Daejeon, IOE]
 
 - 신형섭: `State of CSS: CSS 안부 묻기`
 
-        컨테이너 쿼리, 서브그리드 등 CSS 최신 기술과 동향에 대해 알아 봅니다.
+    컨테이너 쿼리, 서브그리드 등 CSS 최신 기술과 동향에 대해 알아 봅니다.
 
 - 박다솜: `개인을 위한 접근성 설계`
-
-        머터리얼 디자인의 접근성 개선을 위해 어떤 전략을 통해 구성됐는지 확인합니다.
+        
+    머터리얼 디자인의 접근성 개선을 위해 어떤 전략을 통해 구성됐는지 확인합니다.
 
 - 박수지: `Core Web Vitals: 구현 그 너머의 세계`
 
-        더 나은 사용자 경험을 위한 Core Web Vitals 와 google I/O 2022 에서 소개된 내용을 살펴봅니다
+    더 나은 사용자 경험을 위한 Core Web Vitals 와 google I/O 2022 에서 소개된 내용을 살펴봅니다
 
 - 안재영: `Platform faster with Cloud Code: 생산성 향상을 위한 원포인트툴 Cloud Code`
 
-        서비스의 규모가 커지면서 여러 툴, 여러 시스템을 돌아다니면서 생산성이 떨어지기 마련입니다. CloudCode에서는 이를 어떻게 해결했는지 함께 알아봅니다
+    서비스의 규모가 커지면서 여러 툴, 여러 시스템을 돌아다니면서 생산성이 떨어지기 마련입니다. CloudCode에서는 이를 어떻게 해결했는지 함께 알아봅니다
 
 - 이상훈: `Flutter 101: 웹 개발자가 플러터로 앱 개발하기`
 
-        웹 개발자의 시선에서 플러터 초기 구현부터 최근 3.0 업데이트 내용까지 알아봅니다.
+    웹 개발자의 시선에서 플러터 초기 구현부터 최근 3.0 업데이트 내용까지 알아봅니다.
 
 - 김인철: `Firebase with Web: 장님의 파이어베이스 다리(웹) 만져보기`
 
-        웹개발자가 알아두면 좋을 파이어베이스의 기능과 업데이트된 기능을 알아봅니다.
+    웹개발자가 알아두면 좋을 파이어베이스의 기능과 업데이트된 기능을 알아봅니다.
 
 <br><hr><br>
 
