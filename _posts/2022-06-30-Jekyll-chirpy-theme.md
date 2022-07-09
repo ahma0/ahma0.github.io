@@ -19,7 +19,7 @@ bash tools/init.sh
 ```
 
 해당 명령어를 사용하여 초기화를 해줘야 했는데 
-```error
+```yaml
 Error: Commit unstaged files first, and then run this tool againt.
 ```
 가 뜨면서 작동을 안하는 것이다.
@@ -29,7 +29,11 @@ Error: Commit unstaged files first, and then run this tool againt.
 
 chirpy starter를 사용하면 커스터마이징할 때 오류가 많다는 (해결할 수 있는) 글을 읽고 고민중이라면 starter를 사용하기 바란다. 나는 chirpy starter를 사용하고 왼쪽의 사이드바와 글자 색, 아바타, favicon을 손쉽게 바꿨다. 딱히 대대적인 공사를 할게 아니라 그냥 이미지나 색만 바꾸고 싶다면, 커스터마이징의 범위가 좁다면. 그냥 chirpy starter를 사용하는게 해당 테마를 이용하여 블로그를 만들 수 있는 가장 빠른 지름길이다. 커스터마이징은 대충 구글에 올라온 블로그 2~3개 참고하면 쉽게 가능하다.
 
-<br><hr><br>
+<br>
+
+<hr>
+
+<br>
 
 ## 1. chirpy starter를 이용해 레포지토리 시작
 

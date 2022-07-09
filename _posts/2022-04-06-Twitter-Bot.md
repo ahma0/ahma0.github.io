@@ -94,7 +94,7 @@ tweeting University Cafeteria's Lunch Menus in twitter for myself. And learning 
 나는 workflow를 윈도우 버전으로 작성하였다. 매일 UTC 00:00 기준으로 트윗이 올라가게끔 작성하였으며 트윗할 때마다 크롬 드라이버를 다운받아 unzip한 뒤 사용하도록 만들었다.
 프로젝트의 더 자세한 코드는 https://github.com/NadudAn/KNU_Cafeteria_Menu에서 볼 수 있다.
 
-```workflow
+```yaml
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 

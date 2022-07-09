@@ -44,7 +44,11 @@ Google I/O (or simply I/O) is an annual developer conference held by Google in M
 
 During the event, the company is expected to reveal Android 13 and two new smart products. Read for details. Google's annual tech conference, the Google I/O 2022 is about to be held this month. As announced by the company, the event will take place on May 11 and May 12 in California.
 
-<br><hr><br>
+<br>
+
+<hr>
+
+<br>
 
 ## 세션
 
@@ -74,10 +78,18 @@ During the event, the company is expected to reveal Android 13 and two new smart
 
     웹개발자가 알아두면 좋을 파이어베이스의 기능과 업데이트된 기능을 알아봅니다.
 
-<br><hr><br>
+<br>
+
+<hr>
+
+<br>
 
 해당 이벤트를 통해 기술의 최신 동향과 여러 업데이트 된 기능들을 알 수 있었다. 안타깝게도 늦게 들어오는 바람에 가장 듣고싶었던 `Core Web Vitals: 구현 그 너머의 세계`를 듣지 못했다. 다행히 친절하시게도 ppt를 올려주셔서 ppt는 갖고있는 상태이다. css 업데이트된 내용이 꽤 흥미로웠던 것으로 기억한다.
 
 이 행사 이벤트로 추첨 5명을 뽑아 한정판 굿즈를 선물하는게 있었는데 무척이나 갖고싶다. 그래도 큰 기대는 안하고 있다. 
 
 ![image](https://user-images.githubusercontent.com/84761609/176904374-54464385-69b9-4049-8e15-b1fcc0a9d5a3.png)
+
+<hr>
+
++) 이벤트에 당첨됐다. 해커톤 준비를 하던 도중 메일함을 확인하니 이벤트에 당첨됐다고 주소를 보내달라고 메일이 와있었다. 정말 기대도 안하고 있었는데.. 이 글도 아직 google search console 오류로 구글에 뜨지 않은 상태인데.. 다행히 내가 쓴 후기와 피드백이 꽤 맘에 들었나보다.
