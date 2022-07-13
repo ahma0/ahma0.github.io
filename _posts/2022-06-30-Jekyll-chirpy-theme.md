@@ -2,7 +2,7 @@
 title: Jekyll chirpy 테마 적용
 author: NadudAn
 date:   2022-06-30 17:06:00 +0900
-categories: [Jekyll, Blog]
+categories: [Post, Jekyll]
 tag: [Jekyll, Blog, Theme, Error]
 ---
 
@@ -89,7 +89,11 @@ $ git commit -m "initialize"
 $ git push -u origin master
 ```
 
-<br><hr><br>
+<br>
+
+<hr>
+
+<br>
 
 ## ERROR
 
