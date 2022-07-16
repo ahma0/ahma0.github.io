@@ -18,8 +18,6 @@ Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University stu
     <li>MBTI: INTP</li>
 </ul>
 
-<br>
-
 <h2>🌱Experience🌱</h2>
 
 <ul>
@@ -27,8 +25,6 @@ Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University stu
     <p>Jan. 10 ~ Jan. 28, 2022<br>2022 모각코 웹< HTML/CSS 심화 > 1월과정 수료</p>
     <p>Feb. 03 ~ Feb. 25, 2022<br>2022 모각코 웹< 자바스크립트 > 2월과정 수료</p>
 </ul>
-
-<br>
 
 <h2>✨Achievement✨</h2>
 
@@ -50,8 +46,6 @@ Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University stu
         2021 국립 대학 육성사업 학부융합 프로그램 금상: 카메라 모듈을 통해 얻은 빅데이터를 활용하여 두피 건강을 진단할 수 있는 기구
         </p>
 </ul>
-
-<br>
     
 <h2>⚡Projects⚡</h2>
     
