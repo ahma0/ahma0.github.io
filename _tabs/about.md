@@ -6,8 +6,6 @@ order: 4
 
 Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University student who wants to be a Back-end Engineer.
 
-<br>
-
 <h2>💬Introductuon💬</h2>
 
 <ul>
