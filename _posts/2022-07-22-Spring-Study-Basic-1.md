@@ -1,5 +1,5 @@
 ---
-title: Spring Study 1 - 프로젝트 생성, 라이브러리, 빌드
+title: Spring 입문 1 - 프로젝트 생성, 라이브러리, 빌드
 author: NadudAn
 date:   2022-07-22 19:46:00 +0900
 categories: [Study, Spring]
