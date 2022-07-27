@@ -6,6 +6,9 @@ categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]
 ---
 
+> 인프런 김영한 님 스프링 입문 강의를 들은 후 공부한 내용입니다.
+{: .prompt-info }
+
 - 정적 컨텐츠
     - 서버에서 뭐 하는거 없이 파일을 웹 브라우저에 넘겨줌
 - MVC와 템플릿 엔진

@@ -6,6 +6,9 @@ categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]
 ---
 
+> 인프런 김영한 님 스프링 입문 강의를 들은 후 공부한 내용입니다.
+{: .prompt-info }
+
 전에 스프링부트 프로젝트를 생성한 경험이 있어서 편하게 할 수 있었다. 인프런 김영한 님 강의를 보고 스프링 공부를 시작하게 되었다! 감기 걸려서 하루에 1강씩 들을 예정..
 
 <br>
