@@ -64,7 +64,6 @@ public class Member {
 }
 ```
 
-<br>
 
 `main/java/hello.hellospring/repository`에 `MemberRepository.java` 인터페이스 생성
 
