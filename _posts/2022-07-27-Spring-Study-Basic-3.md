@@ -1,5 +1,5 @@
 ---
-title: Spring 입문 3 - 회원 관리 예제
+title: Spring 입문 3 - 회원 관리 예제(백엔드 개발)
 author: NadudAn
 date:   2022-07-27 15:13:00 +0900
 categories: [Study, Spring]
@@ -64,6 +64,7 @@ public class Member {
 }
 ```
 
+<br>
 
 `main/java/hello.hellospring/repository`에 `MemberRepository.java` 인터페이스 생성
 
