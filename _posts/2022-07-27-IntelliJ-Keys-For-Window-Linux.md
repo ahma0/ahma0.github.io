@@ -77,6 +77,7 @@ tag: [IntelliJ]
  
 
 ## Navigation : 이동 관련 단축키
+
 |||
 |---|---|
 |Ctrl + N | 전체 검색창 열기 (Alt + 방향키로 All, Class, File, Symbol, Actions 등 선택 가능)
@@ -91,6 +92,7 @@ tag: [IntelliJ]
 <br>
 
 ## Compile and Run : 컴파일 및 실행 관련 단축키
+
 |||
 |---|---|
 |Ctrl + F9 | 프로젝트 빌드(Bliud project)|
