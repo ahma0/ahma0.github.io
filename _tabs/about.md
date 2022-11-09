@@ -28,7 +28,7 @@ Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University stu
 
 <ul>
     <p>
-        Nov. 20, 2022<br>
+        Nov. 20, 2020<br>
         2020 KNU 창업 아이디어 경진대회 장려상 : 바오먀오(Bow-Meow) - 반려동물 맞춤 통합 서비스
     </p>
     <p>
@@ -56,5 +56,6 @@ Hello, I'm <a href="https://github.com/NadudAn">Nayeong An</a>, a University stu
     <li><a href="https://nadudan.github.io/posts/Twitter-Bot/">[Twtitter Project] Automatic Tweet Bot using Github Action</a></li>
     <li><a href="https://github.com/NadudAn/2022_WebProgramming">[KNU] Web Programming Project - Create a web page that describes the skills you are interested in</a></li>
     <li><a href="https://github.com/NadudAn/AmusementPark">[KNU] Computer Graphics Project - Amusement Park Simulation using OpenGL</a></li>
+    <li><a href="https://github.com/youbbin/DB_Project_OwnPli">[KNU] DataBase Programming Project - OwnPli</a></li>
 </ul>
 
