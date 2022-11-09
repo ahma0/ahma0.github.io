@@ -6,7 +6,7 @@ categories: [Study, JPA]
 tag: [Spring, Springoot, Study, JPA, JAVA]
 ---
 
-JPA 엔티티에 중복키를 선언하려하니 duplication 오류가 나서 방법을 찾아보았다.
+JPA 엔티티에 중복키를 선언하려하니 duplicate 오류가 나서 방법을 찾아보았다.
 
 오류가 나는 코드 - `entity/music/MusicMoodEntity.java`
 
