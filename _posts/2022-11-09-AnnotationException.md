@@ -7,7 +7,7 @@ tag: [Spring, Springoot, Study, JPA, JAVA]
 ---
 
 > [에러 메시지] AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements
-{: .prompt-info }
+{: .prompt-danger }
 
 <br>
 

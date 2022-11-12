@@ -1,0 +1,85 @@
+---
+title: Git subtree
+author: NadudAn
+date:   2022-11-13 13:26:00 +0900
+categories: [Study, Git]
+tag: [Git, Github, Study, Subtree]
+---
+
+> 참고사이트: [Git Repository 하나로 합치기 - git subtree // 잔디 유지 // commit log 유지](https://kimdevel.tistory.com/94)
+{: .prompt-info }
+
+subtree 너무 헷갈리고 어려워서 따로 정리하기로 결심했다!
+모르는게 많아서 나중에 더 추가될 수도 있다.
+
+내가 A레포를 생성하여 B레포에 폴더로 넣고싶다고 가정한다.
+
+A 레포를 B 레포에 넣는다면 A 레포가 child, B 레포가 parent.
+
+<br>
+
+포함하는게 parent, 포함되어지는게 child이다.
+
+<br>
+
+### Info
+
+Repository|branch|
+|---|---|
+|Parent|main|
+|Child|master|
+
+<br>
+
+## subtree 생성방법
+
+먼저 Parent 레포를 클론하여 로컬 레포지토리를 만든 후 로컬 레포에서 git bash를 열어준다.
+
+```
+$ git subtree add --prefix=<폴더 이름> <child레포의 깃 주소> <child레포의 브랜치명>
+```
+
+
+<폴더이름> : Parent 레포에 들어갈 Child 레포 폴더의 이름
+
+예를 들어, Parent 레포의 이름을 study, Child 레포 이름을 BFS라고 해보자. 브랜치 명은 위의 인포 표와 동일하다고 가정한다. 위의 명령어를 사용하여 Study 레포에 week1이라는 파일명으로 BFS 레포를 저장하고 싶을 때, 명령어는 다음과 같다.
+
+```
+$ git subtree add --prefix=week1 <BFS 레포의 깃 주소> master
+```
+
+그 후 다음 명령어를 작성해주고 깃허브 Parent 레포지토리에 들어가면 week1으로 잘 저장되어 있다.
+
+```
+$ git push origin main
+```
+
+<br>
+
+## +) remote 설정하기
+
+나는 이제부터 Child레포의 깃주소를 caddress로 지칭하겠다. 계속 깃 주소를 복붙하지 않기 위해 remote 해주자.
+
+```
+$ git remote add caddress <Child 레포의 깃주소>
+```
+
+<br>
+
+## Child 레포에서 Parent 레포로 push
+
+```
+$ git subtree pull --prefix=<폴더명> caddress master  
+$ git add .
+$ git commit -m "커밋 제목" -m "커밋 내용"
+$ git push
+```
+
+아마 아까 예시를 이용한다면 다음과 같을 것이다.
+
+```
+$ git subtree pull --prefix=week1 caddress master  
+$ git add .
+$ git commit -m "커밋 제목" -m "커밋 내용"
+$ git push
+```
