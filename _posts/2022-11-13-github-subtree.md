@@ -6,7 +6,7 @@ categories: [Study, Git]
 tag: [Git, Github, Study, Subtree]
 ---
 
-> 참고사이트: [Git Repository 하나로 합치기 - git subtree // 잔디 유지 // commit log 유지](https://kimdevel.tistory.com/94)
+> [참고사이트](https://kimdevel.tistory.com/94)
 {: .prompt-info }
 
 subtree 너무 헷갈리고 어려워서 따로 정리하기로 결심했다!
