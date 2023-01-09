@@ -1,5 +1,5 @@
 ---
-title: Android Studio - "trying to draw too large bitmap" 오류가 발생할때.
+title: Android Studio - trying to draw too large bitmap
 author: NadudAn
 date:   2023-01-05 21:32:00 +0900
 categories: [Study, Android]
