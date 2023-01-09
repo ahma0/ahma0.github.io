@@ -35,59 +35,57 @@ import twitter4j.auth.AccessToken;
 import twitter4j.auth.RequestToken;
 
 public class HttpSourceCall {
-	static AccessToken accessToken = null;
-	static String accessSecret = "";
-	static Twitter twitter;
+    static AccessToken accessToken = null;
+    static String accessSecret = "";
+    static Twitter twitter;
 
-	public static void main(String[] args) {
-		RequestToken requestToken = null;
-		AccessToken finalAccessToken = null;
-		
-		twitter = TwitterFactory.getSingleton();
-		twitter.setOAuthConsumer("YOUR_API_KEY", "YOUR_API_KEY_SECRET");
-		
-		//토큰
-		requestToken = null;
-		try {
-			requestToken = twitter.getOAuthRequestToken();
-		} catch (TwitterException e) {
-			e.printStackTrace();
-		}
-		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println(requestToken.getAuthenticationURL());
-		
-		System.out.println("Enter the PIN and hit enter after you granted access");
-		String pin = "";
-		
-		try {
-			pin = br.readLine();
-		} catch(IOException e1) {
-			e1.printStackTrace();
-		}
-		
-		try {
-			if(pin.length() > 0) 
-				accessToken = twitter.getOAuthAccessToken(requestToken, pin);
-			else
-				accessToken = twitter.getOAuthAccessToken(requestToken);
-			
-			String key1 = accessToken.getToken();
-			String key2 = accessToken.getTokenSecret();
-			
-			System.out.println("accessToken: " + accessToken);
-			System.out.println("getToken: " + key1);
-			System.out.println("getTokenSecret: " + key2);
-		} catch(TwitterException te) {
-			if(401 == te.getStatusCode()) {
-				System.out.println("unable to get the access token");
-				System.out.println(te);
-			}
-			else te.printStackTrace();
-		}
-		
-	}
+    public static void main(String[] args) {
+        RequestToken requestToken = null;
+        AccessToken finalAccessToken = null;
 
+        twitter = TwitterFactory.getSingleton();
+        twitter.setOAuthConsumer("YOUR_API_KEY", "YOUR_API_KEY_SECRET");
+
+        //토큰
+        requestToken = null;
+        try {
+            requestToken = twitter.getOAuthRequestToken();
+        } catch (TwitterException e) {
+            e.printStackTrace();
+        }
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(requestToken.getAuthenticationURL());
+		
+        System.out.println("Enter the PIN and hit enter after you granted access");
+        String pin = "";
+		
+        try {
+            pin = br.readLine();
+        } catch(IOException e1) {
+            e1.printStackTrace();
+        }
+		
+        try {
+            if(pin.length() > 0) 
+                accessToken = twitter.getOAuthAccessToken(requestToken, pin);
+            else
+                accessToken = twitter.getOAuthAccessToken(requestToken);
+
+            String key1 = accessToken.getToken();
+            String key2 = accessToken.getTokenSecret();
+
+            System.out.println("accessToken: " + accessToken);
+            System.out.println("getToken: " + key1);
+            System.out.println("getTokenSecret: " + key2);
+        } catch(TwitterException te) {
+            if(401 == te.getStatusCode()) {
+                System.out.println("unable to get the access token");
+                System.out.println(te);
+            }
+            else te.printStackTrace();
+        }
+    }
 }
 ```
 
@@ -135,7 +133,7 @@ print(me.screen_name)
 
 401 ERROR의 경우 
 
-![image](https://user-images.githubusercontent.com/84761609/169577477-31579d4c-a3bd-482d-bc57-94475788be99.png)
+<img src="https://user-images.githubusercontent.com/84761609/169577477-31579d4c-a3bd-482d-bc57-94475788be99.png">
 
 트위터 디벨로퍼 내 앱의 설정을 바꿀 경우 api 키와 액세스 토큰 등을 새로 발급받아야 합니다. 
 
@@ -148,7 +146,7 @@ print(me.screen_name)
 
 블로그를 따라 잘 진행했음에도 불구하고
 
-![image (3)](https://user-images.githubusercontent.com/84761609/169577923-685d2f6f-e5e9-4a2d-9c0c-348d2b5da025.png)
+<img src="https://user-images.githubusercontent.com/84761609/169577923-685d2f6f-e5e9-4a2d-9c0c-348d2b5da025.png">
 
 이 화면이 뜨지 않는 분들을 위한 설명입니다.
 
@@ -157,25 +155,25 @@ print(me.screen_name)
 
 #### 1. 먼저 봇 계정으로 트위터 로그인을 한 후 위의 파이썬 코드를 실행, 링크를 받습니다.
 
-![image (4)](https://user-images.githubusercontent.com/84761609/169578157-a548e8eb-91ab-4a97-a22a-04adfe9ac764.png)
+<img src="https://user-images.githubusercontent.com/84761609/169578157-a548e8eb-91ab-4a97-a22a-04adfe9ac764.png"/>
 
 저는 M7로 시작하는 링크를 얻었네요.
 
 #### 2. 해당 링크를 들어가 앱 인증을 해줍니다.
 
-![SE-64a23c0e-d06a-4ab8-8d63-8dd653139c56](https://user-images.githubusercontent.com/84761609/169577505-9493044a-aa47-4954-bc44-a5542966e907.png)
+<img src="https://user-images.githubusercontent.com/84761609/169577505-9493044a-aa47-4954-bc44-a5542966e907.png">
 
 앱 인증을 해주면 PIN 번호가 뜨지 않고 트위터 디벨로퍼 내에 설정해둔 callback url로 넘어갑니다. 
 저는 twitter.com으로 해둬서 그냥 타임라인이 떴어요.
 근데 그 위 링크를 보시면
 
-![image (1)](https://user-images.githubusercontent.com/84761609/169577549-7cc5fac8-20f0-4a5c-9f45-1a56c85b2da4.png)
+<img src="https://user-images.githubusercontent.com/84761609/169577549-7cc5fac8-20f0-4a5c-9f45-1a56c85b2da4.png">
 
 주황색으로 가려둔 거 보이시나요? 저 가려진 부분을 복사해야합니다.
 
 #### 3. oauth_verifier=의 뒷 부분을 복사해 콘솔에 핀 번호로 입력 후 토큰을 얻습니다.
 
-![image (2)](https://user-images.githubusercontent.com/84761609/169577518-7f570124-c2ef-438a-8131-009d1fec79ff.png)
+<img src="https://user-images.githubusercontent.com/84761609/169577518-7f570124-c2ef-438a-8131-009d1fec79ff.png"/>
 
 
 저 부분을 복사해서 핀 번호로 입력하면 *액세스 토큰과 액세스 시크릿 토큰*이 나옵니다.

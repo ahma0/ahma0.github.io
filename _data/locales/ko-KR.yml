@@ -3,28 +3,28 @@
 # ----- Commons label -----
 
 layout:
-  post: Post
-  category: Categories
-  tag: Tags
+  post: 포스트
+  category: 카테고리
+  tag: 태그
 
 # The tabs of sidebar
 tabs:
   # format: <filename_without_extension>: <value>
-  home: HOME
-  categories: CATEGORIES
-  tags: TAGS
-  archives: ARCHIVES
-  about: ABOUT
+  home: 홈
+  categories: 카테고리
+  tags: 태그
+  archives: 아카이브
+  about: 정보
 
 # the text displayed in the search bar & search results
 search:
-  hint: Search..
+  hint: 검색
   cancel: 취소
   no_results: 검색 결과가 없습니다.
 
 panel:
-  lastmod: Recent Update
-  trending_tags: Trending Tags
+  lastmod: 최근 업데이트
+  trending_tags: 인기 태그
   toc: 바로가기
 
 copyright:
@@ -72,6 +72,13 @@ post:
       succeed: 링크가 복사되었습니다!
   # pinned prompt of posts list on homepage
   pin_prompt: 핀
+
+# Date time format.
+# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: '%Y/%m/%d'
+    dayjs: 'YYYY/MM/DD'
 
 # categories page
 categories:
