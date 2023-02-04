@@ -31,7 +31,11 @@ tag: [Spring, Study, JAVA, ERROR]
 ### 단일 책임 원칙(SRP: Single Responsibility Principle)
 > 한 클래스는 하나의 책임만 가져야 한다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcuqYdD%2FbtrwqL6MF7H%2FJVDhLUazvF7brBQ77jU1Qk%2Fimg.png)
+![image](https://user-images.githubusercontent.com/84761609/216751041-4a35caa3-064c-4e81-ac1a-a0519b8568aa.png)
+
+
+<br>
+
 #### SRP가 지켜지지 않은 경우
 
 ~~~
@@ -75,7 +79,8 @@ class 암컷강아지 extends 강아지 {
 ### 개방 폐쇄 원칙(OCP: Open/Closed Principle)
 > 확장에는 열려있으나 변경에는 닫혀있어야 한다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdEDRSC%2FbtrwA7tELrM%2FzZoziv44Xxtfwa1YrW4blK%2Fimg.png)
+![image](https://user-images.githubusercontent.com/84761609/216751066-3e47dddc-2a6c-41da-96ce-e9ede35929d6.png)
+
 
 <br>
 
@@ -85,7 +90,8 @@ class 암컷강아지 extends 강아지 {
 -   `하위 클래스 is a kind of 상위 클래스` - 하위 분류는 상위 분류의 한 종류다.
 -   `구현 클래스 is able to 인터페이스`: 구현 분류는 인터페이스할 수 있어야 한다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXaUKI%2FbtrwA7f7P3m%2F8c8r4X5uxYMN0BYcOyklp1%2Fimg.png)
+![image](https://user-images.githubusercontent.com/84761609/216751083-c54628e2-3691-4500-a123-8549aa449ff5.png)
+
 
 <br>
 
@@ -95,7 +101,8 @@ class 암컷강아지 extends 강아지 {
  결론적으로는 단일 책임 원칙(SRP)과 인터페이스 분할 원칙(ISP)은 같은 문제에 대한 두 가지 다른 해결책이라고 볼 수 있다. 하지만 특별한 경우가 아니라면 `단일 책임 원칙`을 적용하는 것이 더 좋은 해결책이라고 할 수 있다.
 
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb6SEzY%2FbtrwwsLTglL%2FmknVKvSLZfh5gvbp3tqssk%2Fimg.png)
+![image](https://user-images.githubusercontent.com/84761609/216751098-f53410ba-819f-4d2c-a82e-c27471903eb2.png)
+
 
 -   `상위 클래스는 풍성할수록 좋다.`
     -   풍성할수록 하위 클래스에게 많은 기능을 확장시켜주는 것이고, 형변환, 코드 중복을 줄여줍니다.
@@ -112,7 +119,8 @@ class 암컷강아지 extends 강아지 {
 자주 변경되는 구체(Concrete) 클래스에 의존하지 마라
 
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F235E853E569870EA358109)
+![image](https://user-images.githubusercontent.com/84761609/216751119-51115a6c-9964-4e62-9a58-84ad55d6ca74.png)
+
 
 자동차가 타이어에 의존하면 안된다. 자동차가 구체적인 타이어가 아닌 타이어 인터페이스에 의존하게 해서 어떤 타이어를 끼우든 문제가 없게해야 한다.
 
@@ -133,7 +141,7 @@ class 암컷강아지 extends 강아지 {
 
 **DI(의존성 주입)를 통해서 모듈 간의 결합도가 낮아지고 유연성이 높아진다.**
 
-![](https://velog.velcdn.com/images%2Fgillog%2Fpost%2F08489bda-549e-4dae-851b-8ae1734bf85e%2F21373937580AEF9B37.jpg)
+![image](https://user-images.githubusercontent.com/84761609/216751169-983b18c4-0e7b-4af6-8c7a-6af381d0f0df.png)
 
 
 첫번째 방법은 A객체가 B와 C객체를 New 생성자를 통해서 직접 생성하는 방법이고, 
@@ -143,7 +151,7 @@ class 암컷강아지 extends 강아지 {
 이러한 두번째 방식이 의존성 주입의 예시인데,  
 `A 객체`에서 **`B, C객체`를 사용(의존)할 때** `A 객체`에서 **직접 생성 하는 것이 아니라** **`외부(IOC컨테이너)`에서 생성된 `B, C객체`를 조립(주입)시켜 `setter` 혹은 `생성자`를 통해 사용하는 방식**이다.
 
-![](https://velog.velcdn.com/images%2Fgillog%2Fpost%2F41f2eb24-fce2-4b7e-b9ac-d5c3ce97d213%2F22535642580C4AF12C.jpg)
+![image](https://user-images.githubusercontent.com/84761609/216751178-912bf2dc-fb50-4de8-91f9-c2ccef6d962f.png)
 
 **스프링에서는 객체를 `Bean`** 이라고 부르며, 프로젝트가 실행될때 사용자가 Bean으로 관리하는 객체들의 생성과 소멸에 관련된 작업을 자동적으로 수행해주는데 객체가 생성되는 곳을 스프링에서는 Bean 컨테이너라고 부른다.
 
