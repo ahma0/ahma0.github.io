@@ -26,10 +26,10 @@ title: Devbug                          # the main title
 tagline: Development blog   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  NadudAn's Dev Blog
+  ahma0's Dev Blog
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://nadudan.github.io'
+url: 'https://ahma0.github.io'
 
 github:
   username: NadudAn             # change to your github username
@@ -40,12 +40,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: NadudAn
+  name: ahma0
   email: dsd932@naver.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
     #- https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/NadudAn       # change to your github homepage
+    - https://github.com/ahma0       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username

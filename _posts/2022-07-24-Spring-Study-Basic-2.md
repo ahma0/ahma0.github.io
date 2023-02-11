@@ -1,6 +1,6 @@
 ---
 title: Spring 입문 2 - 정적 컨텐츠, MVC, API
-author: NadudAn
+author: ahma0
 date:   2022-07-24 21:53:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]

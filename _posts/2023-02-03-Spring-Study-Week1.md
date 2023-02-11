@@ -1,6 +1,6 @@
 ---
 title: Spring Study Week1 - 객체지향 특징, 원칙과 IoC, DI
-author: NadudAn
+author: ahma0
 date:   2023-02-03 22:56:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Study, JAVA, ERROR]

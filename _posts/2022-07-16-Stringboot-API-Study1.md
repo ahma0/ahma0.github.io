@@ -1,6 +1,6 @@
 ---
 title: springboot로 Rest api 만들기(1) HelloWorld
-author: NadudAn
+author: ahma0
 date:   2022-07-17 00:51:00 +0900
 categories: [Study, SpringBoot]
 tag: [Spring, Springoot, Study, API]

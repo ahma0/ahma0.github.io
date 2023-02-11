@@ -1,6 +1,6 @@
 ---
 title: My financiall
-author: NadudAn
+author: ahma0
 date:   2021-02-26 15:00:00 +0900
 categories: [Projects, App]
 tag: [Portfolio, Projects, App, Primitive]

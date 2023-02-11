@@ -1,6 +1,6 @@
 ---
 title: Spring 중복키 설정
-author: NadudAn
+author: ahma0
 date:   2022-11-09 16:07:00 +0900
 categories: [Study, JPA]
 tag: [Spring, Springoot, Study, JPA, JAVA, ERROR]

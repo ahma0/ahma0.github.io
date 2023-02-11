@@ -1,6 +1,6 @@
 ---
 title: Google I/O Extended 2022 Daejeon 후기
-author: NadudAn
+author: ahma0
 date:   2022-07-01 22:34:00 +0900
 categories: [Conference, Google]
 tag: [Conference, Google, Daejeon, IOE]

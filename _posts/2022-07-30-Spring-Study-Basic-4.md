@@ -1,6 +1,6 @@
 ---
 title: Spring 입문 4 - 컴포넌트 스캔과 자동 의존관계 설정
-author: NadudAn
+author: ahma0
 date:   2022-07-30 12:52:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]

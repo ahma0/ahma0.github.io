@@ -1,6 +1,6 @@
 ---
 title: Spring 입문 5 - 회원 관리 예제(웹 MVC 개발)
-author: NadudAn
+author: ahma0
 date:   2022-07-31 14:13:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]
