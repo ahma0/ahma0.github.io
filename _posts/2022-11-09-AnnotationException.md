@@ -17,8 +17,8 @@ tag: [Spring, Springoot, Study, JPA, JAVA, ERROR]
 
 ```
 @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId")
-    private UserEntity userId;
+@JoinColumn(name = "userId")
+private UserEntity userId;
 ```
 
 <br>
@@ -26,7 +26,7 @@ tag: [Spring, Springoot, Study, JPA, JAVA, ERROR]
 - `UserEntity`를 `List`로 고치기
 
 ```
-@OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId")
-    private List<UserEntity> userId;
+@OneToMany(mappedBy = "music_like", fetch = FetchType.LAZY)
+@JoinColumn(name = "userId")
+private List<UserEntity> userId;
 ```
