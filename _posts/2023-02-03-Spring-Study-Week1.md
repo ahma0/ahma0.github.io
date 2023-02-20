@@ -1,9 +1,14 @@
 ---
-title: Spring Study Week1 - 객체지향 특징, 원칙과 IoC, DI
+title: Spring Study Group Week1 - 객체지향 특징, 원칙과 IoC, DI
 author: ahma0
 date:   2023-02-03 22:56:00 +0900
-categories: [Study, Spring]
-tag: [Spring, Study, JAVA, ERROR]
+categories: [StudyGroup, Spring]
+tag: [StudyGroup, Spring, Study, JAVA]
+math: true
+mermaid: true
+image:
+  path: https://user-images.githubusercontent.com/84761609/220085479-19ee260a-d709-4a47-b788-416275d8a2d8.png
+  alt: Spring Image
 ---
 
 > 스프링 스터디 1주차 공부한 것입니다.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nadudan.github.io/sitemap.xml
+Sitemap: https://ahma0.github.io/sitemap.xml

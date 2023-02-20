@@ -68,7 +68,7 @@ bash tools/init.sh
 os가 windows인 사람만 ruby를 사용하고 아닌 사람은 그냥 cmd창을 사용하면 될 것이다. ruby를 작동시켜 블로그의 로컬 저장소로 이동해준다.
 
 ```yaml
-cd C:\Users\Nadud\Documents\GitHub\NadudAn.github.io
+cd C:\Users\Nadud\Documents\GitHub\ahma0.github.io
 ```
 
 그리고 번들을 설치한다.
