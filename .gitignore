@@ -1,20 +1,16 @@
-# hidden files
-.*
-!.git*
-!.editorconfig
-!.nojekyll
-!.travis.yml
-!.husky
-!.commitlintrc.json
-!.versionrc.json
+root = true
 
-# bundler cache
-_site
-vendor
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+# Unix-style newlines with a newline ending every file
+end_of_line = lf
+insert_final_newline = true
 
-# rubygem
-*.gem
+[*.js]
+indent_size = 4
 
-# npm dependencies
-node_modules
-package-lock.json
+[*.md]
+trim_trailing_whitespace = false
