@@ -11,7 +11,7 @@ image:
   alt: Spring Image
 ---
 
-> 스프링 스터디 4주차 공부한 것입니다. [어라운드 허브 스튜디오의 스프링 강의]("https://www.youtube.com/playlist?list=PLlTylS8uB2fBOi6uzvMpojFrNe7sRmlzU") 를 듣고 작성하였습니다.
+> 스프링 스터디 4주차 공부한 것입니다. [어라운드 허브 스튜디오의 스프링 강의](https://www.youtube.com/playlist?list=PLlTylS8uB2fBOi6uzvMpojFrNe7sRmlzU) 를 듣고 작성하였습니다.
 {: .prompt-info }
 
 <br>
