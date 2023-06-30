@@ -171,8 +171,6 @@ HTML 파서는 HTML 마크업을 파싱 트리로 변환합니다. HTML은 일�
 
 일반적인 파싱 기술을 사용할 수 없기 때문에 브라우저는 HTML 파싱을 위해 별도의 파서를 생성합니다.
 
-<br>
-
 ![HTML 파싱 과정(HTML5 명세에서 가져옴)](https://github.com/ahma0/ahma0.github.io/assets/84761609/b3950f98-b2ac-4a62-9d32-5449d6abb3fe)
 
 <br>
