@@ -48,7 +48,7 @@ Hello, I'm <a href="https://github.com/ahma0">Nayeong Ahn</a>, a University stud
     
 <ul>
     <li><a href="https://ahma0.github.io/posts/my-financialledger/">[Android App] MyFinancialledger</a></li>
-    <li><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10664642">[IOT Research] Technical research to diagnose scalp health conditions using big data obtained through camera module</a></li>
+    <!-- <li><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10664642">[IOT Research] Technical research to diagnose scalp health conditions using big data obtained through camera module</a></li> -->
     <!--li><a href="#">Bread App, App Project</a></li-->
     <li><a href="https://github.com/ahma0/mini-hompage">mini-hompage</a></li>
     <li><a href="https://github.com/ahma0/JS-chatbot">Chat-Bot using JS</a></li>
