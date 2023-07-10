@@ -2,7 +2,7 @@
 title: Twitter Project - Github Actions를 이용 학식 자동 트윗 봇
 author: ahma0
 date:   2022-04-06 15:00:00 +0900
-categories: [Projects, Twitter]
+categories: [Project, Twitter]
 tag: [Portfolio, Projects, Twitter, Api, TwitterDeveloper]
 ---
 
