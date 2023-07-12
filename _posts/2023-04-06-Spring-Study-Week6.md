@@ -3,7 +3,7 @@ title: Spring Study Group Week6 - validation, Exception, Test
 author: ahma0
 date:   2023-04-06 19:53:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA]
+tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
 math: true
 mermaid: true
 image:

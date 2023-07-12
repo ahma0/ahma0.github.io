@@ -3,7 +3,7 @@ title: Spring Study Group Week4 - Spring 프로젝트 생성, 빌드 도구, 디
 author: ahma0
 date:   2023-03-21 09:54:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA]
+tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
 math: true
 mermaid: true
 image:
