@@ -2,8 +2,8 @@
 title: 21th Developer Meetup - 오픈서치 기반 오라클 클라우드의 Search Service 알아보기 웨비나 후기
 author: ahma0
 date:   2022-07-14 02:16:00 +0900
-categories: [Webinar, Oracle]
-tag: [Webinar, Seminar, Oracle, OpenSearch]
+categories: [Event, Webinar]
+tag: [Event, Webinar, Seminar, Oracle, OpenSearch]
 ---
 
 깃허브 Dev-Event repo를 보던 중 오라클에서 웨비나를 개최한다는 것을 보아 신청하게 되었다. 신청할 때만 해도 강연일까지 꽤 시간이 남아있었던 걸로 기억하는데 코앞으로 다가와 좀 망설여졌다. 아직 나는 개발지식이 부족하다고 느꼈기때문에 내가 이걸 들어서 이해를 할 수 있을까 고민이 많았다. 그 덕에 밤을 설친듯 싶다.
