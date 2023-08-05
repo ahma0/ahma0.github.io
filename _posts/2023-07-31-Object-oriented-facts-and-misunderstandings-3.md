@@ -8,7 +8,7 @@ math: true
 mermaid: true
 image:
   path: https://github.com/ahma0/ahma0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
-  alt: Spring Web layer
+  alt: book image
 ---
 
 > [객체지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)를 읽고 정리한 글입니다.
