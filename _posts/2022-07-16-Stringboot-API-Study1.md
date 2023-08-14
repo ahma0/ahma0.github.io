@@ -1,8 +1,8 @@
 ---
-title: springboot로 Rest api 만들기(1) HelloWorld
+title: springboot로 Rest api 만들기 HelloWorld
 author: ahma0
 date:   2022-07-17 00:51:00 +0900
-categories: [Study, SpringBoot]
+categories: [Study, Spring]
 tag: [Spring, Springoot, Study, API]
 ---
 
@@ -93,7 +93,7 @@ package com.example2.pepega.helloworld.java;
 
 SpringBoot에서는 @SpringbootApplication (annotation이라고 한다.) 선언만으로 대부분 설정이 자동으로 이루어진다. 하단은 boot실행을 위한 Application 설정 파일이다.
 
-```
+```java
 package com.example.pepega;
 
 import org.springframework.boot.SpringApplication;
@@ -156,7 +156,7 @@ package com.example.프로젝트_이름.controller;
 
 ## controller 작성
 
-```
+```java
 package com.example.api_practice.controller;
 
 import lombok.Getter;
@@ -270,7 +270,7 @@ HelloWorld
 
 application.yml 에 하단 내용을 추가한다.
 
-```
+```yml
 spring:
   freemarker:
     template-loader-path: classpath:/templates/

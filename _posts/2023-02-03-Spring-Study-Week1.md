@@ -43,7 +43,7 @@ image:
 
 #### SRP가 지켜지지 않은 경우
 
-~~~
+```java
 class 강아지 { 
 	final static Boolean 수컷 = true; 
 	final static Boolean 암컷 = false; 
@@ -57,11 +57,11 @@ class 강아지 {
 		} 
 	} 
 }
-~~~
+```
 
 #### SRP가 지켜진 경우
 
-~~~
+```java
 abstract class 강아지 { 
 	abstract void 소변보다(); 
 } 
@@ -77,7 +77,7 @@ class 암컷강아지 extends 강아지 {
 		// 뒷다리 두 개로 앉은 자세로 소변을 본다. 
 	} 
 }
-~~~
+```
 
 <br>
 

@@ -76,7 +76,7 @@ public Order cancelOrder(int orderId) {
 
 ## 실제 코드
 
-```
+```java
 @Transactional
 public Order cancelOrder(int orderId) {
 
@@ -107,7 +107,7 @@ public Order cancelOrder(int orderId) {
 
 모든 로직이 **서비스 클래스 내부**에서 처리됩니다. 그러다 보니 **서비스 계층이 무의미하며, 객체란 단순히 데이터 덩어리** 역할만 하게 됩니다. 반면 도메인 모델에서 처리할 경우 다음과 같은 코드가 될 수 있습니다.
 
-```
+```java
 @Transactional
 public Order cancelOrder(int orderId) {
 

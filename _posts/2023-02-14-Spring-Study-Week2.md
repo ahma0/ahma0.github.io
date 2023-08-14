@@ -47,7 +47,7 @@ image:
 
 ### UserDao의 의존관계
 
-```
+```java
 public class UserDao { 
 	private ConnectionMaker connectoinmaker; 
 	,,, 
@@ -120,7 +120,7 @@ UserDao가 ConnectionMaker를 의존하고 있는 형태이다.
 
 ### UserDao의 의존관계 주입
 
-```
+```java
 public UserDao() { 
 	connectionMaker = new DconnectionMaker(); 
 }
@@ -134,7 +134,7 @@ public UserDao() {
 
 1.  런타임 의존관계를 드러내지 않기 위해, 인터페이스에만 의존했다.
 
-```
+```java
 public class UserDao { 
 	private ConnectoinMaker connectionMaker; 
 }
@@ -142,7 +142,7 @@ public class UserDao {
 
 2. 제3의 존재인 DaoFactory를 생성하여 런타임 의존관계를 결정했다.
 
-```
+```java
 public class DaoFactory { 
 	public UserDao userDao() { 
 		return new UserDao(connectionMaker()); 
@@ -156,7 +156,7 @@ public class DaoFactory {
 
 3. 의존관계는 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공 받았다.
 
-```
+```java
 public class UserDao { 
 	private ConnectoinMaker connectionMaker; 
 	
@@ -172,7 +172,7 @@ public class UserDao {
 -  DI 컨테이너는 자신이 결정한 의존관계를 맺어줄 클래스의 오브젝트를 만들고 이 생성자의 파라미터로 오브젝트의 레퍼런스를 전달해준다.
 	-  Ex. UserDao를 생성하는 시점에 생성자의 파라미터로 이미 만들어진 DConnectionMaker 오브젝트의 레퍼런스를 전달한다.
 
-```
+```java
 //Ex 작업을 수행하기 위한 필수적인 코드
 public class UserDao { 
 	private ConnectoinMaker connectionMaker; 
@@ -219,7 +219,7 @@ public UserDao() {
 -   스프링의 IoC 컨테이너인 애플리케이션 컨텍스트는 **getBean()**이라는 메소드를 제공한다. **바로 이 메소드가 의존관계 검색에 사용되는 것이다.**
 -   의존관계 검색을 이용한 UserDao 생성자를 확인해보자
 
-```
+```java
 public UserDao() { 
 	ApplicationContext context = 
 			new AnnotationConfigApplicationContext(DaoFactory.class);
@@ -270,7 +270,7 @@ _일반 메소드를 이용한 주입_
 
 -   UserDao도 수정자 메소드 DI 방식을 사용하도록 해보자
 
-```
+```java
 public class UserDao { 
 	private ConnectionMaker connectionMaker; 
 	public void setConnectionMaker(ConnectionMaker connectionMaker) { 

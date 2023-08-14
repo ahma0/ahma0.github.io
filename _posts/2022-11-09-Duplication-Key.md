@@ -10,7 +10,7 @@ JPA 엔티티에 중복키를 선언하려하니 duplicate 오류가 나서 방�
 
 오류가 나는 코드 - `entity/music/MusicMoodEntity.java`
 
-```
+```java
 @Data
 @Builder
 @AllArgsConstructor
@@ -39,7 +39,7 @@ public class MusicMoodEntity {
 
 아이디 선언 `entity/id/MusicMoodId.jaca`
 
-```
+```java
 @Data
 @Embeddable
 public class MusicMoodId implements Serializable {
@@ -56,7 +56,7 @@ public class MusicMoodId implements Serializable {
 
 중복키 사용 - `entity/music/MusicMoodEntity.java`
 
-```
+```java
 @Data
 @Builder
 @AllArgsConstructor

@@ -13,7 +13,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 ### 홈 컨트롤러 추가
 
-```
+```java
 package hello.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
@@ -33,7 +33,7 @@ public class HomeController {
 
 `resources/templates/home.html`
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -67,7 +67,7 @@ public class HomeController {
 
 `hellospring/controller/MemberForm.java`
 
-```
+```java
 package hello.hellospring.controller;
 
 public class MemberForm {
@@ -85,7 +85,7 @@ public class MemberForm {
 
 `hellospring/controller/MemberController.java`
 
-```
+```java
 package hello.hellospring.controller;
 
 import hello.hellospring.domain.Member;
@@ -129,7 +129,7 @@ public class MemberController {
 
 `resources/templates/members/createMemberForm.html`
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -160,7 +160,7 @@ public class MemberController {
 
 `hellospring/controller/MemberController.java`
 
-```
+```java
 @GetMapping("/members")
 public String list(Model model) {
     List<Member> members = memberService.findMembers();
@@ -171,7 +171,7 @@ public String list(Model model) {
 
 ### 회원 리스트 HTML
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>

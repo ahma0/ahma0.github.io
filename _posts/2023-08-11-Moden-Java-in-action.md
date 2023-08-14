@@ -66,7 +66,7 @@ image:
 
 - 익명 클래스를 이용한 파일 리스팅
 
-```
+```java
 File[] hiddenFiles = new File(".").listFiles(new FileFilter() {
     public boolean accept(File file) {
         return file.hidden();
@@ -76,7 +76,7 @@ File[] hiddenFiles = new File(".").listFiles(new FileFilter() {
 
 - 메서드 참조를 통한 파일리스팅
 
-```
+```java
 File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 ```
 
@@ -92,7 +92,7 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
 - 자바 8 이전
 
-```
+```java
 public class Test {
 
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
@@ -122,7 +122,7 @@ public class Test {
 
 - 자바 8 이후
 
-```
+```java
 public class Test {
 
     public static boolean isGreenApple(Apple apple) {
@@ -151,7 +151,7 @@ public class Test {
 
 다음처럼 메서드를 호출할 수 있다.
 
-```
+```java
 filterApples(inventory, Apple::isGreenApple);
 filterApples(inventory, Apple::isHeavyApple);
 ```
@@ -162,7 +162,7 @@ filterApples(inventory, Apple::isHeavyApple);
 
 람다를 사용하면 다음과 같이 구현할 수 있다.
 
-```
+```java
 filterApples(inventory, (Apple a) -> GREEN.equals(a.getColor()));
 filterApples(inventory, (Apple a) -> a.getWeight() > 150);
 filterApples(inventory, (Apple a) -> a.getWeight() < 80 || RED.equals(a.getColor()));
@@ -192,7 +192,7 @@ filter(inventory, (Apple a) -> a.getWeight() > 150);
 
 - 순차 처리 방식의 코드
 
-```
+```java
 import static java.util.stream.Collectors.toList;
 
 List<Apple> heavyApples =
@@ -202,7 +202,7 @@ List<Apple> heavyApples =
 
 - 병렬 처리 방식의 코드
 
-```
+```java
 import static java.util.stream.Collectors.toList;
 
 List<Apple> heavyApples =
@@ -229,7 +229,7 @@ List<Apple> heavyApples =
 
 자바 9의 모듈 시스템은 모듈을 정의하는 문법을 제공하므로 이를 이용해 패키지 모음을 포함하는 모듈을 정의할 수 있다. 모듈 덕분에 JAR 같은 컴포넌트에 구조를 적용할 수 있으며 문서화와 모듈 확인 작업이 용이해졌다. 또한 자바 8에서는 인터페이스를 쉽게 바꿀 수 있도록 디폴트 메서드를 지원한다. 디폴트 메서드는 특정 프로그램을 구현하는 데 도움을 주는 기능이 아니라 미래에 프로그램이 쉽게 변화할 수 있는 환경을 제공하는 기능이다.
 
-```
+```java
 List<Apple> heavyApples =
         inventory.stream().filter((Apple a) -> a.getWeight() > 150)
                 .collect(toList());

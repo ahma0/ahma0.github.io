@@ -39,7 +39,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 `main/java/hello.hellospring/domain/Member.java` - getter와 setter 작성
 
-```
+```java
 package hello.hellospring.domain;
 
 public class Member {
@@ -68,7 +68,7 @@ public class Member {
 
 `main/java/hello.hellospring/repository`에 `MemberRepository.java` 인터페이스 생성
 
-```
+```java
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
@@ -89,7 +89,7 @@ public interface MemberRepository {
 
 `main/java/hello.hellospring/repository`에 `MemoryMemberRepository.java` 클래스 생성
 
-```
+```java
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
@@ -140,7 +140,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
 `test/java/hello.hellospring/repository`에 `MemoryMemberRepositoryTest.java` 클래스 생성
 
-```
+```java
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
@@ -214,7 +214,7 @@ class MemoryMemberRepositoryTest {
 
 `main/java/hello.hellospring/service`에 `MemberService.java` 클래스 생성
 
-```
+```java
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
@@ -264,7 +264,7 @@ public class MemberService {
 
 `test/java/hello.hellospring/service`에 `MemberService.java` 클래스 생성
 
-```
+```java
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;

@@ -15,7 +15,7 @@ tag: [Spring, Springoot, Study, JPA, JAVA, ERROR]
 
 - 에러나는 코드
 
-```
+```java
 @OneToMany(fetch = FetchType.LAZY)
 @JoinColumn(name = "userId")
 private UserEntity userId;
@@ -25,7 +25,7 @@ private UserEntity userId;
 
 - `UserEntity`를 `List`로 고치기
 
-```
+```java
 @OneToMany(mappedBy = "music_like", fetch = FetchType.LAZY)
 @JoinColumn(name = "userId")
 private List<UserEntity> userId;

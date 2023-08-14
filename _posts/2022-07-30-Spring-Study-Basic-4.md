@@ -14,8 +14,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 ### 회원 컨트롤러에 의존관계 추가
 
-```
-
+```java
 package hello.hellospring.controller;
 
 import hello.hellospring.service.MemberService;
@@ -73,7 +72,7 @@ public class MemberController {
 
 ### 회원 서비스 스프링 빈 등록
 
-```
+```java
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
@@ -101,7 +100,7 @@ public class MemberService {
 
 ### 회원 리포지토리 스프링 빈 등록
 
-```
+```java
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
@@ -131,7 +130,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
 `hello.hellospring/SpringConfig.java`
 
-```
+```java
 package hello.hellospring;
 
 import hello.hellospring.repository.MemberRepository;
@@ -165,7 +164,7 @@ public class SpringConfig {
 
 필드 주입
 
-```
+```java
 @Controller
 public class MemberController {
     
@@ -176,7 +175,7 @@ public class MemberController {
 
 setter 주입
 
-```
+```java
 @Controller
 public class MemberController {
 
@@ -193,7 +192,7 @@ public class MemberController {
 
 생성자 주입
 
-```
+```java
 @Controller
 public class MemberController {
 

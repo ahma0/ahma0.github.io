@@ -28,7 +28,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 `resource/static`에 `hello-static.html` 파일 생성
 
-```
+```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -60,7 +60,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 ### Controller
 
-```
+```java
     // localhost:8080/hello-mvc/                -> 오류 name 파라미터에 값이 없음
     // localhost:8080/hello-mvc?name=spring!    -> name 파리미터에 spring! 값 넣기
     @GetMapping("hello-mvc")
@@ -74,7 +74,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 `resource/template`에 `hello-template.html` 생성
 
-```
+```html
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
@@ -98,7 +98,7 @@ tag: [Spring, Springoot, Study, Inflearn]
 
 ### @ResponseBody 문자 반환
 
-```
+```java
 @Controller
 public class Hellocontroller {
 
@@ -115,7 +115,7 @@ public class Hellocontroller {
 
 ### @ResponseBody 객체 반환
 
-```
+```java
 @Controller
 public class Hellocontroller {
 

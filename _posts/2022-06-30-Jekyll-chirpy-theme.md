@@ -14,12 +14,12 @@ tag: [Jekyll, Blog, Theme, Error]
 
 결국 chirpy starter를 사용해서 적용에 성공하였다. 
 
-```yaml
+```shell
 bash tools/init.sh
 ```
 
 해당 명령어를 사용하여 초기화를 해줘야 했는데 
-```yaml
+```
 Error: Commit unstaged files first, and then run this tool againt.
 ```
 가 뜨면서 작동을 안하는 것이다.
@@ -50,7 +50,7 @@ chirpy starter를 사용하면 커스터마이징할 때 오류가 많다는 (�
 Option 1의 Chirpy Starter를 클릭하여 레포지토리를 만들고, 로컬 저장소에 클론한다. 
 
 최근에 파일이 바뀐건지 
-```yaml
+```shell
 bash tools/init.sh
 ```
 를 치지 않아도 괜찮은 것 같다. 이 명령어는 넘어가주자. 폴더에 .travis.yml이 있는지 없는지를 보고 결정하면 될 것 같다. 나는 없었다.
@@ -67,13 +67,13 @@ bash tools/init.sh
 
 os가 windows인 사람만 ruby를 사용하고 아닌 사람은 그냥 cmd창을 사용하면 될 것이다. ruby를 작동시켜 블로그의 로컬 저장소로 이동해준다.
 
-```yaml
-cd C:\Users\Nadud\Documents\GitHub\ahma0.github.io
+```shell
+cd C:\Users\username\Documents\GitHub\ahma0.github.io
 ```
 
 그리고 번들을 설치한다.
 
-```yaml
+```shell
 $ bundle
 ```
 
@@ -83,7 +83,7 @@ $ bundle
 
 git bash를 이용하여
 
-``` yaml
+``` shell
 $ git add *
 $ git commit -m "initialize"
 $ git push -u origin master
@@ -110,7 +110,7 @@ Your bundle only supports platforms ["x64-unknown"] but your local platform is
 이 에러는 스택 오버플로우를 보고 해결하였다.
 
 ruby로 로컬 저장소를 들어가
-```yaml
+```shell
 $ bundle lock --add-platform ruby
 $ bundle lock --add-platform x86_64-linux
 ```

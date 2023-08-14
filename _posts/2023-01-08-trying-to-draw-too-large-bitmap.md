@@ -22,7 +22,7 @@ tag: [Android, AndroidStudio, Study, JAVA, ERROR]
 
 `AndroidManifest.xml` 파일에 application 내에 해당 코드를 추가한다.
 
-```
+```yml
 android:hardwareAccelerated="false"
 ```
 

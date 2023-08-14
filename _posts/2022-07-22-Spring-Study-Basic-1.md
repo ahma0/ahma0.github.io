@@ -62,7 +62,7 @@ Group엔 보통 기업명이나 기업 도메인명을 넣는다고 한다.
 ### build.gradle
 
 
-```
+```yml
 repositories {
     mavenCentral()  // mavenCentral에서 디펜던시스를 다운받아라
 }
@@ -133,7 +133,7 @@ gradle을 통해서 빌드하면 느릴 때가 있다. gradle이 아닌 InteliJ 
 
 resources/static에 index.html을 만든다.
 
-```
+```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -166,7 +166,7 @@ hello.hellospring을 마우스 우클릭하여 controller 패키지를 만든다
 
 코드 입력
 
-```
+```java
 package hello.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
@@ -190,7 +190,7 @@ public class Hellocontroller {
 
 `resources/tempates`에 `hello.html`을 만들어준다.
 
-```
+```html
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -243,7 +243,7 @@ return hello를 하면 리소스에 있는 템플릿에 hello를 찾아서 렌�
 
 ![image](https://user-images.githubusercontent.com/84761609/180421511-5e5d0e1a-594d-42a7-bb25-31eec9f2e259.png)
 
-```
+```shell
 ./gradlew.bat build
 cd build
 cd libs
@@ -255,7 +255,7 @@ cd libs
 
 를 볼 수 있다. 여기서 `hello-spring-0.0.1-SNAPSHOT.jar`를 실행해주면 된다.
 
-```
+```shell
 java -jar hello-spring-0.0.1-SNAPSHOT.jar
 ```
 
@@ -271,7 +271,7 @@ java -jar hello-spring-0.0.1-SNAPSHOT.jar
 
 `./gradlew.bat build`를 실행시켜서
 
-```
+```shell
 > Task :compileJava FAILED
 
 FAILURE: Build failed with an exception.

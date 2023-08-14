@@ -21,9 +21,7 @@ Twitter Api Access Token Error
 
 ### Access Token과 Access Token Secret을 발급받는 소스코드
 
-```yaml
-//JAVA
-
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -89,9 +87,7 @@ public class HttpSourceCall {
 }
 ```
 
-```yaml
-#Python
-
+```python
 import tweepy
 import webbrowser
 import time

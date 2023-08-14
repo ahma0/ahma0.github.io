@@ -23,7 +23,7 @@ image:
 - value와 method로 정의하여 API를 개발하는 방식
 - 이제는 고전적인 방법으로 사용하지 않음
 
-```
+```java
 // http://localhost:8080/api/v1/get-api/hello
 @RequestMapping(value="/hello", method=RequestMethod.GET)
 public String getHello() {
@@ -37,7 +37,7 @@ public String getHello() {
 
 - 별도의 파라미터 없이 GET API를 호출하는 경우 사용되는 방법
 
-```
+```java
 // http://localhost:8080/api/v1/get-api/name
 @GetMapping(value="/name")
 public String getName() {
@@ -52,7 +52,7 @@ public String getName() {
 - GET 형식의 요청에서 파라미터를 전달하기 위해 URL에 값을 담아 요청하는 방법
 - 아래 방식은 `@GetMapping`에서 사용된 `{변수}`의 이름과 메소드의 매개변수와 일치시켜야 함
 
-```
+```java
 @GetMapping(value="/variable1/{valiable}")
 public String getVariable1(@PathVariable String variable) {
 	return variable;
@@ -62,7 +62,7 @@ public String getVariable1(@PathVariable String variable) {
 - 아래 방식은 `@GetMapping`에서 사용된 `{변수}`의 이름과 메소드의 매개변수가 다를 경우 사용하는 방식
 - 변수의 관리의 용이를 위해 사용되는 방식
 
-```
+```java
 @GetMapping(value="/variable2/{variable}")
 public String getVariable2(@PathVariable("variable") String var) {
 	return var;
@@ -78,7 +78,7 @@ public String getVariable2(@PathVariable("variable") String var) {
 
 `http://localhost:8080/api/v1/get-api/request1?name=flature&email=thinkground.flature@Gmail.com&organization=thinkground`
 
-```
+```java
 @GetMapping(value="/request1")
 public String getRequestParam1(
 						@RequestParam String name, 
@@ -90,7 +90,7 @@ public String getRequestParam1(
 
 - 아래 예시 코드는 어떤 요청 값이 들어올 지 모를 경우 사용하는 방식
 
-```
+```java
 @GetMapping(value="/request2")
 public String getRequestParam2(@RequestParam Map<String, String> param) {
 	StringBuilder sb = new StringBuilder();
@@ -110,7 +110,7 @@ public String getRequestParam2(@RequestParam Map<String, String> param) {
 - GET 형식의 요청에서 쿼리 문자열을 전달하기 위해 사용되는 방법
 - key와 value가 정해져있지만, 받아야할 파라미터가 많을 경우 DTO 객체를 사용한 방식
 
-```
+```java
 @GetMapping(value="/request3")
 public String getRequestParam3(MemberDTO memberDTO) {
 	//return memberDTO.getName + " " 
@@ -121,7 +121,7 @@ public String getRequestParam3(MemberDTO memberDTO) {
 }
 ```
 
-```
+```java
 public class MemberDTO {
 	private String name;
 	private String email;
@@ -144,7 +144,7 @@ public class MemberDTO {
 - 일반적으로 추가하고자 하는 Resource를 http body에 추가하여 서버에 요청
 - 그렇기 때문에 `@RequestBody`를 이용하여 body에 담겨있는 값을 받아야 함
 
-```
+```java
 @PostMapping(value="/member")
 public String postMember(@RequestBody Map<String, Object> postData) {
 	StringBuilder sb = new StringBuilder();
@@ -159,7 +159,7 @@ public String postMember(@RequestBody Map<String, Object> postData) {
 
 - key와 value가 정해져있지만 받아야할 파라미터가 많을 경우 DTO 객체를 사용한 방식
 
-```
+```java
 @PostMapping(value="/member2")
 public String postMemberDTO(@RequestBody MemberDTO memberDTO) {
 	return memberDTO.toString();
