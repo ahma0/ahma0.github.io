@@ -25,7 +25,7 @@ image:
 
 - 기존 방식
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 - 변경된 방식
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -70,7 +70,7 @@ public class SecurityConfig {
 
 - 기존 방식
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -86,7 +86,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 - 변경된 방식
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -107,7 +107,7 @@ public class SecurityConfig {
 
 - 기존 방식
 
-```
+```java
 @Configuration
 public class SecurityConfiguration {
     @Bean
@@ -135,7 +135,7 @@ public class SecurityConfiguration {
 
 - 변경된 방식
 
-```
+```java
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
@@ -195,7 +195,7 @@ Caused by: java.lang.IllegalArgumentException: This method cannot decide whether
 
 - 당시 코드
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -205,8 +205,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authz) -> authz
                         .requestMatchers("/api/hello").permitAll()
-                        .anyRequest().authenticated()
-                )
+                        .anyRequest().authenticated())
                 .httpBasic(withDefaults());
 
         return http.build();
@@ -218,7 +217,7 @@ public class SecurityConfig {
 
 - 바뀐 코드
 
-```
+```java
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
