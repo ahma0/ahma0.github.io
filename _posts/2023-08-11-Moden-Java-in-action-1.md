@@ -170,7 +170,7 @@ filterApples(inventory, (Apple a) -> a.getWeight() < 80 || RED.equals(a.getColor
 
 한 번만 사용할 메서드는 따로 정의를 구현할 필요가 없다. 다음처럼 메서드 filter를 이용하면 filterApples 메서드를 구현할 필요가 없다.
 
-```
+```java
 filter(inventory, (Apple a) -> a.getWeight() > 150);
 ```
 
