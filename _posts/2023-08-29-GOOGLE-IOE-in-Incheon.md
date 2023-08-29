@@ -1,7 +1,7 @@
 ---
 title: Google I/O Extended 2023 Incheon 후기
 author: ahma0
-date:   2022-08-29 16:36:00 +0900
+date:   2023-08-29 16:36:00 +0900
 categories: [Event, Conference]
 tag: [Event, Conference, Google, Incheon, IOE]
 ---
