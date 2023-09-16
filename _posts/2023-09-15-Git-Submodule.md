@@ -76,7 +76,7 @@ $ git submodule update
 
 $ git submodule foreach git pull
 
-// 2. 용자 저장소의 변경 사항이 git pull 을 수행했을 때 merge conflict 을 유발하는 경우가 종종 있으므로, 많은 경우에 conflict 의 가능성을 줄여주는 git pull --rebase 를 통해 사용자의 변경사항이 가장 최신 커밋 이후에 반영되도록 한다.
+// 2. 사용자 저장소의 변경 사항이 git pull 을 수행했을 때 merge conflict 을 유발하는 경우가 종종 있으므로, 많은 경우에 conflict 의 가능성을 줄여주는 git pull --rebase 를 통해 사용자의 변경사항이 가장 최신 커밋 이후에 반영되도록 한다.
 
 $ git submodule foreach git pull --rebase
 ```
