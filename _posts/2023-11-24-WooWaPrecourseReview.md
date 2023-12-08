@@ -1,5 +1,5 @@
 ---
-title: 우와한 프리코스 회고
+title: 우아한 프리코스 회고
 author: ahma0
 date:   2023-11-24 08:16:00 +0900
 categories: [Post, Review]
