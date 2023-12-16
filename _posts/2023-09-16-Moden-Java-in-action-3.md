@@ -294,3 +294,257 @@ String twoLine =
 
 ### Predicate
 
+`java.util.function.Predicate<T>` 인터페이스는 test라는 추상 메서드를 정의하며 test는 제네릭 형식 T의 객체를 인수로 받아 불리언을 반환한다. T 형식의 객체를 사용하는 불리언 표현식이 필요한 상황에서 Predicate 인터페이스를 사용할 수 있다.
+
+```java
+@FunctionalInterface
+public interface Predicate<T> {
+    boolean test(T t);
+}
+
+public <T> List<T> filter(List<T> list, Predicate<T> p) {
+    List<T> results = new ArrayList<>();
+    for(T t: list) {
+        if(p.test(t)) {
+            results.add(t);
+        }
+    }
+    return results;
+}
+
+Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
+List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
+```
+
+<br>
+
+### Consumer
+
+`java.util.function.Consumer<T>` 인터페이스는 제네릭 형식 T 객체를 받아서 void를 반환하
+는 accept라는 추상 메서드를 정의한다.
+
+```java
+@FunctionalInterface
+public interface Consumer<T> {
+    void accept(T t);
+}
+
+public <T> void forEach(List<T> list, Consumer<T> c) {
+    for(T t: list) {
+        c.accept(t);
+    }
+}
+
+forEach(
+    Arrays.asList(1,2,3,4,5),
+    //Consumer의 accept 메서드를 구현하는 람다
+    (Integer i) -> System.out.println(i)
+);
+```
+
+<br>
+
+### Function
+
+`java.util.function.Function<T, R>` 인터페이스는 제네릭 형식 T를 인수로 받아서 제네릭 형
+식 R 객체를 반환하는 추상 메서드 apply를 정의한다. 
+
+```java
+@FunctionalInterface
+public interface Function<T, R> {
+    R apply(T t);
+}
+
+public <T, R> List<R> map(List<T> list, Function<T, R> f) {
+    List<R> result = new ArrayList<>();
+    for(T t: list) {
+        result.add(f.apply(t));
+    }
+    return result;
+}
+
+// [7, 2, 6]
+List<Integer> l = map(
+    Arrays.asList("lambdas", "in", "action"),
+    (String s) -> s.length() Function의 apply 메서드를 구현하는 람다
+);
+```
+
+<br>
+
+### 기본형 특화
+
+자바의 모든 형식에는 참조형과 기본형이 있다. 그러나 제네릭 파라미터에는 참조형만 사용할 수 있다.
+
+- 참조형<sup>reference type</sup>: Byte, Integer, Object, List 등
+- 기본형<sup>primitive type</sup>: int, double, byte, char 등
+
+자바에서는 참조형을 기본형으로 변환하는 기능을 제공한다. 이 기능을 **박싱**<sup>boxing</sup>이라 하고 반대 동작을 **언박싱**<sup>unboxing</sup>이라 한다. 또한, 박싱과 언박싱이 자동으로 이루어지는 **오토박싱**<sup>autoboxing</sup>이라는 기능도 제공한다.
+
+```java
+List<Integer> list = new ArrayList<>();
+for (int i = 300; i < 400; i++) {
+    list.add(i);
+}
+```
+
+하지만 이런 변환 과정은 비용이 많이 소모된다. 박싱한 값은 기본형을 감싸는 래퍼며 힙에 저장된
+다. 따라서 박싱한 값은 메모리를 더 소비하며 기본형을 가져올 때도 메모리를 탐색하는 과정
+이 필요하다.
+
+자바 8에서는 오토박싱을 피할 수 있도록 특별한 버전의 함수형 인터페이스를 제공한다.
+
+```java
+public interface IntPredicate {
+    boolean test(int t);
+}
+
+IntPredicate evenNumbers = (int i) -> i % 2 == 0;
+evenNumbers.test(1000); //참(박싱 없음)
+
+Predicate<Integer> oddNumbers = (Integer i) -> i % 2 != 0;
+oddNumbers.test(1000); //거짓(박싱)
+```
+
+일반적으로 특정 형식을 입력으로 받는 함수형 인터페이스의 이름 앞에는 `DoublePredicate`, 
+`IntConsumer`, `LongBinaryOperator`, `IntFunction처럼` 형식명이 붙는다. Function 인터페이스
+는 `ToIntFunction<T>`, `IntToDoubleFunction` 등의 다양한 출력 형식 파라미터를 제공한다.
+
+<br>
+
+#### 예외, 람다, 인터페이스의 관계
+
+함수형 인터페이스는 확인된 예외를 던지는 동작을 허용하지 않기 때문에, 예외를 던지는 표현식을 만들기 위해선 직접 정의하거나 try/catch 블록으로 감싸야 한다.
+
+```java
+@FunctionalInterface
+public interface BufferedReaderProcessor {
+    String process(BufferedReader b) throws IOException;
+}
+BufferedReaderProcessor p = (BufferedReader br) -> br.readLine();
+```
+
+우리는 `Function<T, R>` 형식의 함수형 인터페이스를 기대하는 API를 사용하고 있으며 직접 함수형 인터페이스를 만들기 어려운 상황이다. 이 상황에서는 아래와 같은 방법으로 예외를 잡을 수 있다.
+
+```java
+Function<BufferedReader, String> f = (BufferedReader b) -> {
+    try {
+        return b.readLine();
+    }
+    catch(IOException e) {
+        throw new RuntimeException(e);
+    }
+};
+```
+
+<br>
+
+## 형식 검사, 형식 추론, 제약
+
+### 형식 검사
+
+람다가 사용되는 콘텍스트<sup>context</sup>를 이용해서 람다의 형식<sup>type</sup>을 추론할 수 있다. 어떤 콘텍스트에서 기대되는 람다 표현식의 형식을 **대상 형식**<sup>target type</sup>이라 한다.
+
+```java
+List<Apple> heavierThan150g =
+    filter(inventory, (Apple apple) -> apple.getWeight() > 150);
+```
+
+1. filter 메서드의 선언을 확인한다.
+2. filter 메서드는 두 번째 파라미터로 Predicate<Apple> 형식(대상 형식)을 기대한다.
+3. Predicate<Apple>은 test라는 한 개의 추상 메서드를 정의하는 함수형 인터페이스다.
+4. test 메서드는 Apple을 받아 boolean을 반환하는 함수 디스크립터를 묘사한다.
+5. filter 메서드로 전달된 인수는 이와 같은 요구사항을 만족해야 한다.
+
+<br>
+
+### 같은 람다, 다른 함수형 인터페이스
+
+대상 형식이라는 특징 때문에 같은 람다 표현식이더라도 호환되는 추상 메서드를 가진 다른 함수형 인터페이스로 사용될 수 있다.
+
+- 예시 1
+
+```java
+Callable<Integer> c = () -> 42;
+PrivilegedAction<Integer> p = () -> 42;
+```
+
+- 예시 2
+
+```java
+Comparator<Apple> c1 =
+    (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+ToIntBiFunction<Apple, Apple> c2 =
+    (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+BiFunction<Apple, Apple, Integer> c3 =
+    (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+```
+
+<br>
+
+### 형식 추론
+
+자바 컴파일러는 람다 표현식이 사용된 콘텍스트(대상 형식)를 이용해서 람다 표현식과 관련된 함수형 인터페이스를 추론한다. 즉, 대상형식을 이용해서 함수 디스크립터를 알 수 있으므로 컴파일러는 람다의 시그니처도 추론할 수 있다.
+
+자바 컴파일러는 다음처럼 람다 파라미터 형식을 추론할 수 있다.
+
+```java
+//형식을 추론하지 않음
+Comparator<Apple> c = 
+    (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+
+//형식을 추론함
+Comparator<Apple> c =
+    (a1, a2) -> a1.getWeight().compareTo(a2.getWeight()); 
+```
+
+<br>
+
+### 지역 변수 사용
+
+람다 표현식에서는 익명 함수가 하는 것처럼 **자유 변수**<sup>free variable</sup>를 활용할 수 있다. 이와 같은 동작을 **람다 캡처링**<sup>capturing lambda</sup>
+
+- 자유 변수: 파라미터로 넘겨진 변수가 아닌 외부에서 정의된 변수
+
+람다는 인스턴스 변수와 정적 변수를 자유롭게 캡처(자신의 바디에서 참조할 수 있도록)할 수 있다. 하지만 그러려면 지역 변수는 명시적으로 final로 선언되어 있어야 하거나 실질적으로 final로 선언된 변수와 똑같이 사용되어야 한다.
+
+다음 코드는 컴파일할 수 없는 코드이다.
+
+```java
+int portNumber = 1337;
+Runnable r = () -> System.out.println(portNumber);
+portNumber = 31337;
+```
+
+<br>
+
+#### 지역 변수의 제약
+
+인스턴스 변수와 지역 변수는 저장되는 곳이 다르다. 인스턴스 변수는 힙에 저장되는 반면 지역 변수는 스택에 저장된다. 람다에서 지역 변수에 바로 접근할 수 있다는 가정하에 람다가 스레드에서 실행된다면 **변수를 할당한 스레드가 사라져서 변수 할당이 해제되었는데도 람다를 실행하는 스레드에서는 해당 변수에 접근하려** 할 수 있다. 따라서 자바 구현에서는 원래 변수에 접근을 허용하는 것이 아니라 자유 지역 변수의 복사본을 제공한다. 따라서 **복사본의 값이 바뀌지 않아야 하므로 지역 변수에는 한 번만 값을 할당해야 한다는 제약이 생긴 것**이다. 또한 지역 변수의 제약 때문에 외부 변수를 변화시키는 일반적인 명령형 프로그래밍 패턴(병렬화를 방해하는 요소로 나중에 설명한다)에 제동을 걸 수 있다.
+
+<br>
+
+#### 클로저
+
+클로저는 함수의 비지역 변수를 자유롭게 참조할 수 있는 함수의 인스턴스를 말한다. 클로저는 클로저 외부에 정의된 변수의 값에 접근하고, 값을 바꿀 수 있다. 자바 8의 람다와 익명 클래스는 클로저와 비슷한 동작을 한다. 람다와 익명 클래스는 외부에 정의된 변수의 값에 접근할 수 있으나, 지역변수의 값은 바꿀 수 없다는 특징이 있다.
+
+<br>
+
+## 메소드 참조
+
+기존의 메소드를 재활용해서 람다처럼 전달할 수 있다. 
+
+```java
+//기존 코드
+inventory.sort((Apple a1, Apple a2) ->
+    a1.getWeight().compareTo(a2.getWeight()));
+
+//메소드 참조
+inventory.sort(comparing(Apple::getWeight));
+```
+
+<br>
+
+메소드 참조는 특정 메소드만을 호출하는 람다의 축약형이라고 할 수 있다. 메소드 참조를 이용하면 기존 메소드 구현으로 람다 표현식을 만들 수 있다.
+
+작성중...
