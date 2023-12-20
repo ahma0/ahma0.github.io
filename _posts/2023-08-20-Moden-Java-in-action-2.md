@@ -289,7 +289,7 @@ List<Apple> result =
         filterApples(inventory, (Apple, apple) -> RED.equals(apple.getColor()));
 ```
 
-![](https://github.com/ahma0/ahma0/assets/84761609/ae2b1688-6bea-492f-97d9-e45b3fddcbbd)
+![image](https://github.com/ahma0/ahma0/assets/84761609/ae2b1688-6bea-492f-97d9-e45b3fddcbbd)
 
 <br>
 

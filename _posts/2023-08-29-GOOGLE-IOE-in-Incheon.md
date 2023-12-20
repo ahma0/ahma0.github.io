@@ -12,7 +12,7 @@ tag: [Event, Conference, Google, Incheon, IOE]
 
 손목띠, 티셔츠와 스티커, 음료/쿠키 쿠폰을 받았다!
 
-![](https://github.com/ahma0/ahma0.github.io/assets/84761609/3deb1666-37b5-4e67-b28e-19d1a469d516)
+![손목띠, 티셔츠, 스티커, 음료, 쿠키 사진](https://github.com/ahma0/ahma0.github.io/assets/84761609/3deb1666-37b5-4e67-b28e-19d1a469d516)
 
 
 ## 🎈 Session
@@ -25,7 +25,7 @@ tag: [Event, Conference, Google, Incheon, IOE]
 
 ## KEYNOTE
 
-![](https://github.com/ahma0/ahma0.github.io/assets/84761609/0e70db46-7d40-46e5-9c1d-2a632338ac04)
+![KEYNOTE image](https://github.com/ahma0/ahma0.github.io/assets/84761609/0e70db46-7d40-46e5-9c1d-2a632338ac04)
 
 <br>
 

@@ -22,7 +22,7 @@ tag: [Post, Woowa, Review]
 
 > [1주차 코드 살펴보기](https://github.com/ahma0/java-baseball-6/tree/ahma0)
 
-![](https://github.com/ahma0/ahma0/assets/84761609/321db30b-023a-4795-a979-3a743167a45d)
+![32개의 커밋](https://github.com/ahma0/ahma0/assets/84761609/321db30b-023a-4795-a979-3a743167a45d)
 
 작년엔 1주차부터 바로 시작하는 것이 아닌 온보딩 기간이었다고 들었다. 그런데 이번엔 무슨 이유에선지 온보딩 기간을 갖지 않았다.
 
@@ -32,7 +32,7 @@ tag: [Post, Woowa, Review]
 
 개발하기 전 기능 명세서를 작성해야 했다. 명세서를 어떻게 작성할까 고민하다가 기능별로 작성하였다. 이게 어떤 기능이고, 무슨 일을 하는지 등을 적었다. api 명세서는 많이 적어봤지만 기능별로 명세서를 적는건 처음이라 어색했다. 체크박스를 이용해서 todo 리스트처럼 꾸며볼까 고민도 해봤지만 리스트 형식으로 결정하였다. 커밋 컨벤션과 코드 컨벤션을 지키기 위해 많이 노력했다.
 
-![](https://github.com/ahma0/ahma0/assets/84761609/178ed297-d4c6-49d9-af65-ee606105209c)
+![기능 명세서](https://github.com/ahma0/ahma0/assets/84761609/178ed297-d4c6-49d9-af65-ee606105209c)
 
 <br>
 
@@ -67,7 +67,7 @@ tag: [Post, Woowa, Review]
 
 > [2주차 코드 살펴보기](https://github.com/ahma0/java-racingcar-6/tree/ahma0)
 
-![](https://github.com/ahma0/ahma0/assets/84761609/17380ff9-3d9e-461d-96a7-4a63fcce12f7)
+![26개의 커밋](https://github.com/ahma0/ahma0/assets/84761609/17380ff9-3d9e-461d-96a7-4a63fcce12f7)
 
 <br>
 
@@ -84,7 +84,7 @@ tag: [Post, Woowa, Review]
 
 ### 📌 기능 명세서
 
-![](https://github.com/ahma0/ahma0/assets/84761609/a721a66d-6417-4c12-8ddb-01e4b0e330a3)
+![기능 요구사항](https://github.com/ahma0/ahma0/assets/84761609/a721a66d-6417-4c12-8ddb-01e4b0e330a3)
 
 먼저 추가 요구사항을 잊지 않기 위해 위에 적어두었다. 크게 Controller, View, Model로 나누어서 각각 기능을 적었다. 기능 명세서를 작성하면서 머리속으로 한 번 코딩이 되기 때문에 2번 구현하는 듯한 느낌이 들었다. 오히려 기능 명세서를 적으니 막히는 것이 별로 없어서 좋았다.
 
@@ -125,7 +125,7 @@ controller, model, view로 나누어서 패키지를 생성하여 개발하였�
 
 > [3주차 코드 살펴보기](https://github.com/ahma0/java-lotto-6/tree/ahma0)
 
-![](https://github.com/ahma0/ahma0/assets/84761609/d5f8542d-5ce3-41db-b8e5-20a8e9a96d03)
+![46개의 커밋](https://github.com/ahma0/ahma0/assets/84761609/d5f8542d-5ce3-41db-b8e5-20a8e9a96d03)
 
 
 이번 주제는 내가 깜빡하고 처리못한 예외가 있었다. 수가 45 이하인 자연수가 아니면 예외를 발생시켜야 했는데 깜빡하고 그걸 안한 것이다. 제출하고 다음 날 공통 피드백을 보며 깨달았다. 아쉬움이 많이 남았다.
@@ -143,7 +143,7 @@ Enum을 어디서 사용해야할까 고민을 많이 했다. 결국 당첨 내�
 
 ### 📌 기능 명세서 작성
 
-![](https://github.com/ahma0/ahma0/assets/84761609/1a7ca368-34a5-4027-bc60-8c2b65091dae)
+![기능 명세서](https://github.com/ahma0/ahma0/assets/84761609/1a7ca368-34a5-4027-bc60-8c2b65091dae)
 
 기능 명세서도 2주차와 비슷하게 적었다. 살아움직이는 문서?를 만들라고 해서 처음에 정한 기능 목록대로 무조건 만들어야되는게 아니라는걸 깨달았다.
 
@@ -219,11 +219,11 @@ public enum Matching {
 
 > [4주차 코드 살펴보기](https://github.com/ahma0/java-christmas-6-ahma0)
 
-![](https://github.com/ahma0/ahma0/assets/84761609/6b538ce3-d6bb-4b29-832f-cf79e0371635)
+![약 61개의 커밋](https://github.com/ahma0/ahma0/assets/84761609/6b538ce3-d6bb-4b29-832f-cf79e0371635)
 
 커밋 수가 60개를 넘겼다. 많아야 3~40개였던 것 같은데.. 이번 과제는 꽤 많이 어려웠다. 가장 크게 바뀐 점은 그동안 레포지토리를 포크해서 본인의 아이디로 된 브랜치에서 개발한 후 pr을 보내는 형식이었다면, 4주차 과제는 템플릿을 가져와 비공개 레포지토리로 생성한 후 main 브랜치에 개발하는 것이다.
 
-![](https://github.com/ahma0/ahma0/assets/84761609/c6bf872a-e5f3-4788-b3e4-de3191d1c4fc)
+![기능 요구사항](https://github.com/ahma0/ahma0/assets/84761609/c6bf872a-e5f3-4788-b3e4-de3191d1c4fc)
 
 요구사항부터 이메일 형식으로 왔다. 디스코드를 보니 다들 설렌다고 하던데.. 난 꽤나 당황했다. 그동안 리스트에 적혀있는 것을 구현만 하면 됐는데 이건 메일을 읽고 파악해야했기 때문이다. 그래도 밑의 메뉴를 보기 전까진 흥미로웠다. 메뉴를 보는 순간 db를 사용하는 것이 아닌데 저걸 어떻게 저장해서 갖고오나가 가장 머리 아픈 주제였다. 또, 각각의 메뉴에 따라 할인을 해 총 금액을 계산해야되는 것에서 자신감이 없어졌다.
 
@@ -233,7 +233,7 @@ public enum Matching {
 
 일단 어떻게 구현할 지 고민하기 위해 아래와 같이 이벤트에 대하여 날짜, 계획, 주의사항, 개발 요청 사항 등을 정리를 해놓았다.
 
-![](https://github.com/ahma0/ahma0/assets/84761609/1aadd253-3dc5-4344-b3cd-0e573de61253)
+![기능 명세서](https://github.com/ahma0/ahma0/assets/84761609/1aadd253-3dc5-4344-b3cd-0e573de61253)
 
 이어서 구현할 기능 목록을 작성하였는데, 이제까지 작성했던 것 중에 가장 막막했다. 시간이 부족해보였고, 혜택 내역에 대해 고민이 많았기 때문에 이것은 어떻게 개발되는지에 따라 방향을 정하기로 결정하고 개발부터 시작했다.
 

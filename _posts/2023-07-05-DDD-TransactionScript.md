@@ -56,7 +56,7 @@ Web<sup>Controller</sup>, Service, Repository, Dto, Domain, 이 5가지 레이�
 
 ## 수도 코드
 
-```
+```java
 @Transactional
 public Order cancelOrder(int orderId) {
     

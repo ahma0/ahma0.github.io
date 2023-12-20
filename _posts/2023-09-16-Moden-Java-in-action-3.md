@@ -54,7 +54,7 @@ Comparator<Apple> byWeight =
 
 람다 표현식은 파라미터, 화살표, 바디로 이루어진다.
 
-![](https://github.com/ahma0/ahma0/assets/84761609/59ad7b51-f7ac-48ea-9920-6be251777629)
+![람다 표현식의 구조](https://github.com/ahma0/ahma0/assets/84761609/59ad7b51-f7ac-48ea-9920-6be251777629)
 
 - 파라미터 리스트
     - Comparator의 compare 메서드 파리미터(사과 2개)
@@ -216,7 +216,7 @@ public String processFile() throws IOException{
 
 중복되는 준비 코드와 정리 코드가 작업 A와 작업 B를 감싸고 있다.
 
-![](https://github.com/ahma0/ahma0/assets/84761609/cdd3e54b-ea6e-42a4-9d25-17771a152dab)
+![코드의 구조](https://github.com/ahma0/ahma0/assets/84761609/cdd3e54b-ea6e-42a4-9d25-17771a152dab)
 
 <br>
 

@@ -131,7 +131,7 @@ image:
 
 서버를 개발하면서 가장 고민이 많았던 부분은 음악 필터링에 관한 부분이었다.
 
-<img src="https://user-images.githubusercontent.com/84761609/207040610-58f164af-e0da-4544-b5e8-5ddcd259044c.png"/>
+![필터링 화면](https://user-images.githubusercontent.com/84761609/207040610-58f164af-e0da-4544-b5e8-5ddcd259044c.png)
 
 정적 쿼리만으론 해당 기능이 구현되지 않아 동적 쿼리에 대해 많이 찾아봤다.. Criteria, Specification 등 무엇을 사용해야할 지 많이 고민해봤지만 시간이 촉박했고, 상대적으로 쉬워보였던 QueryDSL로 결정했다. 결국 해당 기능을 잘 구현해낼 수 있었다.
 
@@ -146,31 +146,31 @@ image:
     <th>LogIn</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040582-42769f8c-f7a3-4618-8a73-650f1072fa97.png"/></td>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040598-6bbfdda5-bfd1-411f-abc5-3f26abb9cdcf.png"/></td>
+    <td><img alt="home" src="https://user-images.githubusercontent.com/84761609/207040582-42769f8c-f7a3-4618-8a73-650f1072fa97.png"/></td>
+    <td><img alt="log in" src="https://user-images.githubusercontent.com/84761609/207040598-6bbfdda5-bfd1-411f-abc5-3f26abb9cdcf.png"/></td>
   </tr>
   <tr>
     <th>LogOut</th>
     <th>MusicFiltering 1 - Select Singers</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040602-ec1cf1f5-eec5-4c77-aed9-a18fbb32824e.png"/></td>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040610-58f164af-e0da-4544-b5e8-5ddcd259044c.png"/></td>
+    <td><img alt="log out" src="https://user-images.githubusercontent.com/84761609/207040602-ec1cf1f5-eec5-4c77-aed9-a18fbb32824e.png"/></td>
+    <td><img alt="MusicFiltering 1" src="https://user-images.githubusercontent.com/84761609/207040610-58f164af-e0da-4544-b5e8-5ddcd259044c.png"/></td>
   </tr>
   <tr>
     <th>MusicFiltering 2 - Selects</th>
     <th>MyPlaylists</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040608-501029ad-8a28-43a9-bb0f-b045b921537b.png"/></td>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040605-5529d8ea-2a48-431c-ae00-e6eeb5b7349d.png"/></td>
+    <td><img alt="MusicFiltering 2" src="https://user-images.githubusercontent.com/84761609/207040608-501029ad-8a28-43a9-bb0f-b045b921537b.png"/></td>
+    <td><img alt="MyPlaylists" src="https://user-images.githubusercontent.com/84761609/207040605-5529d8ea-2a48-431c-ae00-e6eeb5b7349d.png"/></td>
   </tr>
   <tr>
     <th>MusicLists in Playlist</th>
     <th>Modifying my Playlist Title</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040574-3cf140c5-edf3-4109-bf29-18bfd7ff43fb.png"/></td>
+    <td><img alt="" src="https://user-images.githubusercontent.com/84761609/207040574-3cf140c5-edf3-4109-bf29-18bfd7ff43fb.png"/></td>
     <td><img src="https://user-images.githubusercontent.com/84761609/207040579-9553a636-6bd1-4ab1-8887-7bd978e624c5.png"/></td>
   </tr>
   </table>

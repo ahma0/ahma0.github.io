@@ -61,7 +61,7 @@ tweeting University Cafeteria's Lunch Menus in twitter for myself. And learning 
 
 ### Twitter Developer
 
-<img src="https://user-images.githubusercontent.com/84761609/168482702-14d92f29-ca96-457a-bb7b-4023352aa565.png">
+<img alt="Twitter Developer 화면" src="https://user-images.githubusercontent.com/84761609/168482702-14d92f29-ca96-457a-bb7b-4023352aa565.png">
 
 트위터 봇을 만드려면 트위터 디벨로퍼의 승인을 받은 트위터 계정이 필요하다. 승인 받는 방법은 구글링을 통해 따로 알아보길 바란다.
 [트위터 디벨로퍼 승인받은 당시의 소감](https://blog.naver.com/dsd932/222690657076)
@@ -85,7 +85,7 @@ tweeting University Cafeteria's Lunch Menus in twitter for myself. And learning 
 내 깃허브 코드를 보면 알겠지만 Api key나 Access token이 드러나있지 않고 Environment를 이용하여 환경에서 변수를 받아왔다.
 해당 4개의 키를 그대로 드러내기엔 계정의 중요한 정보라 거부감이 든다.
 
-<img src="https://user-images.githubusercontent.com/84761609/168483328-d776383c-05af-4d2e-80a1-60db872f345b.png">
+<img alt="github secret 화면" src="https://user-images.githubusercontent.com/84761609/168483328-d776383c-05af-4d2e-80a1-60db872f345b.png">
 
 
 따라서 나는 Secret에 인증키들을 등록하는 방법을 사용하였다.
@@ -147,6 +147,6 @@ jobs:
 ## 동작 화면
 
 
-<img src="https://user-images.githubusercontent.com/84761609/168483987-c0f0af12-ef92-4ae1-806e-0fdedd2bd78e.jpg">
+<img alt="" src="https://user-images.githubusercontent.com/84761609/168483987-c0f0af12-ef92-4ae1-806e-0fdedd2bd78e.jpg">
 <img src="https://user-images.githubusercontent.com/84761609/168483989-9f98ecbb-21c4-4162-8671-525d17d639b6.jpg">
 
