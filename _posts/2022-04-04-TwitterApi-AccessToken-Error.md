@@ -169,7 +169,7 @@ print(me.screen_name)
 
 #### 3. oauth_verifier=의 뒷 부분을 복사해 콘솔에 핀 번호로 입력 후 토큰을 얻습니다.
 
-![](https://user-images.githubusercontent.com/84761609/169577518-7f570124-c2ef-438a-8131-009d1fec79ff.png)
+![콘솔창](https://user-images.githubusercontent.com/84761609/169577518-7f570124-c2ef-438a-8131-009d1fec79ff.png)
 
 
 저 부분을 복사해서 핀 번호로 입력하면 *액세스 토큰과 액세스 시크릿 토큰*이 나옵니다.

@@ -54,7 +54,7 @@ tag: [Event, BOJ, Scholarship, 백준 장학금]
 
 ### 📎 1일 1 커밋
 
-![커밋 이미지](https://github.com/ahma0/ahma0.github.io/assets/84761609/93ff8933-8514-475a-a96a-7f967faf4453)
+![커밋 내역](https://github.com/ahma0/ahma0.github.io/assets/84761609/93ff8933-8514-475a-a96a-7f967faf4453)
 
 <br>
 

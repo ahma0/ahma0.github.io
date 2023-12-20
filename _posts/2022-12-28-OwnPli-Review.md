@@ -170,7 +170,7 @@ image:
     <th>Modifying my Playlist Title</th>
   </tr>
   <tr>
-    <td><img alt="" src="https://user-images.githubusercontent.com/84761609/207040574-3cf140c5-edf3-4109-bf29-18bfd7ff43fb.png"/></td>
-    <td><img src="https://user-images.githubusercontent.com/84761609/207040579-9553a636-6bd1-4ab1-8887-7bd978e624c5.png"/></td>
+    <td><img alt="플레이리스트 안에 음악들" src="https://user-images.githubusercontent.com/84761609/207040574-3cf140c5-edf3-4109-bf29-18bfd7ff43fb.png"/></td>
+    <td><img alt="플레이리스트 제목 정하는 화면" src="https://user-images.githubusercontent.com/84761609/207040579-9553a636-6bd1-4ab1-8887-7bd978e624c5.png"/></td>
   </tr>
   </table>

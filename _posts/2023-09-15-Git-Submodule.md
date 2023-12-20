@@ -37,7 +37,7 @@ git clone --recurse-submodules <레포지토리의 깃 주소>
 ![서브모듈 클론](https://github.com/ahma0/ahma0/assets/84761609/07d7bd38-af44-4d79-979c-bb9a8741c2b1)
 
 
-- 기존 방식(`git clone <레포지토리의 깃 주소`)으로 클론했을 때
+- 기존 방식(`git clone <레포지토리의 깃 주소>`)으로 클론했을 때
 
 ![기존 방식](https://github.com/ahma0/ahma0/assets/84761609/6651b7e3-4bf4-4fa8-b2f7-5155b8658a36)
 
