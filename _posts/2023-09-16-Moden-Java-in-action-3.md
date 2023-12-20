@@ -175,7 +175,7 @@ process(() -> System.out.println("Hello World 3"));
 
 <br>
 
-#### 람다와 메소드 호출
+#### 람다와 메서드 호출
 
 조금 이상해보일 수 있지만 아래는 정상적인 람다 표현식이다.
 
@@ -189,7 +189,7 @@ process(() -> System.out.println("This is awesome"));
 process(() -> { System.out.println("This is awesome"); });
 ```
 
-결론적으로 중괄호는 필요 없다. 자바 언어 명세에서는 void를 반환하는 메소드 호풀과 관련한 특별한 규칙을 정하고 있기 때문이다. 즉 한 개의 void 메소드 호출은 중괄호로 감쌀 필요가 없다.
+결론적으로 중괄호는 필요 없다. 자바 언어 명세에서는 void를 반환하는 메서드 호풀과 관련한 특별한 규칙을 정하고 있기 때문이다. 즉 한 개의 void 메서드 호출은 중괄호로 감쌀 필요가 없다.
 
 <br>
 
@@ -222,7 +222,7 @@ public String processFile() throws IOException{
 
 ### 1단계 : 동작 파라미터화를 기억하라
 
-현재 코드는 한 번에 한 줄만 읽을 수 있다. 한 번에 두 줄을 읽거나 가장 자주 사용되는 단어를 반환하려면 어떻게 해야할까? 기존의 설정, 정리 과정은 재사용하고 processFile 메서드만 다른 동작을 명령할 수 있다면 좋을것이다. processFile의 동작을 파라미터화하자. processFile 메소드가 BufferedReader를 이용해서 다른 동작을 수행할 수 있도록 processFile 메서드로 동작을 전달해야 한다.
+현재 코드는 한 번에 한 줄만 읽을 수 있다. 한 번에 두 줄을 읽거나 가장 자주 사용되는 단어를 반환하려면 어떻게 해야할까? 기존의 설정, 정리 과정은 재사용하고 processFile 메서드만 다른 동작을 명령할 수 있다면 좋을것이다. processFile의 동작을 파라미터화하자. processFile 메서드가 BufferedReader를 이용해서 다른 동작을 수행할 수 있도록 processFile 메서드로 동작을 전달해야 한다.
 
 람다를 이용해서 동작을 전달하자. processFile 메서드가 한 번에 두 행을 읽게 하려면 BufferedReader를 인수로 받아서 String을 반환하는 람다가 필요하다.
 
@@ -530,21 +530,112 @@ portNumber = 31337;
 
 <br>
 
-## 메소드 참조
+## 메서드 참조
 
-기존의 메소드를 재활용해서 람다처럼 전달할 수 있다. 
+기존의 메서드를 재활용해서 람다처럼 전달할 수 있다. 
 
 ```java
 //기존 코드
 inventory.sort((Apple a1, Apple a2) ->
     a1.getWeight().compareTo(a2.getWeight()));
 
-//메소드 참조
+//메서드 참조
 inventory.sort(comparing(Apple::getWeight));
 ```
 
 <br>
 
-메소드 참조는 특정 메소드만을 호출하는 람다의 축약형이라고 할 수 있다. 메소드 참조를 이용하면 기존 메소드 구현으로 람다 표현식을 만들 수 있다.
+메서드 참조는 특정 메서드만을 호출하는 람다의 축약형이라고 할 수 있다. 메서드 참조를 이용하면 기존 메서드 구현으로 람다 표현식을 만들 수 있다. 이때 명시적으로 메서드명을 참조함으로써 **가독성을 높일 수 있다**. 메서드명 앞에 구분자(`::`)를 붙이는 방식으로 메서드명을 참조한다.
 
-작성중...
+<br>
+
+### 메서드 참조를 만드는 방법
+
+1. **정적 메서드 참조**
+
+- Integer의 parseInt 메서드는 `Integer::parseInt`로 나타낼 수 있다.
+
+2. **다양한 형식의 인스턴스 메서드 참조**
+
+-  String의 length 메서드는 `String::length`로 표현할 수 있다.
+
+3. **기존 객체의 인스턴스 메서드 참조**
+
+- Transaction 객체를 할당받은 expensiveTransaction 지역 변수가 있고, Transaction 객체에는 getValue 메서드가 있다면, 이를 `expensiveTransaction::getValue`라고 표현할 수 있다.
+- 비공개 헬퍼 메서드를 정의한 상황에서 유용하게 사용할 수 있다.
+
+<br>
+
+## 생성자 참조
+
+`ClassName::new`처럼 클래스명과 `new` 키워드를 이용해서 기존의 생성자 참조를 만들 수 있다.
+
+<br>
+
+## 람다 표현식을 조합할 수 있는 유용한 메서드
+
+`Comparator`, `Function`, `Predicate`같은 함수형 인터페이스는 람다 표현식을 조합할 수 있도록 유틸리티 메서드를 제공한다. 간단한 여러 개의 람다 표현식을 조합해서 복잡한 람다 표현식을 만들거나 한 함수의 입력 결과가 다른 함수의 입력이 되도록 두 함수를 조합할 수 있다. 여기서 등장하는 것이 **디폴트 메서드**<sup>default method</sup>이다.
+
+<br>
+
+### Comparator 조합
+
+```java
+Comparator<Apple> c = Comparator.comparing(Apple::getWeight);
+```
+
+1. 역정렬
+
+```java
+inventory.sort(comparing(Apple::getWeight).reversed());
+```
+
+2. Comperator 연결
+
+```java
+inventory.sort(comparing(Apple::getWeight)
+    .reversed() //무게를 내림차순으로 정렬
+    .thenComparing(Apple::getCountry)); //두 사과의 무게가 같으면 국가별로 정렬
+```
+
+<br>
+
+### Predicate 조합
+
+Predicate 인터페이스는 복잡한 프레디케이트를 만들 수 있도록 negate, and, or 세 가지 메서드를 제공한다.
+
+```java
+//기존 프레디케이트 객체 redApple의 결과를 반전시킨 객체를 만든다
+Predicate<Apple> notRedApple = redApple.negate();
+
+//두 프레디케이트를 연결해서 새로운 프레디케이트 객체를 만든다.
+Predicate<Apple> redAndHeavyApple = 
+    redApple.and(apple -> apple.getWeight() > 150);
+
+//프레디케이트 메서드를 연결해서 더 복잡한 프레디케이트 객체를 만든다.
+Predicate<Apple> redAndHeavyAppleOrGreen =
+    redApple.and(apple -> apple.getWeight() > 150)
+            .or(apple -> GREEN.equals(a.getColor()));
+```
+
+<br>
+
+### Function 조합
+
+Function 인터페이스는 Function 인스턴스를 반환하는 andThen, compose 두 가지 디폴트 메서드를 제공한다.
+
+- andThen: 주어진 함수를 먼저 적용한 결과를 다른 함수의 입력으로 전달하는 함수를 반환
+- compose: 인수로 주어진 함수를 먼저 실행한 다음에 그 결과를 외부 함수의 인수로 제공
+
+```java
+Function<Integer, Integer> f = x -> x + 1;
+Function<Integer, Integer> g = x -> x * 2;
+
+//수학으로는 write g(f(x)) 또는 (g o f)(x)라고 표현
+Function<Integer, Integer> h = f.andThen(g);
+int result = h.apply(1); //4를 반환
+
+//수학으로는 f(g(x)) 또는 (f o g)(x)라고 표현
+Function<Integer, Integer> h = f.compose(g);
+int result = h.apply(1); //3을 반환
+```
