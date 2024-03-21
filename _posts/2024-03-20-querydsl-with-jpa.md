@@ -3,7 +3,7 @@ title: Querydsl과 JPA 같이 쓰기, 페이징과 Map
 author: ahma0
 date:   2024-03-20 11:21:00 +0900
 categories: [Study, Querydsl]
-tag: [Study, Spring, Querydsl]
+tag: [Study, Spring, Querydsl, Paging, Map]
 math: true
 mermaid: true
 image:
