@@ -8,7 +8,7 @@ math: true
 mermaid: true
 image:
   path: https://github.com/ahma0/ahma0.github.io/assets/84761609/4c79b0e1-6f51-4657-ac99-c948085be91d
-  alt: querydsl logo
+  alt: jwt + redis
 ---
 
 ## 📌 JWT 토큰 관리
