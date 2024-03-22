@@ -164,6 +164,94 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 <br>
 
+## +) 추가
+
+- 기존 방식
+
+```java
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
+                .and()
+                .httpBasic().disable()
+                .formLogin().disable()
+                .addFilter(corsFilter);
+
+        http.authorizeRequests()
+                .antMatchers(FRONT_URL+"/main/**")
+                .authenticated()
+                .anyRequest().permitAll()
+
+                .and()
+                //(1)
+                .exceptionHandling()
+                .authenticationEntryPoint(new CustomAuthenticationEntryPoint());
+
+		//(2)
+        http.addFilterBefore(new JwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+}
+
+```
+
+- 변경된 방식
+
+```java
+@Configuration
+@EnableWebSecurity
+@RequiredArgsConstructor
+public class SecurityConfig {
+
+    private final CorsFilter corsFilter;
+    public static final String FRONT_URL = "http://localhost:3000";
+
+    @Bean
+    public BCryptPasswordEncoder encodePwd() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement((sessionManagement) ->
+                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                )
+                .httpBasic(AbstractHttpConfigurer::disable)
+                .formLogin(AbstractHttpConfigurer::disable)
+                .addFilter(corsFilter);
+
+        http
+                .authorizeRequests((authz) -> authz
+                                .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
+                                .requestMatchers(
+                                        new AntPathRequestMatcher("/bookmark/**"),
+                                        new AntPathRequestMatcher("/user/mypage/**")
+                                ).hasRole(Role.USER.name())
+                                .requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole(Role.ADMIN.name())
+                                .anyRequest().authenticated()
+                )
+                .exceptionHandling((exceptionConfig) ->
+                        exceptionConfig.authenticationEntryPoint(new CustomAuthenticationEntryPoint())
+                );
+
+        http
+                .addFilterBefore(new JwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
+    }
+
+}
+```
+
 ------
 
 ## 📌 requestMatchers 에러
