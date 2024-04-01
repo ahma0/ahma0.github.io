@@ -6,8 +6,6 @@ categories: [Study, AWS]
 tag: [Study, AWS, ec2]
 ---
 
-책에 윈도우 버전밖에 적혀있지 않아서 맥os 버전을 정리하려 한다.
-
 ## 인스턴스에 접속하기
 
 먼저 pem 키 파일의 권한을 변경한다.
