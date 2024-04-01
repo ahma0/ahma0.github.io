@@ -64,13 +64,21 @@ $ vi ~/.ssh/config
 ```
 
 ```
+# public
 Host <본인이 원하는 서비스명>
-    HostName <ec2의 탄력적 IP주소>
+    HostName <ec2 instance의 public IP주소>
     User ec2-user
     IdentityFile <~/.ssh/pem-name.pem>
+
+# private
+Host <본인이 원하는 서비스명>
+    HostName <ec2 instance의 private IP 주소>
+    User ec2-user
+    IdentityFile <~/.ssh/pem-name.pem>
+    ssh <public 서버의 서비스명> -W %h:%p
 ```
 
-생성된 config 파일은 실행 권한이 필요하기 때문에 부여해준다.
+public 서버의 Hostname은 개발 머신에서 연결하므로 퍼블릭 IP를 지정한다. 그러나 private 서버의 Hostname은 public 서버로부터 연결하므로 VPC 안에서 이용하는 프라이빗 IP를 지정한다. 생성된 config 파일은 실행 권한이 필요하기 때문에 부여해준다.
 
 ```
 $ chmod 700 ~/.ssh/config
