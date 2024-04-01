@@ -113,6 +113,102 @@ Q 클래스를 사용하기 위해서 `compileQuerydsl`을 빌드해주면 된�
 
 <br>
 
+### +) Spring Boot 3.0.0 이상 querydsl 설정
+
+Spring Boot 3.x.x 대로 넘어오면서 querydsl 플러그인을 사용하면 여러 문제점이 생길 수 있다는 것을 알게되었다. 그래서 3버전 이상부터는 아래와 같이 설정을 해야한다. dependency는 유지하고 Querydsl 관련 플러그인 제거 및 clean 동작에 QType 제거 동작을 추가해주면 gradle task - build시 새 QType이 생성된다.
+
+```
+buildscript {
+    ext {
+        queryDslVersion = "5.0.0"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+    // querydsl plugin 제거
+//    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+
+def generatedDir = 'src/main/generated'
+
+group = 'toyproject.genshin'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+//configurations {
+//    compileOnly {
+//        extendsFrom annotationProcessor
+//    }
+//}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    //querydsl
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+    annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+
+}
+
+def querydslDir = "$buildDir/generated/querydsl"
+
+//querydsl {
+//    jpa = true
+//    querydslSourcesDir = querydslDir
+//}
+
+//sourceSets {
+//    main.java.srcDir querydslDir
+//}
+
+//configurations {
+//    querydsl.extendsFrom compileClasspath
+//}
+
+clean {
+    delete file (generatedDir)
+}
+
+//compileQuerydsl {
+//    options.annotationProcessorPath = configurations.querydsl
+//}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+```
+
+<br>
+
 ## Querydsl과 JPA 같이 쓰기
 
 querydsl과 JPA를 같이 쓰는 방법은 간단하다. JPA 레포지토리에 querydsl 코드를 구현한 인터페이스를 상속시켜주면 된다.
