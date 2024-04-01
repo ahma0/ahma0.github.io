@@ -178,7 +178,7 @@ dependencies {
 
 }
 
-def querydslDir = "$buildDir/generated/querydsl"
+//def querydslDir = "$buildDir/generated/querydsl"
 
 //querydsl {
 //    jpa = true
