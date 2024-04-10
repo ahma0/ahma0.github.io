@@ -34,16 +34,16 @@ POST https://www.spotify.com/graphql
 
 ```
 {
-	artist(query: "아이들") { 
+    artist(query: "아이들") { 
     	name
         ...
     }
     music(query: "아이들") {
-		name
+        name
         ...
     }
     album(query: "아이들") {
-    	name
+        name
         ...
     }
 }
@@ -59,7 +59,8 @@ sql은 데이터베이스 시스템에 저장된 데이터를 효율적으로 �
 SELECT plot_id, species_id, sex, weight, ROUND(weight / 1000.0, 2) FROM surveys;
 ```
 
-```gql
+```
+//GraphQL
 {
   hero {
     name
