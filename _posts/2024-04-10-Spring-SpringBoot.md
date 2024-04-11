@@ -1,5 +1,5 @@
 ---
-title: Spring Framework와 SpringBoot의 차이
+title: Spring Framework와 Spring Boot의 차이
 author: ahma0
 date:   2024-04-10 17:30:00 +0900
 categories: [StudyGroup, Spring]
@@ -59,11 +59,11 @@ JUnit, Mockito와 같은 유닛 테스트 프레임워크와 통합이 간단하
 
 <br>
 
-## SpringBoot
+## Spring Boot
 
 > Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".<br><br>We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need minimal Spring configuration.
 
-위는 [SpringBoor 공식 문서](https://spring.io/blog/2006/11/09/spring-framework-the-origins-of-a-project-and-a-name)의 일부분으로 스프링 부트는 단독적이고, 상용화 수준의, 스프링 기반 애플리케이션을 단지 실행할 수 있을 정도로 쉽게 만들 수 있다는 내용이다.
+위는 [Spring Boot 공식 문서](https://spring.io/blog/2006/11/09/spring-framework-the-origins-of-a-project-and-a-name)의 일부분으로 스프링 부트는 단독적이고, 상용화 수준의, 스프링 기반 애플리케이션을 단지 실행할 수 있을 정도로 쉽게 만들 수 있다는 내용이다.
 
 Spring Boot는 Spring Framework를 기반으로 좀더 확장된 모듈로써, Spring Framework의 기능을 포함하고 있고, Spring Framework의 단점이라고도 할수 있는 복잡한 환경설정을 자동으로 해주기때문에 개발자가 좀더 개발에만 집중할수 있다는 장점이 있다.
 
