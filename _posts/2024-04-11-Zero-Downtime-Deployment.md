@@ -32,7 +32,7 @@ v1 서비스를 종료 시키는 시점부터 v2를 시작하기 전까지 애�
 
 ### 📌 방식 1
 
-![rolling deployment 1](/_posts/rolling-deployment-1.gif)
+![rolling deployment 1](/posts/img/rolling-deployment-1.gif)
 
 인스턴스를 하나 추가하고, 새로운 버전을 실행한다. 로드 밸런서에 이 인스턴스를 연결하고, 기존 구버전 어플리케이션이 실행되는 인스턴스 하나를 줄인다.
 
@@ -42,7 +42,7 @@ v1 서비스를 종료 시키는 시점부터 v2를 시작하기 전까지 애�
 
 ### 📌 방식 2
 
-![rolling deployment 2](/_posts/rolling-deployment-2.gif)
+![rolling deployment 2](/posts/img/rolling-deployment-2.gif)
 
 V1이 실행되고 있는 서버 하나를 로드밸런서에서 라우팅하지 않도록 한다. 이렇게 되면, 해당 서버에는 트래픽이 도달하지 않게 된다. 이 상태에서 해당 서버의 어플리케이션을 V2로 적용한다. 이를 반복해서 모든 서버를 새로운 버전으로 교체한다.
 
@@ -72,7 +72,7 @@ V1이 실행되고 있는 서버 하나를 로드밸런서에서 라우팅하지
 
 ## 🥑 Blue/Green이란?
 
-![Blue/Green Deployment](/_posts/img/blue-green-deployment.gif)
+![Blue/Green Deployment](/posts/img/blue-green-deployment.gif)
 
 트래픽을 한번에 구버전에서 신버전으로 옮기는 방법이다. Blue/Green 배포 전략에서는 현재 운영중인 서비스의 환경을 Blue라고 부르고, 새롭게 배포할 환경을 Green이라고 부른다.
 
@@ -106,7 +106,7 @@ blue/green 배포는 무중단 시스템 배포 방법중 가장 많이 사용�
 
 옛날 광부들이 유독 가스에 민감한 카나리아 새를 이용해 가스 누출 위험을 감지했던 것에서 유래한 것으로 잠재적 문제 상황을 미리 발견하기 위한 방식이다. 점진적으로 구버전에 대한 트래픽을 신버전으로 옮기는 것은 롤링 배포 방식과 비슷하다. 다만 카나리<sub>Canary</sub> 배포의 핵심은 새로운 버전에 대한 오류를 조기에 감지하는 것이다.
 
-![Canary Deployment](./img/canary-deployment.gif)
+![Canary Deployment](/post/img/canary-deployment.gif)
 
 소수 인원에 대해서만 트래픽을 새로운 버전에 옮겨둔 상태에서 서비스를 운영한다. 새로운 버전에 이상이 없다고 판단하였을 경우에 모든 트래픽을 신규 버전으로 옮긴다. 이때, 트래픽을 새로운 버전으로 옮기는 기준은 정해진 규칙(특정 유저 등) 혹은 랜덤이다.
 
