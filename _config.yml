@@ -14,9 +14,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Devug                          # the main title
+title: nya0                          # the main title
 
-tagline: Development blog   # it will display as the sub-title
+tagline: Java Chip Frappuccino   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   ahma0's Dev Blog
