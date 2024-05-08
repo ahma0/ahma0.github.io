@@ -3,7 +3,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hello, I'm <a href="https://github.com/ahma0">Nayeong Ahn. It is a blog that summarizes what I've studied.</a>
+Hello, I'm <a href="https://github.com/ahma0">Nayeong Ahn.</a> It is a blog that summarizes what I've studied.
 
     
 <h2>⚡Projects⚡</h2>
