@@ -530,9 +530,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 
 ![커스텀 스니펫](https://github.com/user-attachments/assets/52b3b2cc-27ba-4a9a-942b-1f53a83a5cd0)
 
-내가 작성한 스니펫들은 이렇다.
-
-<br>
+내가 작성한 스니펫들은 이렇다. 스니펫 코드가 블로그에서 제대로 뜨지 않는 관계로 사진도 추가하였다.
 
 #### query-parameters.snippet
 
@@ -550,7 +548,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 |===
 ```
 
-<br>
+![query-parameters](https://github.com/user-attachments/assets/a832a6bc-add9-4bed-a99f-38f8d2620168)
 
 #### request-fields.snippet
 
@@ -567,7 +565,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 |===
 ```
 
-<br>
+![request-fields](https://github.com/user-attachments/assets/25b5f127-c279-486c-8f34-53da407c4c73)
 
 #### response-fields.snippet
 
@@ -583,13 +581,13 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 |===
 ```
 
+![response-fields](https://github.com/user-attachments/assets/c1fd2dd3-642f-48bc-97a1-c0628499a6b0)
+
 <br>
 
 ### 문서 작성
 
 `src/docs/asciidoc`에 문서 작성을 해준다. 예시는 다음과 같다.
-
-<br>
 
 #### index.adoc
 
@@ -603,8 +601,6 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 
 include::characters.adoc[]
 ```
-
-<br>
 
 #### characters.adoc
 
