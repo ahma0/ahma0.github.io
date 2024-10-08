@@ -120,16 +120,208 @@ $ redis-server
 6865:M 08 Oct 2024 12:00:43.163 # Redis is now ready to exit, bye bye...
 ```
 
+<br>
+
 ### 🚨 오류 해결
 
-설치 위치가 usr/local/bin인데, redis-server를 입력해서 실행해보면 usr/bin에 파일이 없다는 엉뚱한 소리를 하는 오류가 생길 때가 있다. 이 경우 아래의 명령어를 작성해주면 된다. 
+설치 위치가 `usr/local/bin`인데, `redis-server`를 입력해서 실행해보면 `usr/bin`에 파일이 없다는 엉뚱한 소리를 하는 오류가 생길 때가 있다. 이 경우 아래의 명령어를 작성해주면 된다. 
 
 ```shell
-# 홈 경로로 이동한 후 Redis 서버 실행 파일과 redis-cli를 시스템의 /usr/bin 디렉터리로 복사
+# 홈 경로로 이동한 후 Redis 서버 실행 파일과 `redis-cli`를 시스템의 `/usr/bin` 디렉터리로 복사
 $ cd ~
 $ sudo cp ~/redis-7.4.1/src/redis-server /usr/bin
 $ sudo cp ~/redis-7.4.1/src/redis-cli /usr/bin
 
 # 서버 실행
 $ redis-server
+```
+
+<br>
+
+## 🍥 Redis 백그라운드 실행하기
+
+Redis를 실행하기 위해 `sudo systemctl start redis`를 입력하였다.
+
+```shell
+$ sudo systemctl start redis
+[sudo] password for user:
+Failed to start redis.service: Unit redis.service not found.
+```
+
+Redis 설치를 끝낸 줄 알았는데 `redis.service`가 없다니! 새로 만들어주기로 결정하였다.
+
+```shell
+# redis-server가 설치되어 있는지 확인
+# 하지만 우리는 방금 redis-server를 입력해 서버가 실행되는 것을 확인했으니 생략해도 된다.
+$ which redis-server
+/usr/bin/redis-server
+
+# redis-server와 redis-cli의 위치 찾기
+$ whereis redis-server
+redis-server: /usr/bin/redis-server
+$ whereis redis-cli
+redis-cli: /usr/bin/redis-cli
+
+# redis.service 생성
+# 나는 vi를 사용해서 작성하였다. nano를 사용한다면 nano를 써도 된다.
+$ sudo vi /etc/systemd/system/redis.service
+sudo mv ~/jiran/redis-7.4.1/* /etc/redis/
+```
+
+<br>
+
+### 🥨 Service 파일 작성
+
+`redis.service` 파일을 아래와 같이 작성한다. `ExecStart`와 `ExecStop`에 들어갈 경로는 아까 `whereis` 커맨드를 입력해서 찾은 경로를 입력해줘야 한다. 나는 `/usr/bin`로 떠서 저렇게 입력해줬다. 만약 `/usr/local/bin`으로 뜬다면 `/usr/local/bin`으로 작성하면 된다. `/etc/redis/redis.conf` 또한 본인의 'redis.conf' 경로를 입력해주면 된다.
+
+```ini
+[Unit]
+Description=Redis In-Memory Data Store
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/redis-server /etc/redis/redis.conf
+ExecStop=/usr/bin/redis-cli shutdown
+User=redis
+Group=redis
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+전부 작성을 끝냈다. 이제 실행해보자.
+
+```shell
+# 서비스 리로드
+$ sudo systemctl daemon-reload
+
+# 백그라운드로 Redis 실행
+$ sudo systemctl start redis
+
+# 제대로 실행되었는지 확인하기 위해 ping 보내기
+# 백그라운드에 떠있다면 PONG이 와야한다.
+$ redis-cli ping
+PONG
+```
+
+<br>
+
+### 🚨 오류 해결
+
+나는 PONG이 오지 않았다.
+
+```shell
+$ redis-cli ping
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+
+# redis status 확인
+$ sudo systemctl status redis
+× redis.service - Redis In-Memory Data Store
+     Loaded: loaded (/etc/systemd/system/redis.service; disabled; preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2024-10-08 15:47:18 KST; 2min 40s ago
+   Duration: 4ms
+    Process: 7326 ExecStart=/usr/bin/redis-server /etc/redis/redis.conf (code=exited, status=217/USER)
+   Main PID: 7326 (code=exited, status=217/USER)
+
+Oct 08 15:47:18 computerName systemd[1]: redis.service: Scheduled restart job, restart counter is at 5.
+Oct 08 15:47:18 computerName systemd[1]: redis.service: Start request repeated too quickly.
+Oct 08 15:47:18 computerName systemd[1]: redis.service: Failed with result 'exit-code'.
+Oct 08 15:47:18 computerName systemd[1]: Failed to start redis.service - Redis In-Memory Data Store.
+```
+
+`status=217/USER` 오류로 보아 사용자 관련 문제로 인해 발생한 것 같다. user를 지정해주지 않았는데 `redis.service` 파일에 작성해놨기 때문이다. 해결 방법은 간단하다. 주석치면 된다.
+
+```ini
+[Unit]
+Description=Redis In-Memory Data Store
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/redis-server /etc/redis/redis.conf
+ExecStop=/usr/bin/redis-cli shutdown
+# User=redis
+# Group=redis
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+<br>
+
+### 🚨 오류 해결 2
+
+만약 아래와 같은 오류가 떴다면 `redis.service`의 `redis.conf` 경로가 제대로 되어있는지 확인해보자.
+
+```shell
+$ redis-cli ping
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+
+$ sudo systemctl status redis
+× redis.service - Redis In-Memory Data Store
+     Loaded: loaded (/etc/systemd/system/redis.service; disabled; preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2024-10-08 15:54:25 KST; 12s ago
+   Duration: 19ms
+    Process: 7490 ExecStart=/usr/bin/redis-server /etc/redis/redis.conf (code=exited, status=1/FAILURE)
+   Main PID: 7490 (code=exited, status=1/FAILURE)
+
+Oct 08 15:54:25 computerName systemd[1]: redis.service: Scheduled restart job, restart counter is at 5.
+Oct 08 15:54:25 computerName systemd[1]: redis.service: Start request repeated too quickly.
+Oct 08 15:54:25 computerName systemd[1]: redis.service: Failed with result 'exit-code'.
+Oct 08 15:54:25 computerName systemd[1]: Failed to start redis.service - Redis In-Memory Data Store.
+```
+
+이 오류는 간단하다. `redis.conf`의 경로만 알맞게 바꿔주면 된다.
+
+<br>
+
+### +) redis 폴더 내의 모든 파일과 서브폴더 옮기기
+
+이건 하지 않아도 된다. 나는 찝찝해서 옮겨놓았다.
+
+```shell
+$ cd ~/redis-7.4.1
+
+# redis-7.4.1에 있는 폴더 리스트 출력
+$ ll
+total 316
+drwxr-xr-x  8 jiran jiran   4096 Oct  8 14:50 ./
+drwxr-x---  4 jiran jiran   4096 Oct  8 15:49 ../
+drwxr-xr-x  2 jiran jiran   4096 Oct  3 04:04 .codespell/
+-rw-r--r--  1 jiran jiran    405 Oct  3 04:04 .gitattributes
+drwxr-xr-x  4 jiran jiran   4096 Oct  3 04:04 .github/
+-rw-r--r--  1 jiran jiran    559 Oct  3 04:04 .gitignore
+-rw-r--r--  1 jiran jiran  10420 Oct  3 04:04 00-RELEASENOTES
+-rw-r--r--  1 jiran jiran     51 Oct  3 04:04 BUGS
+-rw-r--r--  1 jiran jiran   5023 Oct  3 04:04 CODE_OF_CONDUCT.md
+-rw-r--r--  1 jiran jiran   7178 Oct  3 04:04 CONTRIBUTING.md
+-rw-r--r--  1 jiran jiran     11 Oct  3 04:04 INSTALL
+-rw-r--r--  1 jiran jiran  37493 Oct  3 04:04 LICENSE.txt
+-rw-r--r--  1 jiran jiran   6888 Oct  3 04:04 MANIFESTO
+-rw-r--r--  1 jiran jiran    151 Oct  3 04:04 Makefile
+-rw-r--r--  1 jiran jiran  23845 Oct  3 04:04 README.md
+-rw-r--r--  1 jiran jiran   1805 Oct  3 04:04 REDISCONTRIBUTIONS.txt
+-rw-r--r--  1 jiran jiran   1480 Oct  3 04:04 SECURITY.md
+-rw-r--r--  1 jiran jiran   3628 Oct  3 04:04 TLS.md
+drwxr-xr-x  8 jiran jiran   4096 Oct  8 11:55 deps/
+-rw-r--r--  1 jiran jiran    343 Oct  8 14:50 dump.rdb
+-rw-r--r--  1 jiran jiran 108981 Oct  3 04:04 redis.conf
+-rwxr-xr-x  1 jiran jiran    279 Oct  3 04:04 runtest*
+-rwxr-xr-x  1 jiran jiran    283 Oct  3 04:04 runtest-cluster*
+-rwxr-xr-x  1 jiran jiran   1804 Oct  3 04:04 runtest-moduleapi*
+-rwxr-xr-x  1 jiran jiran    285 Oct  3 04:04 runtest-sentinel*
+-rw-r--r--  1 jiran jiran  14700 Oct  3 04:04 sentinel.conf
+drwxr-xr-x  4 jiran jiran  12288 Oct  8 11:56 src/
+drwxr-xr-x 11 jiran jiran   4096 Oct  3 04:04 tests/
+drwxr-xr-x  9 jiran jiran   4096 Oct  3 04:04 utils/
+
+# 폴더 내 모든 파일과 서브폴더를 /etc/redis로 옮긴다.
+$ sudo mv ~/redis-7.4.1/{.,}* /etc/redis/
+
+# 이렇게 뜨면 성공이다.
+$ ll
+total 8
+drwxr-xr-x 2 jiran jiran 4096 Oct  8 16:06 ./
+drwxr-x--- 4 jiran jiran 4096 Oct  8 16:03 ../
 ```
