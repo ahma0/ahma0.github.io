@@ -286,35 +286,35 @@ $ cd ~/redis-7.4.1
 # redis-7.4.1에 있는 폴더 리스트 출력
 $ ll
 total 316
-drwxr-xr-x  8 jiran jiran   4096 Oct  8 14:50 ./
-drwxr-x---  4 jiran jiran   4096 Oct  8 15:49 ../
-drwxr-xr-x  2 jiran jiran   4096 Oct  3 04:04 .codespell/
--rw-r--r--  1 jiran jiran    405 Oct  3 04:04 .gitattributes
-drwxr-xr-x  4 jiran jiran   4096 Oct  3 04:04 .github/
--rw-r--r--  1 jiran jiran    559 Oct  3 04:04 .gitignore
--rw-r--r--  1 jiran jiran  10420 Oct  3 04:04 00-RELEASENOTES
--rw-r--r--  1 jiran jiran     51 Oct  3 04:04 BUGS
--rw-r--r--  1 jiran jiran   5023 Oct  3 04:04 CODE_OF_CONDUCT.md
--rw-r--r--  1 jiran jiran   7178 Oct  3 04:04 CONTRIBUTING.md
--rw-r--r--  1 jiran jiran     11 Oct  3 04:04 INSTALL
--rw-r--r--  1 jiran jiran  37493 Oct  3 04:04 LICENSE.txt
--rw-r--r--  1 jiran jiran   6888 Oct  3 04:04 MANIFESTO
--rw-r--r--  1 jiran jiran    151 Oct  3 04:04 Makefile
--rw-r--r--  1 jiran jiran  23845 Oct  3 04:04 README.md
--rw-r--r--  1 jiran jiran   1805 Oct  3 04:04 REDISCONTRIBUTIONS.txt
--rw-r--r--  1 jiran jiran   1480 Oct  3 04:04 SECURITY.md
--rw-r--r--  1 jiran jiran   3628 Oct  3 04:04 TLS.md
-drwxr-xr-x  8 jiran jiran   4096 Oct  8 11:55 deps/
--rw-r--r--  1 jiran jiran    343 Oct  8 14:50 dump.rdb
--rw-r--r--  1 jiran jiran 108981 Oct  3 04:04 redis.conf
--rwxr-xr-x  1 jiran jiran    279 Oct  3 04:04 runtest*
--rwxr-xr-x  1 jiran jiran    283 Oct  3 04:04 runtest-cluster*
--rwxr-xr-x  1 jiran jiran   1804 Oct  3 04:04 runtest-moduleapi*
--rwxr-xr-x  1 jiran jiran    285 Oct  3 04:04 runtest-sentinel*
--rw-r--r--  1 jiran jiran  14700 Oct  3 04:04 sentinel.conf
-drwxr-xr-x  4 jiran jiran  12288 Oct  8 11:56 src/
-drwxr-xr-x 11 jiran jiran   4096 Oct  3 04:04 tests/
-drwxr-xr-x  9 jiran jiran   4096 Oct  3 04:04 utils/
+drwxr-xr-x  8 user user   4096 Oct  8 14:50 ./
+drwxr-x---  4 user user   4096 Oct  8 15:49 ../
+drwxr-xr-x  2 user user   4096 Oct  3 04:04 .codespell/
+-rw-r--r--  1 user user    405 Oct  3 04:04 .gitattributes
+drwxr-xr-x  4 user user   4096 Oct  3 04:04 .github/
+-rw-r--r--  1 user user    559 Oct  3 04:04 .gitignore
+-rw-r--r--  1 user user  10420 Oct  3 04:04 00-RELEASENOTES
+-rw-r--r--  1 user user     51 Oct  3 04:04 BUGS
+-rw-r--r--  1 user user   5023 Oct  3 04:04 CODE_OF_CONDUCT.md
+-rw-r--r--  1 user user   7178 Oct  3 04:04 CONTRIBUTING.md
+-rw-r--r--  1 user user     11 Oct  3 04:04 INSTALL
+-rw-r--r--  1 user user  37493 Oct  3 04:04 LICENSE.txt
+-rw-r--r--  1 user user   6888 Oct  3 04:04 MANIFESTO
+-rw-r--r--  1 user user    151 Oct  3 04:04 Makefile
+-rw-r--r--  1 user user  23845 Oct  3 04:04 README.md
+-rw-r--r--  1 user user   1805 Oct  3 04:04 REDISCONTRIBUTIONS.txt
+-rw-r--r--  1 user user   1480 Oct  3 04:04 SECURITY.md
+-rw-r--r--  1 user user   3628 Oct  3 04:04 TLS.md
+drwxr-xr-x  8 user user   4096 Oct  8 11:55 deps/
+-rw-r--r--  1 user user    343 Oct  8 14:50 dump.rdb
+-rw-r--r--  1 user user 108981 Oct  3 04:04 redis.conf
+-rwxr-xr-x  1 user user    279 Oct  3 04:04 runtest*
+-rwxr-xr-x  1 user user    283 Oct  3 04:04 runtest-cluster*
+-rwxr-xr-x  1 user user   1804 Oct  3 04:04 runtest-moduleapi*
+-rwxr-xr-x  1 user user    285 Oct  3 04:04 runtest-sentinel*
+-rw-r--r--  1 user user  14700 Oct  3 04:04 sentinel.conf
+drwxr-xr-x  4 user user  12288 Oct  8 11:56 src/
+drwxr-xr-x 11 user user   4096 Oct  3 04:04 tests/
+drwxr-xr-x  9 user user   4096 Oct  3 04:04 utils/
 
 # 폴더 내 모든 파일과 서브폴더를 /etc/redis로 옮긴다.
 $ sudo mv ~/redis-7.4.1/{.,}* /etc/redis/
@@ -322,6 +322,6 @@ $ sudo mv ~/redis-7.4.1/{.,}* /etc/redis/
 # 이렇게 뜨면 성공이다.
 $ ll
 total 8
-drwxr-xr-x 2 jiran jiran 4096 Oct  8 16:06 ./
-drwxr-x--- 4 jiran jiran 4096 Oct  8 16:03 ../
+drwxr-xr-x 2 user user 4096 Oct  8 16:06 ./
+drwxr-x--- 4 user user 4096 Oct  8 16:03 ../
 ```
