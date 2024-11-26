@@ -127,3 +127,153 @@ test 코드 작성하는 것을 기능을 개발하던 중 떠올려버렸다. �
 ### 📌 느낀점
 
 2주차 공통 피드백을 보니 README를 고치면 안되는 것은 아닌 것 같다. 그런데 이 글을 보고 말았다. `기능 목록을 작성할 때 클래스 설계와 구현, 메서드 설계와 구현 같은 상세한 내용은 포함하지 않는다.` 맞는 말이다. 그러나 나는 목표에 프로젝트 설계를 간단히 하고 개발을 시작하겠다 했었는데,... 아무래도 목표가 많이 바뀔 것 같다.. 
+
+<br>
+
+## 🎱 3주차: 로또
+
+우선 행위자가 누가 있을지 고민하였다. 로또를 사고 파는데에 객체가 누가 있고 어떤 책임을 져야 하는가. 우선 로또 판매자, 로또, 로또 구매자, 로또 번호 생성기 등이 있을 것이다. 그렇다면 이들은 각각 어떤 행위를 해야 하는가.
+
+- 로또 판매자
+  - 로또를 1장당 1000원의 가격으로 판매한다.
+- 로또 구매자
+  - 로또를 1장당 1000원의 가격으로 구매한다.
+- 로또 번호 생성기
+  - 로또 번호를 생성한다.
+
+결국 로또 판매와 구매를 합쳐 Purchase라는 엔티티를 만들어 구현하였다.
+
+### 📌 프로젝트 구조
+
+스프링에서 빈을 관리하듯이 한 클래스에서 의존성 주입을 하려 노력했다.
+
+```
+.
+├── ./Application.java
+├── ./LottoApplication.java
+├── ./config
+│   └── ./config/LottoConfig.java
+├── ./controller
+│   ├── ./controller/LottoController.java
+│   └── ./controller/dto
+│       ├── ./controller/dto/BonusNumberSaveRequest.java
+│       ├── ./controller/dto/LottoPurchaseResponse.java
+│       ├── ./controller/dto/PrizeResultDto.java
+│       ├── ./controller/dto/PrizeResultResponse.java
+│       └── ./controller/dto/WinningNumberSaveResponse.java
+├── ./domain
+│   ├── ./domain/Lotto.java
+│   ├── ./domain/LottoPurchase.java
+│   ├── ./domain/WinningNumber.java
+│   └── ./domain/value
+│       └── ./domain/value/Standard.java
+├── ./exception
+│   ├── ./exception/ExceptionMessage.java
+│   └── ./exception/LottoException.java
+├── ./repository
+│   ├── ./repository/LottoPurchaseRepository.java
+│   ├── ./repository/LottoRepository.java
+│   └── ./repository/WinningNumberRepository.java
+├── ./service
+│   └── ./service/LottoService.java
+├── ./utils
+│   └── ./utils/LottoUtils.java
+└── ./view
+    ├── ./view/Input.java
+    └── ./view/Output.java
+
+```
+
+### 📌 느낀점
+
+이번 과제는 마지막에 통계를 계산하는데 오래 걸렸던 것 같다. 그러나 꽤 자랑스러웠던 점도 있다. 이번엔 웹 형식으로 하려고 마음을 먹었는데, 그래서 최대한 스프링처럼 개발하려고 노력하였다. 모든 의존성 주입을 config 파일을 만들어 그 곳에서 해결하려 하였다.
+
+처음에 어떤 객체가 있어야 할까 고민을 많이 했다. 객체는 각자 책임을 지고 스스로 행동을 하기 때문에 이 로또 프로그램에선 어떤 객체가, 어떤 책임을, 어떤 행동을 해야하는지 고민을 했었다. 처음엔 판매자, 구매자, 로또, 로또 기계 등등을 생각하였으나 최종적으로는 로또 구매, 로또, 당첨 번호 등으로 끝난 것 같다. 
+
+아쉬운 점은 로또에 다른 변수를 더 추가하지 못한다는 점..
+
+웹처럼 동작하게 하기 위해 repository를 만들어서 그 곳에 각각 객체의 List를 정의해두고 저장 및 삭제 로직을 넣어두었다. 리스트의 인덱스값을 id로 사용하는 방식으로 구현하였다.
+
+드디어 마지막 4주차를 눈 앞에 두고 있다. 내가 마지막까지 잘 끝낼 수 있기를..
+
+<br>
+
+## 💰 4주차: 편의점
+
+역시 우아한 형제들에서 주관하는 부트캠프라 그런지 마지막 프리코스는 결제와 관련됐다. 여러 일정이 겹쳐 하루만에 코드를 짤 수 밖에 없었다. 많이 아쉬웠지만 어쩔 수 없었다고 생각한다.
+
+### 📌 프로젝트 구조
+
+```
+.
+├── Application.java
+├── context
+│   └── BeanContext.java
+├── controller
+│   ├── ConvenienceStoreController.java
+│   └── dto
+│       ├── ExtraOrderDto.java
+│       ├── ExtraOrderRequest.java
+│       ├── MainProductListResponse.java
+│       ├── MembershipRequest.java
+│       ├── OrderDto.java
+│       ├── OrderRequest.java
+│       ├── ProductListDto.java
+│       ├── PromotionQuantityDto.java
+│       ├── PromotionQuantityResponse.java
+│       ├── ReceiptEventDto.java
+│       ├── ReceiptOrderDto.java
+│       ├── ReceiptPaymentDto.java
+│       ├── ReceiptResponse.java
+│       └── ReceiptTotalPriceDto.java
+├── domain
+│   ├── common
+│   │   ├── BaseEntity.java
+│   │   ├── DomainFactory.java
+│   │   └── value
+│   │       ├── Domains.java
+│   │       └── FilePath.java
+│   ├── order
+│   │   ├── Order.java
+│   │   └── OrderRepository.java
+│   ├── payment
+│   │   ├── Payment.java
+│   │   └── PaymentRepository.java
+│   ├── products
+│   │   ├── Products.java
+│   │   ├── ProductsFactory.java
+│   │   └── ProductsRepository.java
+│   └── promotions
+│       ├── Promotions.java
+│       ├── PromotionsFactory.java
+│       └── PromotionsRepository.java
+├── exception
+│   └── ConvenienceStoreException.java
+├── service
+│   ├── FileLoaderService.java
+│   ├── OrderService.java
+│   ├── PaymentService.java
+│   └── ProductsService.java
+├── utils
+│   ├── FileReaderUtil.java
+│   └── StoreUtil.java
+└── view
+    ├── InputView.java
+    └── OutputView.java
+
+```
+
+### 📌 느낀점
+
+우선 많은 시간을 들일 수 없었다는 점. 급하게 끝내느라 테스트 코드를 짜지 못했다. 역시 회사와 병행하는건 쉽지 않은 것 같다. 제일 크게 달라진 점은 역시 파일 입출력을 추상화하여 팩토리 패턴을 사용했다는 것? 최대한 여러 클래스를 넣어도 사용할 수 있도록 구현하고 싶었다.
+
+처음엔 시간이 많아서 코드를 가독성 있고 이쁘게 짜고 싶었다. 그런데 뒤로 갈 수록 시간도 없고 구현하는데 급급하여 가독성 떨어지는 코드가 되어버렸다.. 정말 10분 남기고 겨우 구현한 뒤 제출했기 때문에 아쉬움이 많이 남는 코드였다.
+
+
+dto도 따로 도메인 별로 정리했으면 좋았을텐데 하는 아쉬움도 있다.
+
+<br>
+
+최근 회사 일이 갑자기 바빠져서 퇴근하고 집에서 잠만 자고 있다.. 미루다가 2주나 지나서 회고를 쓰게 되었다. 3주차 회고는 작성해놓은 상태였는데 집에 와서 노트북을 열고 커밋 하나 하는게 왜이리 힘이 들던지.. 아마 이게 나의 마지막 프리코스가 되지 않을까.
+
+전체적으로 작년보다 실력이 늘었다는 것을 깨달았다. 조금씩 코드를 보는 눈이 생기는 것 같다. 
