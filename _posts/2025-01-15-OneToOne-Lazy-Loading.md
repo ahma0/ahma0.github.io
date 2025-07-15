@@ -86,9 +86,9 @@ Hibernate:
 
 왜 이런 문제가 발생하는지 알아보기 전에, 지연 로딩이 동작하는 매커니즘을 이해해야 한다.
 
- - 지연 로딩은 로딩되는 시점에 Fetch 전략이 Lazy로 설정되어있는 엔티티를 프록시 객체로 가져온다. 해당 예제에서는 User를 조회할때 cart를 프록시 객체로 가져오게 된다.
- - 이후 실제로 Cart 객체를 사용하는 시점에 초기화 되면서 쿼리가 실행된다.
- - 예를들어, getCart() 처럼 cart 객체가 사용되었을때 쿼리가 실행되는 것이다.
+- 지연 로딩은 로딩되는 시점에 Fetch 전략이 Lazy로 설정되어있는 엔티티를 프록시 객체로 가져온다. 해당 예제에서는 User를 조회할때 cart를 프록시 객체로 가져오게 된다.
+- 이후 실제로 Cart 객체를 사용하는 시점에 초기화 되면서 쿼리가 실행된다.
+- 예를들어, getCart() 처럼 cart 객체가 사용되었을때 쿼리가 실행되는 것이다.
 
 이렇게 지연 로딩으로 설정이 되어있는 엔티티를 조회할 때는 프록시로 감싸서 동작하게 되는데, 프록시는 null을 감쌀 수 없기 때문에 이와 같은 문제점이 발생하게 된다. 즉, 프록시의 한계로 인해 발생하는 문제이다.
 
@@ -98,7 +98,7 @@ Hibernate:
 
 ## 해결방법
 
-1. 연관관계의 주인을 users로 설정한다.
+### 1. 연관관계의 주인을 users로 설정한다.
 
 ```kotlin
 @Entity
@@ -115,10 +115,29 @@ class Marketing(
 )
 ```
 
-
-2. @OneToOne 대신 @ManyToOne + unique 제약조건 사용
+### 2. @OneToOne으로 매핑하나 단방향 매핑으로 변경
 
 ```kotlin
+@Entity
+class Users(
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", unique = true, nullable = false)
+    val user: Users,
+)
+```
+
+
+### 3. @OneToOne 대신 @ManyToOne + unique 제약조건 사용
+
+```kotlin
+@Entity
+class Users(
+    ...
+) : BaseDateEntity(Domain.USER) {
+    @OneToMany(mappedBy = "user")
+    var marketings: MutableSet<Marketing> = mutableSetOf()
+}
+
 @Entity
 class Marketing(
     @ManyToOne(fetch = FetchType.LAZY)
@@ -131,8 +150,7 @@ class Marketing(
 - Users에는 mappedBy 필요 없이 marketing 컬럼을 제거해준다.
 - 데이터베이스에서 user_id에 UNIQUE 제약조건을 걸어주면 동일한 효과.
 
-
-3. @EntityGraph 등으로 명시적 로딩 제어 (기존에 사용)
+### 4. @EntityGraph 등으로 명시적 로딩 제어 (기존에 사용)
 
 ```kotlin
 @EntityGraph(attributePaths = ["marketing"])
@@ -144,12 +162,12 @@ EntityGraph로 가져오거나 fetch join을 하는 등의 방법으로 컨트�
 
 <br>
 
-나는 이 중에서 2번을 사용하기로 하였다. user에서 marketing을 조회할 일이 없고 기존 db도 marketing이 user의 id를 불러왔기 때문에 db를 수정할 일이 없기 때문이다.
+나는 이 중에서 4번을 사용하기로 하였다. user에서 marketing을 조회할 일이 없고 기존 db도 marketing이 user의 id를 불러왔기 때문에 db를 수정할 일이 없기 때문이다.
 
 ### 수정 이후 쿼리문
 
 ```
-Hibernate: 
+Hibernate:
     select
         a1_0.id,
         a1_0.auth_id,
@@ -166,14 +184,12 @@ Hibernate:
         u1_0.nickname,
         u1_0.profile,
         u1_0.role,
-        u1_0.updated_at 
+        u1_0.updated_at
     from
-        user_auth a1_0 
+        user_auth a1_0
     left join
-        users u1_0 
-            on u1_0.id=a1_0.user_id 
+        users u1_0
+            on u1_0.id=a1_0.user_id
     where
         a1_0.email=?
 ```
-
-
