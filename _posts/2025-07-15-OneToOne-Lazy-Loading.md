@@ -119,7 +119,7 @@ class Marketing(
 
 ```kotlin
 @Entity
-class Users(
+class Marketing(
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", unique = true, nullable = false)
     val user: Users,
