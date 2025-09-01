@@ -1,7 +1,7 @@
 ---
 title: Spring AOP와 Transactional의 관계
 author: ahma0
-date:   2024-09-17 15:47:00 +0900
+date:   2025-09-01 23:59:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, Java, Transactional, AOP]
 math: true
