@@ -19,7 +19,7 @@ AOP는 Aspect Oriented Programming의 약자로 관점 지향 프로그래밍을
 
 각 관점을 기준으로 모듈화 한다는 것은 코드를 부분적으로 나누어 모듈화한다는 의미이다. 이때 **소스코드상에서 다른 부분에 계속 반복하여 쓰는 코드들**을 발견할 수 있는데, 이를 **흩어진 관심사**라고 한다. 이 흩어진 관심들을 Aspect로 모듈화하고 핵심 비즈니스 로직에서 재사용하겠다는 것이 AOP의 취지다.
 
-![](/posts/image/2025-09-01-01.png)
+![](/assets/img/posts-image/2025-09-01-01.png)
 
 AOP 없이 흩어진 관심사를 처리하면 다음과 같은 문제가 발생한다.
 
@@ -136,7 +136,7 @@ Spring에서는 몇 가지 설정을 하면 자동으로 Target의 프록시 객
 
 두 방식의 가장 큰 차이점은 **Target의 어떤 부분을 상속 받아서 프록시를 구현하느냐**에 있다.
 
-![](/posts/image/2025-09-01-02.png)
+![](/assets/img/posts-image/2025-09-01-02.png)
 
 - JDK Proxy
     - Target의 상위 인터페이스를 상속 받아 프록시를 만듦
@@ -156,7 +156,7 @@ Spring에서는 몇 가지 설정을 하면 자동으로 Target의 프록시 객
 
 트랜잭션 처리를 위한 Transactional 애노테이션은 Spring AOP의 대표적인 예이다.
 
-![](/posts/image/2025-09-01-03.png)
+![](/assets/img/posts-image/2025-09-01-03.png)
 
 1. target에 대한 호출이 들어오면 AOP proxy가 이를 가로채서(intercept) 가져온다.
 2. AOP proxy에서 Transaction Advisor가 commit 또는 rollback 등의 트랜잭션 처리를 한다.
@@ -197,7 +197,7 @@ public class TransactionProxy{
 
 2. 트랜잭션은 객체 외부에서 처음 진입하는 메서드를 기준으로 동작한다.
 
-![](/posts/image/2025-09-01-04.png)
+![](/assets/img/posts-image/2025-09-01-04.png)
 
 클래스에 @Transactional 처리가 되어 있는 부분이 있다면, Spring은 해당 부분에 트랜잭션 처리를 추가한 프록시를 자동으로 생성한다. 그리고 외부에서 호출하면, 원래 클래스가 아닌 프록시가 대신 호출된다.
 
