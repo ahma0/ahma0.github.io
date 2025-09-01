@@ -277,7 +277,7 @@ networks:
 
 `http://<ec2-public-ip>:9090/targets`에 접속하면 아래와 같은 화면이 떠야한다.
 
-![](image/2025-08-09-07.png)
+![](/_posts/image/2025-08-09-07.png)
 
 나는 블루 그린 배포를 해놓았기 때문에 블루 컨테이너는 닫혀있는 상태다.
 
@@ -289,32 +289,32 @@ networks:
 
 `http://<ec2-public-ip>:3000`으로 접속한다. Grafana의 기본 아이디와 비밀번호는 admin/admin이다. 로그인을 성공하면 홈 화면이 뜨는데,
 
-![datasource 화면](image/2025-08-09-01.png)
+![datasource 화면](/_posts/image/2025-08-09-01.png)
 
 DATA SOURCES로 들어가주면 된다. Prometheus를 선택한 뒤
 
-![](image/2025-08-09-02.png)
+![](/_posts/image/2025-08-09-02.png)
 
 Connection에 `http://<ec2-public-ip:9090`을 입력한다.
 
 아래에서 save & test 버튼을 눌러서 
 
-![](image/2025-08-09-03.png)
+![](/_posts/image/2025-08-09-03.png)
 
 해당 박스가 나오면 성공한 것이다.
 
 
 ### Dashboard 설정
 
-![](image/2025-08-09-04.png)
+![](/_posts/image/2025-08-09-04.png)
 
 이제 대시보드 화면으로 들어가 원하는 대시보드를 만들거나 Import를 해주면 된다. 나는 [JVM (Micrometer)](https://grafana.com/grafana/dashboards/4701-jvm-micrometer/)와 [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full/)을 사용하기로 하였다.
 
-![](image/2025-08-09-05.png)
+![](/_posts/image/2025-08-09-05.png)
 
 id인 4701과 1860을 입력하고 Load 후 Import를 누르면 된다.
 
 #### 적용 화면
 
-![](image/2025-08-09-06.png)
+![](/_posts/image/2025-08-09-06.png)
 
