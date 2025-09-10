@@ -1,6 +1,6 @@
 ---
 title: Redis Error - MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk.
-author: ahma0
+author: dnya0
 date:   2024-10-10 11:16:00 +0900
 categories: [Post, Redis]
 tag: [Study, Redis, Permission]

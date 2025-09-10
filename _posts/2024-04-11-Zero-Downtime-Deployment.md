@@ -1,6 +1,6 @@
 ---
 title: 무중단 배포 알아보기
-author: ahma0
+author: dnya0
 date:   2024-04-11 11:25:00 +0900
 categories: [Study, Infra]
 tag: [Study, Infra, AWS, BlueGreen]
@@ -10,7 +10,7 @@ tag: [Study, Infra, AWS, BlueGreen]
 
 무중단 배포는 말 그대로 **서비스가 중단되지 않은 상태**<sub>zero-downtime</sub>로, 새로운 버전을 사용자들에게 배포하는 것을 의미한다. 무중단 배포를 하기 위해서는 최소 서버가 2대 이상을 확보해야한다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/34a1a2b7-4fa2-4c63-890c-ec1c6aed8fa2)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/34a1a2b7-4fa2-4c63-890c-ec1c6aed8fa2)
 
 v1 서비스를 종료 시키는 시점부터 v2를 시작하기 전까지 애플리케이션은 중단된다. 이렇게 서비스가 중단되는 시간을 **다운타임**<sub>downtime</sub>이라고 한다. v1 서비스를 꼭 중단시켜야 v2를 실행시킬 수 있는가? 동일한 포트를 사용한다고 하면 당연한 이야기이다. 8080포트를 특정 서버가 사용중일때 다른 서버를 8080 포트로 띄울수는 없다.
 

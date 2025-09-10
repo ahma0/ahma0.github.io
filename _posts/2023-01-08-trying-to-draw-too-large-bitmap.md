@@ -1,6 +1,6 @@
 ---
 title: Android Studio - trying to draw too large bitmap
-author: ahma0
+author: dnya0
 date:   2023-01-08 21:32:00 +0900
 categories: [Study, Android]
 tag: [Android, AndroidStudio, Study, JAVA, ERROR]

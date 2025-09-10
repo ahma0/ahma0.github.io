@@ -1,13 +1,13 @@
 ---
 title: 웹 브라우저 동작 원리
-author: ahma0
+author: dnya0
 date:   2023-06-30 19:00:00 +0900
 categories: [Study, CS]
 tag: [Study, ComputerScience, CS]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0.github.io/assets/84761609/fe59a57b-9652-4322-ad26-d50e342a5dbd
+  path: https://github.com/dnya0/dnya0.github.io/assets/84761609/fe59a57b-9652-4322-ad26-d50e342a5dbd
   alt: 브라우저의 주요 구성 요소
 ---
 
@@ -38,7 +38,7 @@ image:
 
 ### DNS 조회
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/d4288ac0-d232-4382-b094-4ecc4abe031f)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/d4288ac0-d232-4382-b094-4ecc4abe031f)
 
 웹 페이지를 탐색하는 첫 단계는 해당 페이지의 자원이 어디에 위치하는지 찾는 것입니다. 만약 `https://example.com`를 탐색한다면 HTML 페이지는 IP 주소가 `93.184.216.34`인 서버에 위치하고 있습니다. 만약 이 사이트를 한 번도 방문한 적이 없다면 DNS 조회가 필요합니다.
 
@@ -60,7 +60,7 @@ TCP의 3방향 핸드셰이크 기술은 "SYN-SYN-ACK" (더 정확히는 SYN, SY
 
 HTTPS를 이용한 보안성있는 연결을 위해서는 TLS 협상이라고 할 수 있는 또 다른 "핸드셰이크"가 필요합니다. 이 핸드셰이크는 통신 암호화에 쓰일 암호를 결정하고, 서버를 확인하고, 실제 데이터 전송 전에 안전한 연결이 이루어지도록 합니다. 이를 위해서 자원에 대한 실제 요청 전에 클라이언트에서 서버로 3번 더 왕복해야합니다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/6ec7f025-20e4-4cd9-a483-b10cad8cb0bf)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/6ec7f025-20e4-4cd9-a483-b10cad8cb0bf)
 
 <br>
 
@@ -92,7 +92,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 TLS 협상이라고 �
 
 ### 브라우저의 구조 
 
-![브라우저의 주요 구성 요소](https://github.com/ahma0/ahma0.github.io/assets/84761609/fe59a57b-9652-4322-ad26-d50e342a5dbd)
+![브라우저의 주요 구성 요소](https://github.com/dnya0/dnya0.github.io/assets/84761609/fe59a57b-9652-4322-ad26-d50e342a5dbd)
 
 <br>
 
@@ -136,7 +136,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 TLS 협상이라고 �
 
 렌더링 엔진은 통신으로부터 요청한 문서의 내용을 얻는 것으로 시작하는데 문서의 내용은 보통 8KB 단위로 전송된다.
 
-![렌더링 엔진의 동작 과정](https://github.com/ahma0/ahma0.github.io/assets/84761609/d82a4b61-f253-4ac8-a489-0459c47ea211)
+![렌더링 엔진의 동작 과정](https://github.com/dnya0/dnya0.github.io/assets/84761609/d82a4b61-f253-4ac8-a489-0459c47ea211)
 
 ① 렌더링 엔진은 HTML 문서를 파싱 하여 DOM 트리를 구축합니다. <br>
 ② 그다음 외부 CSS 파일과 함께 포함된 스타일 요소를 파싱 합니다. <br>
@@ -152,7 +152,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 TLS 협상이라고 �
 
 일련의 과정들이 점진적으로 진행된다는 것을 아는 것이 중요하다. 렌더링 엔진은 좀 더 나은 사용자 경험을 위해 가능하면 빠르게 내용을 표시하는데 모든 HTML을 파싱할 때까지 기다리지 않고 배치와 그리기 과정을 시작한다. 네트워크로부터 나머지 내용이 전송되기를 기다리는 동시에 받은 내용의 일부를 먼저 화면에 표시하는 것이다.
 
-![웹킷 동작 과정](https://github.com/ahma0/ahma0.github.io/assets/84761609/027b9e0a-b305-4344-8acc-e9730e2dc194)
+![웹킷 동작 과정](https://github.com/dnya0/dnya0.github.io/assets/84761609/027b9e0a-b305-4344-8acc-e9730e2dc194)
 
 <br>
 
@@ -172,7 +172,7 @@ HTML 파서는 HTML 마크업을 파싱 트리로 변환합니다. HTML은 일�
 
 일반적인 파싱 기술을 사용할 수 없기 때문에 브라우저는 HTML 파싱을 위해 별도의 파서를 생성합니다.
 
-![HTML 파싱 과정(HTML5 명세에서 가져옴)](https://github.com/ahma0/ahma0.github.io/assets/84761609/b3950f98-b2ac-4a62-9d32-5449d6abb3fe)
+![HTML 파싱 과정(HTML5 명세에서 가져옴)](https://github.com/dnya0/dnya0.github.io/assets/84761609/b3950f98-b2ac-4a62-9d32-5449d6abb3fe)
 
 <br>
 
@@ -180,7 +180,7 @@ HTML 파서는 HTML 마크업을 파싱 트리로 변환합니다. HTML은 일�
 
 <br>
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/d8235ed3-884c-44f5-bc16-e4e4573d3ef2)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/d8235ed3-884c-44f5-bc16-e4e4573d3ef2)
 
 <br>
 
@@ -207,13 +207,13 @@ DOM은 마크업과 1:1의 관계를 맺습니다.
 
 이것은 아래와 같은 DOM 트리로 변환할 수 있습니다.
 
-![예제 마크업의 DOM 트리](https://github.com/ahma0/ahma0.github.io/assets/84761609/40abdea4-f3c8-4369-9ac2-c27b19e82c90)
+![예제 마크업의 DOM 트리](https://github.com/dnya0/dnya0.github.io/assets/84761609/40abdea4-f3c8-4369-9ac2-c27b19e82c90)
 
 <br>
 
 #### 동작과정
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/5f09a85f-dd7a-4e7b-883a-c405e7afaa0b)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/5f09a85f-dd7a-4e7b-883a-c405e7afaa0b)
 
 1. 서버는 브라우저로부터 요청받은 HTML 파일을 읽어드린후 > 메모리에 저장하고 > 그 메모리에 저장된 바이트(101101000100…)을 응답한다.
 2. 브라우저는 응답받은 바이트 형태의 문서를 meta태그의 charset 어트리뷰트에 지정된 인코딩방식(UTF-8)에 따라 문자열로 반환한다.
@@ -227,19 +227,19 @@ DOM은 마크업과 1:1의 관계를 맺습니다.
 
 CSS 파일은 스타일 시트 객체로 파싱 되고 각 객체는 CSS 규칙을 포함합니다. CSS 규칙 객체(CSSOM)는 선택자와 선언 객체 그리고 CSS 문법과 일치하는 다른 객체를 포함합니다.
 
-![CSS 파싱](https://github.com/ahma0/ahma0.github.io/assets/84761609/299de345-ae85-4e8d-a0fc-098ae3f45ca3)
+![CSS 파싱](https://github.com/dnya0/dnya0.github.io/assets/84761609/299de345-ae85-4e8d-a0fc-098ae3f45ca3)
 
 렌더링 엔진은 HTML문서를 한줄 한줄 순차적으로 파싱하며 DOM을 생성합니다. 그러다 CSS를 로드하는 `<link>` 혹은 `<style>`를 만나면 DOM 생성을 중지한 후 CSS파싱의 결과물인 CSSOM을 생성하는 과정을 진행합니다.
 
 CSS파싱 과정은 **바이트 > 문자 > 토큰 > 노드 > CSSOM** 생성 순으로 HTML의 파싱과정과 동일합니다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/ad4aeff4-52fb-4c3f-adf2-2783b956a88d)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/ad4aeff4-52fb-4c3f-adf2-2783b956a88d)
 
 <br>
 
 ### ③ 렌더 트리 구축
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/6ca2e4a7-aa8d-4a2a-850b-d757f79bb983)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/6ca2e4a7-aa8d-4a2a-850b-d757f79bb983)
 
 CSSOM 트리와 DOM 트리를 결합하여, 표시해야 할 순서로 내용을 그려낼 수 있도록 하기 위해 렌더 트리를 형성한다. 이 과정을 Attachment라고 합니다.
 
@@ -247,13 +247,13 @@ DOM 트리가 구축되는 동안 브라우저는 렌더 트리를 구축합니�
 
 파이어폭스는 이 구성 요소를 "형상(frames)" 이라고 부르고 웹킷은 "렌더러(renderer)" 또는 "렌더 객체(render object)"라는 용어를 사용합니다.
 
-![렌더 트리와 DOM 트리 대응](https://github.com/ahma0/ahma0.github.io/assets/84761609/a8a31513-b394-4a14-b80c-ef29d344f06d)
+![렌더 트리와 DOM 트리 대응](https://github.com/dnya0/dnya0.github.io/assets/84761609/a8a31513-b394-4a14-b80c-ef29d344f06d)
 
 렌더러는 DOM 요소에 부합하지만 1:1로 대응하는 관계는 아닙니다. 예를 들어 "head" 요소와 같은 비시각적 DOM 요소는 렌더 트리에 추가되지 않습니다. 또한 display 속성에 "none" 값이 할당된 요소는 트리에 나타나지 않습니다.(visibility 속성에 "hidden" 값이 할당된 요소는 트리에 나타남).
 
 어떤 렌더 객체는 DOM 노드에 대응하지만 트리의 동일한 위치에 있지 않습니다. float 처리된 요소 또는 position 속성 값이 absolute로 처리된 요소는 흐름에서 벗어나 트리의 다른 곳에 배치된 상태로 형상이 그려집니다. 대신 자리 표시자가 원래 있어야 할 곳에 배치됩니다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/cff816ed-d265-48c0-85ef-8bc5b0e6f7eb)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/cff816ed-d265-48c0-85ef-8bc5b0e6f7eb)
 
 <br>
 
@@ -273,7 +273,7 @@ DOM 트리가 구축되는 동안 브라우저는 렌더 트리를 구축합니�
 
 > 렌더 트리는 위치와 크기를 가지고 있지 않기 때문에, 어느 공간에 위치해야 할지 각 객체들에게 위치(position)와 크기(size)를 결정해줍니다. 
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/f51b362b-5698-426b-9943-b2a191db5b0a)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/f51b362b-5698-426b-9943-b2a191db5b0a)
 
 렌더 트리가 생성되고, 기기의 뷰포트 내에서 렌더 트리의 노드가 정확한 위치와 크기를 계산합니다. 이때 모든 상대적인 값이 픽셀값으로 변환됩니다. CSS에 상대적인 값인 `%`, `rem`, `vh`으로 할당된 값들은 절대적인 값인 px단위로 변환 됩니다. 이 과정을 배치(Layout) 또는 Reflow 라고 합니다.
 
@@ -290,7 +290,7 @@ DOM 트리가 구축되는 동안 브라우저는 렌더 트리를 구축합니�
 
 ### ⑤ 렌더 트리 그리기 
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/349134bf-4dba-4e03-8f58-c54a1fff57a3)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/349134bf-4dba-4e03-8f58-c54a1fff57a3)
 
 렌더 트리가 만들어져 레이아웃이 구성되었으면 UI 백엔드가 동작하여 렌더 트리의 각 객체를 화면의 픽셀(px) 값으로 나타냅니다. 
 
@@ -308,7 +308,7 @@ DOM 트리가 구축되는 동안 브라우저는 렌더 트리를 구축합니�
 
 자바스크립트는 자바스크립트 엔진이 처리합니다. HTML 파서는 `<script>` 태그를 만나면 Javascript 코드를 실행하기 위해 DOM 생성 프로세스를 중지하고 자바스크립트 엔진으로 권한을 넘깁니다. 제어 권한을 넘겨받은 자바스크립트 엔진은 `<script>` 태그 내의 Javascript 코드 또는 src 속성에 정의된 Javascript 파일을 로드하고 파싱 하여 실행합니다. Javascript의 실행이 완료되면 다시 HTML 파서로 제어 권한을 넘겨서 중지했던 시점으로 돌아가 DOM 생성을 재개합니다. 
 
-![브라우저 동작 원리](https://github.com/ahma0/ahma0.github.io/assets/84761609/a7612d1e-3826-4d5e-af87-e4a8aa3e6a83)
+![브라우저 동작 원리](https://github.com/dnya0/dnya0.github.io/assets/84761609/a7612d1e-3826-4d5e-af87-e4a8aa3e6a83)
 
 이처럼 브라우저는 동기적으로 HTML, CSS, Javascript를 처리합니다. 하지만 자바스크립트 엔진에 제어 권한이 있을 때 Javascript 코드가 완성되지 않은 DOM을 조작하게 된다면 어떻게 될까요? 당연히 에러가 발생할 것입니다. 
 

@@ -1,6 +1,6 @@
 ---
 title: Google I/O Extended 2023 Incheon 후기
-author: ahma0
+author: dnya0
 date:   2023-08-29 16:36:00 +0900
 categories: [Event, Conference]
 tag: [Event, Conference, Google, Incheon, IOE]
@@ -12,12 +12,12 @@ tag: [Event, Conference, Google, Incheon, IOE]
 
 손목띠, 티셔츠와 스티커, 음료/쿠키 쿠폰을 받았다!
 
-![손목띠, 티셔츠, 스티커, 음료, 쿠키 사진](https://github.com/ahma0/ahma0.github.io/assets/84761609/3deb1666-37b5-4e67-b28e-19d1a469d516)
+![손목띠, 티셔츠, 스티커, 음료, 쿠키 사진](https://github.com/dnya0/dnya0.github.io/assets/84761609/3deb1666-37b5-4e67-b28e-19d1a469d516)
 
 
 ## 🎈 Session
 
-![image](https://github.com/ahma0/ahma0/assets/84761609/83299558-f73d-4e5f-a336-7483730a69f4)
+![image](https://github.com/dnya0/dnya0/assets/84761609/83299558-f73d-4e5f-a336-7483730a69f4)
 
 이 중에서 내가 들은 세션은 KEYNOTE부터 0이라고 하면 1, 2, 4, 5였다. 그날 컨퍼런스를 들으면서 정리・요약한 것보다는 대략적으로 어떤 내용이 있었는지와 간단한 느낀점만 적기로 하였다.
 
@@ -25,7 +25,7 @@ tag: [Event, Conference, Google, Incheon, IOE]
 
 ## KEYNOTE
 
-![KEYNOTE image](https://github.com/ahma0/ahma0.github.io/assets/84761609/0e70db46-7d40-46e5-9c1d-2a632338ac04)
+![KEYNOTE image](https://github.com/dnya0/dnya0.github.io/assets/84761609/0e70db46-7d40-46e5-9c1d-2a632338ac04)
 
 <br>
 

@@ -1,6 +1,6 @@
 ---
 title: Spring Study Group Week5 - GET, POST, PUT, DELETE, Entity, Repository, DAO, DTO, ORM, JPA
-author: ahma0
+author: dnya0
 date:   2023-03-27 13:56:00 +0900
 categories: [StudyGroup, Spring]
 tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]

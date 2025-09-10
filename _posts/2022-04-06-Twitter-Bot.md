@@ -1,6 +1,6 @@
 ---
 title: Twitter Project - Github Actions를 이용 학식 자동 트윗 봇
-author: ahma0
+author: dnya0
 date:   2022-04-06 15:00:00 +0900
 categories: [Project, Twitter]
 tag: [Portfolio, Projects, Twitter, Api, TwitterDeveloper]
@@ -78,7 +78,7 @@ tweeting University Cafeteria's Lunch Menus in twitter for myself. And learning 
 그런데, 자동봇을 만들기 위해 파이썬으로 코딩하여 트윗을 작성하면 알겠지만 개발자 계정에 트윗이 된다.
 매번 봇을 만들 때마다 승인을 받는건 여간 귀찮은 일이 아니다. 따라서 트위터 디벨로퍼에서 발급받은
 저 4개의 키를 이용해 자동봇 계정의 Access Token과 Access Token Secret을 만들 것이다.
-해당 내용에 대해선 [블로그에 자세히 적어놓았다.](https://ahma0.github.io/posts/TwitterApi-AccessToken-Error/)
+해당 내용에 대해선 [블로그에 자세히 적어놓았다.](https://dnya0.github.io/posts/TwitterApi-AccessToken-Error/)
 
 ### Github Environment
 
@@ -93,7 +93,7 @@ tweeting University Cafeteria's Lunch Menus in twitter for myself. And learning 
 ### workflow
 
 나는 workflow를 윈도우 버전으로 작성하였다. 매일 UTC 00:00 기준으로 트윗이 올라가게끔 작성하였으며 트윗할 때마다 크롬 드라이버를 다운받아 unzip한 뒤 사용하도록 만들었다.
-프로젝트의 더 자세한 코드는 [이곳](https://github.com/ahma0/KNU_Cafeteria_Menu)에서 볼 수 있다.
+프로젝트의 더 자세한 코드는 [이곳](https://github.com/dnya0/KNU_Cafeteria_Menu)에서 볼 수 있다.
 
 ```yaml
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions

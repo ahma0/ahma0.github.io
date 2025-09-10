@@ -1,6 +1,6 @@
 ---
 title: 백준 장학금 1주차 - 신청 이유와 목표, 소감
-author: ahma0
+author: dnya0
 date:   2023-07-25 11:29:00 +0900
 categories: [Event, 백준 장학금]
 tag: [Event, BOJ, Scholarship, 백준 장학금]
@@ -14,7 +14,7 @@ tag: [Event, BOJ, Scholarship, 백준 장학금]
 
 ## 📌 목표 및 계획
 
-![일정](https://github.com/ahma0/ahma0.github.io/assets/84761609/b14345f1-249b-45e4-b039-a754d5dd3198)
+![일정](https://github.com/dnya0/dnya0.github.io/assets/84761609/b14345f1-249b-45e4-b039-a754d5dd3198)
 
 나의 목표는 다음과 같다.
 
@@ -42,19 +42,19 @@ tag: [Event, BOJ, Scholarship, 백준 장학금]
 
 ### 📎 1일 1 코딩테스트 풀기(백준, solved.ac)
 
-![백준 내역](https://github.com/ahma0/ahma0.github.io/assets/84761609/cb51cf95-cca3-46a0-9bc8-5deca0a7c778)
+![백준 내역](https://github.com/dnya0/dnya0.github.io/assets/84761609/cb51cf95-cca3-46a0-9bc8-5deca0a7c778)
 
-![solved ac 내역](https://github.com/ahma0/ahma0.github.io/assets/84761609/9dcdd1d6-c922-4853-9e8a-13047f34f959)
+![solved ac 내역](https://github.com/dnya0/dnya0.github.io/assets/84761609/9dcdd1d6-c922-4853-9e8a-13047f34f959)
 
 ### 📎 개발 서적 2권 읽고 블로그에 작성
 
-> 해당 글은 [이곳](https://ahma0.github.io/posts/Object-oriented-facts-and-misunderstandings-1/)으로 가면 볼 수 있다.
+> 해당 글은 [이곳](https://dnya0.github.io/posts/Object-oriented-facts-and-misunderstandings-1/)으로 가면 볼 수 있다.
 
-![블로그 글](https://github.com/ahma0/ahma0.github.io/assets/84761609/3f7ede3b-1b0a-4fb5-8c71-05980a94bd91)
+![블로그 글](https://github.com/dnya0/dnya0.github.io/assets/84761609/3f7ede3b-1b0a-4fb5-8c71-05980a94bd91)
 
 ### 📎 1일 1 커밋
 
-![커밋 내역](https://github.com/ahma0/ahma0.github.io/assets/84761609/93ff8933-8514-475a-a96a-7f967faf4453)
+![커밋 내역](https://github.com/dnya0/dnya0.github.io/assets/84761609/93ff8933-8514-475a-a96a-7f967faf4453)
 
 <br>
 

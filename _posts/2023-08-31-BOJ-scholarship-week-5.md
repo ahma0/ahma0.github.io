@@ -1,6 +1,6 @@
 ---
 title: 백준 장학금 5주차 - 회고
-author: ahma0
+author: dnya0
 date:   2023-08-31 08:51:00 +0900
 categories: [Event, 백준 장학금]
 tag: [Event, BOJ, Scholarship, 백준 장학금]
@@ -10,9 +10,9 @@ tag: [Event, BOJ, Scholarship, 백준 장학금]
 
 ### 📎 1일 1 코딩테스트 풀기(백준, solved.ac)
 
-![백준 내역](https://github.com/ahma0/ahma0/assets/84761609/260fcb71-9d66-4bee-a292-5346887a964d)
+![백준 내역](https://github.com/dnya0/dnya0/assets/84761609/260fcb71-9d66-4bee-a292-5346887a964d)
 
-![solved ac 내역](https://github.com/ahma0/ahma0/assets/84761609/b32ff909-a0d7-4138-be2e-27ede333d008)
+![solved ac 내역](https://github.com/dnya0/dnya0/assets/84761609/b32ff909-a0d7-4138-be2e-27ede333d008)
 
 너무 힘들었다. 이번 주 월요일부터 하루 쉬었다.
 
@@ -21,12 +21,12 @@ tag: [Event, BOJ, Scholarship, 백준 장학금]
 
 2권을 읽고 블로그에 작성하긴 했는데 내가 처음에 목표로한 책은 아니었다. 심지어 2권을 다 읽지도 못했다. 생각보다 1달동안 2권 읽는게 어려운 일이었다.
 
-- [객체지향의 사실과 오해](https://ahma0.github.io/categories/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-%EC%82%AC%EC%8B%A4%EA%B3%BC-%EC%98%A4%ED%95%B4/)
-- [모던 자바 인 액션](https://ahma0.github.io/categories/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94-%EC%9D%B8-%EC%95%A1%EC%85%98/)
+- [객체지향의 사실과 오해](https://dnya0.github.io/categories/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-%EC%82%AC%EC%8B%A4%EA%B3%BC-%EC%98%A4%ED%95%B4/)
+- [모던 자바 인 액션](https://dnya0.github.io/categories/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94-%EC%9D%B8-%EC%95%A1%EC%85%98/)
 
 ### 📎 1일 1 커밋
 
-![커밋내역](https://github.com/ahma0/ahma0/assets/84761609/33c30cab-5a0d-4be0-a2aa-01c87cb77bc4)
+![커밋내역](https://github.com/dnya0/dnya0/assets/84761609/33c30cab-5a0d-4be0-a2aa-01c87cb77bc4)
 
 <br>
 

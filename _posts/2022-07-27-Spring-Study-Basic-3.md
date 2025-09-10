@@ -1,6 +1,6 @@
 ---
 title: Spring 입문 3 - 회원 관리 예제(백엔드 개발)
-author: ahma0
+author: dnya0
 date:   2022-07-27 15:13:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]

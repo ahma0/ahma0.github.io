@@ -1,6 +1,6 @@
 ---
 title: 온플리 개발 후기
-author: ahma0
+author: dnya0
 date:   2022-12-28 20:26:00 +0900
 categories: [Project, web]
 tag: [Project, Web, OwnPli, DB, Database]

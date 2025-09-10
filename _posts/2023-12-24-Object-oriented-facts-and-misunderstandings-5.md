@@ -1,13 +1,13 @@
 ---
 title: 객체지향의 사실과 오해 - 05. 책임과 메시지
-author: ahma0
+author: dnya0
 date:   2023-12-24 21:37:00 +0900
 categories: [Study, 객체지향의 사실과 오해]
 tag: [Study, 객체지향의 사실과 오해]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
+  path: https://github.com/dnya0/dnya0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
   alt: book image
 ---
 
@@ -33,12 +33,12 @@ image:
 
 객체가 책임을 자율적으로 수행하기 위해서는 객체에게 할당되는 책임이 자율적이어야 한다.
 
-![그림 1 - 왕이 모자 장수에게 '증언하라'라고 명령.](https://github.com/ahma0/ahma0.github.io/assets/84761609/5acb73a8-8f5f-419f-bb74-c5ca84f1baf9)
+![그림 1 - 왕이 모자 장수에게 '증언하라'라고 명령.](https://github.com/dnya0/dnya0.github.io/assets/84761609/5acb73a8-8f5f-419f-bb74-c5ca84f1baf9)
 
 첫 번째 협력에서 모자 장수는 왕에게 증언할 책임은 있지만 증언을 위한 구체적인 방법이나 절차에 대해서는 최대한의 자유를 누린다.
 
 
-![그림 2 - 왕이 모자 장수에게 구체적으로 어떻게 증언할 것인지 명령.](https://github.com/ahma0/ahma0.github.io/assets/84761609/4cc20b88-0c46-403c-bb7b-91d696bbd7e7)
+![그림 2 - 왕이 모자 장수에게 구체적으로 어떻게 증언할 것인지 명령.](https://github.com/dnya0/dnya0.github.io/assets/84761609/4cc20b88-0c46-403c-bb7b-91d696bbd7e7)
 
 두 번째 협력에서 왕은 더 상세한 수준으로 요청한다. 문제는 이 책임들이 모자 장수가 증언하기 위해 선택할 수 있는 자유의 범위를 지나치게 제한한다는 점이다. 모자 장수는 증언하기 위해 무조건 자신의 기억에만 의존해야 한다.
 
@@ -46,7 +46,7 @@ image:
 
 ### 너무 추상적인 책임
 
-![그림 3 - 왕이 모자 장수에게 '설명하라'라고 명령.](https://github.com/ahma0/ahma0.github.io/assets/84761609/a9e1a2b2-1085-41e0-85bd-57498430bec0)
+![그림 3 - 왕이 모자 장수에게 '설명하라'라고 명령.](https://github.com/dnya0/dnya0.github.io/assets/84761609/a9e1a2b2-1085-41e0-85bd-57498430bec0)
 
 추상적이고 포괄적인 책임을 협력을 좀 더 다양한 환경에서 재사용할 수 있도록 유연성이라는 축복을 내려준다. 그러나 책임은 협력에 참여하는 의도를 명확하게 설명할 수 있는 수준 안에서 추상적이어야 한다. '증언하라' 라는 책임이 훌륭한 책임인 이유는 자율성을 보장할 수 있을 정도로 충분히 추상적인 동시에 협력의 의도를 뚜렷하게 표현할 수 있을 정도로 충분히 구체적이기 때문이다.
 

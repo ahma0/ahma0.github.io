@@ -1,13 +1,13 @@
 ---
 title: 비즈니스 로직 처리
-author: ahma0
+author: dnya0
 date:   2023-07-06 00:13:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, Web]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0.github.io/assets/84761609/f77182a2-6283-4315-b6bc-b92485a15882
+  path: https://github.com/dnya0/dnya0.github.io/assets/84761609/f77182a2-6283-4315-b6bc-b92485a15882
   alt: Spring Web layer
 ---
 
@@ -18,7 +18,7 @@ image:
 
 “그럼 비지니스 로직은 누가 처리하냐?”라고 반문할 수 있습니다. 잠깐, 다음 그림을 보겠습니다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/f77182a2-6283-4315-b6bc-b92485a15882)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/f77182a2-6283-4315-b6bc-b92485a15882)
 
 간단하게 각 영역을 소개하자면 다음과 같습니다. 이미 아시는 분들은 넘어가셔도 좋습니다.
 

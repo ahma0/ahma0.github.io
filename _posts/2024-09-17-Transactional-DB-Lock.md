@@ -1,6 +1,6 @@
 ---
 title: Transactional을 걸어야하는 경우와 Lock
-author: ahma0
+author: dnya0
 date:   2024-09-17 15:47:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, Java, Transactional, DB Lock]

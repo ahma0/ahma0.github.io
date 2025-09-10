@@ -1,6 +1,6 @@
 ---
 title: Java Selenium StaleElementReferenceException
-author: ahma0
+author: dnya0
 date:   2024-05-08 21:25:00 +0900
 categories: [Study, Selenium]
 tag: [Study, Selenium, Crawling, Java]
@@ -41,7 +41,7 @@ void search(WebDriver driver) {
 
 driver에서 a 태그가 있는 요소만을 큐에 넣어 링크를 출력하는 코드였다. 어떻게 해결해야할까 고민이 많았으나 [이 글](https://stackoverflow.com/questions/56150033/selenium-fire-staleelementreferenceexception)을 읽고 해결할 수 있었다. 
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/3c0466ce-5dcd-4b18-91fd-96cb9028d4c9)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/3c0466ce-5dcd-4b18-91fd-96cb9028d4c9)
 
 > When you navigate away from the first page all `WebElements` in the allLinks list get lost.
 

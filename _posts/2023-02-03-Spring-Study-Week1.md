@@ -1,6 +1,6 @@
 ---
 title: Spring Study Group Week1 - 객체지향 특징, 원칙과 IoC, DI
-author: ahma0
+author: dnya0
 date:   2023-02-03 22:56:00 +0900
 categories: [StudyGroup, Spring]
 tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]

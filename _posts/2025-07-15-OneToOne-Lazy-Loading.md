@@ -1,6 +1,6 @@
 ---
 title: OneToOne에서 Fetch 전략을 Lazy로 설정했을 때
-author: ahma0
+author: dnya0
 date: 2025-07-15 17:49:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, OneToOne, Kotlin]

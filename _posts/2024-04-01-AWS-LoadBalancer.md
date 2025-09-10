@@ -1,6 +1,6 @@
 ---
 title: AWS 로드밸런서
-author: ahma0
+author: dnya0
 date:   2024-04-01 18:13:00 +0900
 categories: [Study, AWS]
 tag: [Study, AWS, ec2]
@@ -23,7 +23,7 @@ tag: [Study, AWS, ec2]
 - SSL 처리
 - 부정 요청 대응
 
-![로드밸런서의 역할](https://github.com/ahma0/ahma0.github.io/assets/84761609/ffe7cb7d-ad38-4bac-a6a7-47bfbaf7198d)
+![로드밸런서의 역할](https://github.com/dnya0/dnya0.github.io/assets/84761609/ffe7cb7d-ad38-4bac-a6a7-47bfbaf7198d)
 
 <br>
 
@@ -31,7 +31,7 @@ tag: [Study, AWS, ec2]
 
 인터넷으로부터 전송된 요청을 여러 웹 서버에 균등하게 분산한다.
 
-![한줄서기](https://github.com/ahma0/ahma0.github.io/assets/84761609/cef699c1-7a69-48b3-8cbc-aa3385f1b126)
+![한줄서기](https://github.com/dnya0/dnya0.github.io/assets/84761609/cef699c1-7a69-48b3-8cbc-aa3385f1b126)
 
 <br>
 

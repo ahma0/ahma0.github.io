@@ -1,6 +1,6 @@
 ---
 title: AWS EC2에 접속하기
-author: ahma0
+author: dnya0
 date:   2024-04-01 04:17:00 +0900
 categories: [Study, AWS]
 tag: [Study, AWS, ec2]
@@ -22,7 +22,7 @@ $ ssh -i <pem경로> ec2-user@<ec2의 public IPv4 주소 또는 도메인>
 
 아래는 성공했을 시 화면이다.
 
-![성공했을 시 화면](https://github.com/ahma0/ahma0/assets/84761609/a8e5b8e4-9c4d-49be-bb04-971ba289ea8f)
+![성공했을 시 화면](https://github.com/dnya0/dnya0/assets/84761609/a8e5b8e4-9c4d-49be-bb04-971ba289ea8f)
 
 위 화면을 나가려면 
 
@@ -47,7 +47,7 @@ $ cd ~/.ssh/
 $ cd ll
 ```
 
-![화면](https://github.com/ahma0/ahma0/assets/84761609/f5192295-d1a7-482f-bfe5-7ab7279d5ef8)
+![화면](https://github.com/dnya0/dnya0/assets/84761609/f5192295-d1a7-482f-bfe5-7ab7279d5ef8)
 
 위 명령어를 실행했을 때 pem 키가 잘 복사 되었다면 복사된 pem키의 권한을 변경한다.
 

@@ -1,6 +1,6 @@
 ---
 title: IntelliJ 단축키 (Windows / Linux)
-author: ahma0
+author: dnya0
 date:   2022-07-27 15:39:00 +0900
 categories: [Post, IntelliJ]
 tag: [IntelliJ]

@@ -1,6 +1,6 @@
 ---
 title: Spring 입문 1 - 프로젝트 생성, 라이브러리, 빌드
-author: ahma0
+author: dnya0
 date:   2022-07-22 19:46:00 +0900
 categories: [Study, Spring]
 tag: [Spring, Springoot, Study, Inflearn]

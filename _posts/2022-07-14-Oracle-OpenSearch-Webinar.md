@@ -1,6 +1,6 @@
 ---
 title: 21th Developer Meetup - 오픈서치 기반 오라클 클라우드의 Search Service 알아보기 웨비나 후기
-author: ahma0
+author: dnya0
 date:   2022-07-14 02:16:00 +0900
 categories: [Event, Webinar]
 tag: [Event, Webinar, Seminar, Oracle, OpenSearch]

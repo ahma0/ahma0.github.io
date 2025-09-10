@@ -1,6 +1,6 @@
 ---
 title: Jekyll chirpy 테마 적용
-author: ahma0
+author: dnya0
 date:   2022-06-30 17:06:00 +0900
 categories: [Post, Jekyll]
 tag: [Jekyll, Blog, Theme, Error]
@@ -68,7 +68,7 @@ bash tools/init.sh
 os가 windows인 사람만 ruby를 사용하고 아닌 사람은 그냥 cmd창을 사용하면 될 것이다. ruby를 작동시켜 블로그의 로컬 저장소로 이동해준다.
 
 ```shell
-cd C:\Users\username\Documents\GitHub\ahma0.github.io
+cd C:\Users\username\Documents\GitHub\dnya0.github.io
 ```
 
 그리고 번들을 설치한다.

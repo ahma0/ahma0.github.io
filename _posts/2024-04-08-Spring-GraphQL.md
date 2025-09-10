@@ -1,6 +1,6 @@
 ---
 title: Spring에서 GraphQL 사용해보기
-author: ahma0
+author: dnya0
 date:   2024-04-08 18:18:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, GraphQL]
@@ -12,7 +12,7 @@ GraphQL은 페이스북에서 만든 API를 위한 쿼리 언어이다.
 
 예를 들어 스포티파이에서 아이들을 검색하면 아티스트, 앨범, 곡 등 다양한 데이터에 대한 결과를 노출한다.
 
-![아이들을 검색한 화면](https://github.com/ahma0/ahma0.github.io/assets/84761609/38677289-4cf1-48df-89d2-affaeb267f32)
+![아이들을 검색한 화면](https://github.com/dnya0/dnya0.github.io/assets/84761609/38677289-4cf1-48df-89d2-affaeb267f32)
 
 REST API를 이용한다면 해당 화면을 구성하기 위해 여러 개의 엔드포인트에 검색 요청을 해야할 것이다.
 
@@ -72,15 +72,15 @@ SELECT plot_id, species_id, sex, weight, ROUND(weight / 1000.0, 2) FROM surveys;
 ```
 gql은 HTTP API처럼 특정 데이터베이스나 플렛폼에 종속적이지 않으며, 네트워크 방식에도 종속적이지 않다. 일반적으로 gql의 인터페이스간 송수신은 네트워크 레이어 L7의 HTTP POST 메서드와 웹소켓 프로토콜을 활용하는데, 필요에 따라서는 얼마든지 L4의 TCP/UDP를 활용하거나 심지어 L2 형식의 이더넷 프레임을 활용 할 수도 있다.
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/bca2d3b8-33e1-4473-9f3b-40afe0d7dcda)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/bca2d3b8-33e1-4473-9f3b-40afe0d7dcda)
 
 <br>
 
 ### 📌 REST API와 비교
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/76e0d011-ffb2-4956-99a1-0fca15b8ecb8)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/76e0d011-ffb2-4956-99a1-0fca15b8ecb8)
 
-![image](https://github.com/ahma0/ahma0.github.io/assets/84761609/12efc3af-2372-4daf-bc05-8931046f5176)
+![image](https://github.com/dnya0/dnya0.github.io/assets/84761609/12efc3af-2372-4daf-bc05-8931046f5176)
 
 <br>
 

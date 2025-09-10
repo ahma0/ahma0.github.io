@@ -1,13 +1,13 @@
 ---
 title: 모던 자바 인 액션 - 01. 자바 8, 9, 10, 11
-author: ahma0
+author: dnya0
 date:   2023-08-11 00:27:00 +0900
 categories: [Study, 모던 자바 인 액션]
 tag: [Study, 모던 자바 인 액션]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0.github.io/assets/84761609/be791143-bd96-46a4-b9b4-dd6ed60b3ccf
+  path: https://github.com/dnya0/dnya0.github.io/assets/84761609/be791143-bd96-46a4-b9b4-dd6ed60b3ccf
   alt: book image
 ---
 

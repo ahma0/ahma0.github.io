@@ -1,13 +1,13 @@
 ---
 title: 모던 자바 인 액션 - 02. 동작 파라미터화 코드 전달하기
-author: ahma0
+author: dnya0
 date:   2023-08-20 02:04:00 +0900
 categories: [Study, 모던 자바 인 액션]
 tag: [Study, 모던 자바 인 액션]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0.github.io/assets/84761609/be791143-bd96-46a4-b9b4-dd6ed60b3ccf
+  path: https://github.com/dnya0/dnya0.github.io/assets/84761609/be791143-bd96-46a4-b9b4-dd6ed60b3ccf
   alt: book image
 ---
 
@@ -289,7 +289,7 @@ List<Apple> result =
         filterApples(inventory, (Apple, apple) -> RED.equals(apple.getColor()));
 ```
 
-![image](https://github.com/ahma0/ahma0/assets/84761609/ae2b1688-6bea-492f-97d9-e45b3fddcbbd)
+![image](https://github.com/dnya0/dnya0/assets/84761609/ae2b1688-6bea-492f-97d9-e45b3fddcbbd)
 
 <br>
 

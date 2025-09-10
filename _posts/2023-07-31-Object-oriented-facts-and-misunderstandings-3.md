@@ -1,13 +1,13 @@
 ---
 title: 객체지향의 사실과 오해 - 03. 타입과 추상화
-author: ahma0
+author: dnya0
 date:   2023-07-31 21:08:00 +0900
 categories: [Study, 객체지향의 사실과 오해]
 tag: [Study, 객체지향의 사실과 오해]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
+  path: https://github.com/dnya0/dnya0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
   alt: book image
 ---
 
@@ -181,7 +181,7 @@ image:
 
 좀 더 일반적인 타입인 슈퍼타입을 상단에, 좀 더 특수한 타입인 서브타입을 하단에 위치시키고 속이 빈 삼각형으로 연결해서 표현한다.
 
-![트럼프를 상속받는 트럼프 인간](https://github.com/ahma0/ahma0/assets/84761609/f510fa14-2313-4f7b-b842-4db1b12001d0)
+![트럼프를 상속받는 트럼프 인간](https://github.com/dnya0/dnya0/assets/84761609/f510fa14-2313-4f7b-b842-4db1b12001d0)
 
 <br>
 

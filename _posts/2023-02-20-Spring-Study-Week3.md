@@ -1,6 +1,6 @@
 ---
 title: Spring Study Group Week3 - 스프링 빈과 스프링 컨테이너
-author: ahma0
+author: dnya0
 date:   2023-02-20 19:49:00 +0900
 categories: [StudyGroup, Spring]
 tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]

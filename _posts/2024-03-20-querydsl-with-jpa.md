@@ -1,13 +1,13 @@
 ---
 title: Querydsl과 JPA 같이 쓰기, 페이징과 Map
-author: ahma0
+author: dnya0
 date:   2024-03-20 11:21:00 +0900
 categories: [Study, Querydsl]
 tag: [Study, Spring, Querydsl, Paging, Map]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0.github.io/assets/84761609/9569bfb4-2c75-448c-acb1-24a1f3ca9a6d
+  path: https://github.com/dnya0/dnya0.github.io/assets/84761609/9569bfb4-2c75-448c-acb1-24a1f3ca9a6d
   alt: querydsl logo
 ---
 
@@ -105,7 +105,7 @@ tasks.named('test') {
 
 기본적으로 querydsl은 프로젝트 내의 `@Entity` 어노테이션을 선언한 클래스를 탐색하고, `JPAAnnotationProcessor`를 사용해 Q 클래스를 생성한다. `querydsl-apt`가 `@Entity` 및 `@Id` 등의 어노테이션을 알 수 있도록, `javax.persistence`와 `javax.annotation`을 `annotationProcessor`에 함께 추가해야 한다.
 
-![gradle image](https://github.com/ahma0/ahma0.github.io/assets/84761609/1dab9001-4a6a-4d57-8cfa-d71702643199)
+![gradle image](https://github.com/dnya0/dnya0.github.io/assets/84761609/1dab9001-4a6a-4d57-8cfa-d71702643199)
 
 Q 클래스를 사용하기 위해서 `compileQuerydsl`을 빌드해주면 된다.
 

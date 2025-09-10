@@ -1,13 +1,13 @@
 ---
 title: 객체지향의 사실과 오해 - 02. 이상한 나라의 객체
-author: ahma0
+author: dnya0
 date:   2023-07-27 20:32:00 +0900
 categories: [Study, 객체지향의 사실과 오해]
 tag: [Study, 객체지향의 사실과 오해]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
+  path: https://github.com/dnya0/dnya0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
   alt: book image
 ---
 
@@ -85,14 +85,14 @@ image:
 - 숫자, 문자열, 양, 속도, 날짜, 참/거짓 등 단순한 값은 객체가 아니지만 객체의 상태를 표현하기 위한 중요한 수단
 - 때로 단순한 값이 아니라 객체를 사용해 다른 객체의 상태를 표현해야 할 때가 있음
 
-![음료수를 마시기 위해 병을 들고있는 앨리스의 상태](https://github.com/ahma0/ahma0/assets/84761609/bf5d5ade-d5bb-4b5d-8214-2c412fee4175)
+![음료수를 마시기 위해 병을 들고있는 앨리스의 상태](https://github.com/dnya0/dnya0/assets/84761609/bf5d5ade-d5bb-4b5d-8214-2c412fee4175)
 
 - 모든 상태는 단순한 값과 객체의 조합으로 표현할 수 있음
 - **프로퍼티**: **객체의 상태를 구성하는 모든 특징**
 - 프로퍼티는 변경되지 않고 고정되기 때문에 **'정적'**
 - 프로퍼티 값(property value)는 시간의 흐름에 따라 변경되기 때문에 **'동적'**
 
-![변경된 앨리스의 상태](https://github.com/ahma0/ahma0/assets/84761609/76845e69-86e2-45b1-b175-8f20a1bb2a8e)
+![변경된 앨리스의 상태](https://github.com/dnya0/dnya0/assets/84761609/76845e69-86e2-45b1-b175-8f20a1bb2a8e)
 
 - 앨리스와 음료 사이에 선이 존재했지만 사라짐
 - 앨리스가 음료에 관해 알고 있었지만 음료에 관해 알지 못하는 상태로 변경됨

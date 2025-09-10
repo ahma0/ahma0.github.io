@@ -1,6 +1,6 @@
 ---
 title: AWS ec2에 Spring Boot 서버 배포하기
-author: ahma0
+author: dnya0
 date:   2024-04-06 11:57:00 +0900
 categories: [Study, AWS]
 tag: [Study, AWS, ec2, RDS, mysql]
@@ -41,7 +41,7 @@ $ sudo yum install java-17-amazon-corretto
 
 Spring Boot는 서버 포트가 8080이기 때문에 8080 포트로 들어오는 요청들을 허용해야하므로 이를 추가해준다. 그리고 SSH 와 http, https 도 함께 추가한 뒤 instance에 추가해준다.
 
-![인바운드 규칙](https://github.com/ahma0/ahma0.github.io/assets/84761609/7c4091c5-cdb1-42b3-b9fd-c39efa5e5713)
+![인바운드 규칙](https://github.com/dnya0/dnya0.github.io/assets/84761609/7c4091c5-cdb1-42b3-b9fd-c39efa5e5713)
 
 <br>
 
@@ -59,7 +59,7 @@ $ java -jar TeybatGuide-0.0.1-SNAPSHOT.jar
 > [에러 메시지] com.mysql.cj.jdbc.exception.CommunicationsException: Communications link failure
 {: .prompt-danger }
 
-![오류](https://github.com/ahma0/ahma0.github.io/assets/84761609/11075116-2288-4911-b480-e9614e55eebc)
+![오류](https://github.com/dnya0/dnya0.github.io/assets/84761609/11075116-2288-4911-b480-e9614e55eebc)
 
 서버가 mysql, jdbc를 사용하기 때문에 RDS 에러를 낸다.
 
@@ -123,11 +123,11 @@ $ sudo rpm -ivh mysql80-community-release-el7-11.noarch.rpm
 
 이제 미리 rds 대시보드에서 생성한 데이터베이스를 연결해준다. 데이터베이스 메뉴의 상세정보 탭을 들어간다.
 
-![상세정보](https://github.com/ahma0/ahma0.github.io/assets/84761609/ff35c2ad-fd64-4ab8-869d-c21e60c788ab)
+![상세정보](https://github.com/dnya0/dnya0.github.io/assets/84761609/ff35c2ad-fd64-4ab8-869d-c21e60c788ab)
 
 인스턴스 정보가 표시되면 **연결 & 보안** 탭을 눌러 정보를 확인한다. **엔드포인트 및 포트**가 연결 대상지 정보이다.
 
-![연결 & 보안](https://github.com/ahma0/ahma0.github.io/assets/84761609/5f1cd88d-e626-4eef-b91b-4e1284786b9f)
+![연결 & 보안](https://github.com/dnya0/dnya0.github.io/assets/84761609/5f1cd88d-e626-4eef-b91b-4e1284786b9f)
 
 엔드포인트에 표시된 텍스트를 복사하여 아래 명령어에 붙여넣는다.
 

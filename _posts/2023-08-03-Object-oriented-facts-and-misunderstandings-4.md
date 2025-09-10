@@ -1,13 +1,13 @@
 ---
 title: 객체지향의 사실과 오해 - 04. 역할, 책임, 협력
-author: ahma0
+author: dnya0
 date:   2023-08-03 20:32:00 +0900
 categories: [Study, 객체지향의 사실과 오해]
 tag: [Study, 객체지향의 사실과 오해]
 math: true
 mermaid: true
 image:
-  path: https://github.com/ahma0/ahma0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
+  path: https://github.com/dnya0/dnya0/assets/84761609/7c4db4bc-7e95-4acd-9a5f-0b93e6f5afdc
   alt: book image
 ---
 
@@ -22,7 +22,7 @@ image:
 
 협력은 다수의 요청과 응답으로 구성되며 전체적으로 협력은 연쇄적인 요청과 응답의 흐름으로 구성된다.
 
-![연쇄적인 요청과 응답의 흐름으로 구성된 협력](https://github.com/ahma0/ahma0/assets/84761609/0232aa54-9cc3-4c75-8e0c-160b341f25ed)
+![연쇄적인 요청과 응답의 흐름으로 구성된 협력](https://github.com/dnya0/dnya0/assets/84761609/0232aa54-9cc3-4c75-8e0c-160b341f25ed)
 
 <br>
 
@@ -46,7 +46,7 @@ image:
 
 아래 그림은 왕과 하얀 토끼, 모자 장수 사이의 협력 관계를 그림으로 표현한 것이다.
 
-![왕과 하얀 토끼, 모자 장수 사이의 협력 관계](https://github.com/ahma0/ahma0/assets/84761609/62056c4d-e6d9-4077-ac90-26e61ad369e3)
+![왕과 하얀 토끼, 모자 장수 사이의 협력 관계](https://github.com/dnya0/dnya0/assets/84761609/62056c4d-e6d9-4077-ac90-26e61ad369e3)
 
 - 화살표: 특정 인물에게 보내지는 요청
 - 문장 앞의 번호: 요청이 발생하는 순서
@@ -94,7 +94,7 @@ image:
     - 두 번째 책임: "자신이 유도하거나 계산할 수 있는 것에 관해 아는 것"
     - **아는 것**과 **하는 것** 두 가지 종류의 책임 모두 수행
 
-![왕과 하얀 토끼, 모자 장수 사이의 협력 관계](https://github.com/ahma0/ahma0/assets/84761609/36bba46b-e2ea-4a2e-8350-76384ca85afb)
+![왕과 하얀 토끼, 모자 장수 사이의 협력 관계](https://github.com/dnya0/dnya0/assets/84761609/36bba46b-e2ea-4a2e-8350-76384ca85afb)
 
 - 책임은 객체의 외부에 제공해줄 수 있는 정보(아는 것의 측면)와 외부에 제공해 줄 수 있는 서비스(하는 것의 측면)의 목록
 - 책임은 객체의 **공용 인터페이스(public interface)**를 구성
@@ -166,11 +166,11 @@ image:
 
 역할은 협력 내에서 다른 객체로 대체할 수 있음을 나타내는 일종의 표식이다.
 
-![판사, 토끼, 증인의 협력 관계](https://github.com/ahma0/ahma0/assets/84761609/0f50c386-782f-41b1-93ef-949d4de7c6f1)
+![판사, 토끼, 증인의 협력 관계](https://github.com/dnya0/dnya0/assets/84761609/0f50c386-782f-41b1-93ef-949d4de7c6f1)
 
 역할을 이용해 협력을 추상화했기 때문에 '판사'나 '증인'의 역할을 수행할 수 있는 어떤 객체라도 협력에 참여할 수 있는 것이다. 그러나 역할을 대체할 수 있는 객체는 메시지를 이해할 수 있는 객체로 한정된다. 동일한 역할을 수행할 수 있다는 것은 해당 객체들이 협력 내에서 동일한 책임의 집합을 수행할 수 있다는 것을 의미한다. 동일한 역할을 수행하는 객체들이 동일한 메시지를 수신할 수 있다는 뜻이다.
 
-![판사, 토끼, 증인의 협력 관계](https://github.com/ahma0/ahma0/assets/84761609/79676ae6-bc10-437c-8e05-ad77b36af726)
+![판사, 토끼, 증인의 협력 관계](https://github.com/dnya0/dnya0/assets/84761609/79676ae6-bc10-437c-8e05-ad77b36af726)
 
 - 역할의 개념을 사용하면 유사한 협력을 추상화해서 인지 과부하를 줄일 수 있음
 - 협력이 유연해지며 객체들의 재사용성이 높아짐

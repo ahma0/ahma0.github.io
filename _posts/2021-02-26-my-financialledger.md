@@ -1,6 +1,6 @@
 ---
 title: My financiall
-author: ahma0
+author: dnya0
 date:   2021-02-26 15:00:00 +0900
 categories: [Project, App]
 tag: [Portfolio, Projects, App, Primitive]
@@ -52,4 +52,4 @@ KNU Primitive club Android Project. My own account book, A account book applicat
 
 > If you click, move to GitHub.
 
-<a href="https://github.com/ahma0/MyFinancialledger">![AppVideo](https://user-images.githubusercontent.com/84761609/153580160-7f34d557-f07d-4ee8-b3b4-9dad5d63dbac.gif)</a>
+<a href="https://github.com/dnya0/MyFinancialledger">![AppVideo](https://user-images.githubusercontent.com/84761609/153580160-7f34d557-f07d-4ee8-b3b4-9dad5d63dbac.gif)</a>
