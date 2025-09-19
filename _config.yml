@@ -14,11 +14,11 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: nya0                          # the main title
+title: nya0 # the main title
 
-tagline: Java Chip Frappuccino   # it will display as the sub-title
+tagline: Java Chip Frappuccino # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
+description: >- # used by seo meta and the atom feed
   dnya0's Dev Blog
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
@@ -26,7 +26,7 @@ description: >-                        # used by seo meta and the atom feed
 url: "https://dnya0.github.io"
 
 github:
-  username: dnya0            # change to your github username
+  username: dnya0 # change to your github username
 
 #twitter:
 #  username: twitter_username            # change to your twitter username
@@ -35,26 +35,46 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: dnya0
-  email: dsd932@naver.com             # change to your email address
+  email: dsd932@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     #- https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/dnya0       # change to your github homepage
+    - https://github.com/dnya0 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: 98mhugXinnc712UeL8TyKk_-PNzVgT3Ew-TFI7BvLAY              # fill in to your verification string
+# Site Verification Settings
+webmaster_verifications:
+  google: 98mhugXinnc712UeL8TyKk_-PNzVgT3Ew-TFI7BvLAY
+  bing: # fill in your Bing verification code
+  alexa: # fill in your Alexa verification code
+  yandex: # fill in your Yandex verification code
+  baidu: # fill in your Baidu verification code
+  facebook: # fill in your Facebook verification code
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: G-984G84WZ2Y                # fill in your Google Analytics ID
-  
-goatcounter:
-  id: # fill in your Goatcounter ID
+analytics:
+  google:
+    id: G-984G84WZ2Y
+  goatcounter:
+    id: # fill in your GoatCounter ID
+  umami:
+    id: # fill in your Umami ID
+    domain: # fill in your Umami domain
+  matomo:
+    id: # fill in your Matomo ID
+    domain: # fill in your Matomo domain
+  cloudflare:
+    id: # fill in your Cloudflare Web Analytics token
+  fathom:
+    id: # fill in your Fathom Site ID
 
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -67,14 +87,14 @@ goatcounter:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:  # [light | dark]
+theme_mode: # [light | dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /assets/img/profile.jpg
@@ -83,35 +103,37 @@ avatar: /assets/img/profile.jpg
 toc: true
 
 comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+  # The provider options are as follows:
   disqus:
-    shortname:   # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
+    repo: # <gh-username>/<repo>
+    issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo:             # <gh-username>/<repo>
+    repo: # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
-    mapping:          # optional, default to 'pathname'
-    input_position:   # optional, default to 'bottom'
-    lang:             # optional, default to the value of `site.lang`
+    mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
+    input_position: # optional, default to 'bottom'
+    lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled:      # boolean, keep empty means false
+    enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env:          # [development|production]
+    env: # [development | production]
 
 pwa:
-  enabled: true   # the option for PWA feature (installable)
+  enabled: true # the option for PWA feature (installable)
   cache:
     enabled: true # the option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
@@ -129,7 +151,7 @@ baseurl: ""
 
 kramdown:
   syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
     # default_lang: console
     span:
@@ -145,12 +167,12 @@ collections:
 
 defaults:
   - scope:
-      path: ''          # An empty string here means all files in the project
+      path: "" # An empty string here means all files in the project
       type: posts
     values:
       layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
+      comments: true # Enable comments in posts.
+      toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
@@ -160,7 +182,7 @@ defaults:
       comments: false
   - scope:
       path: ""
-      type: tabs             # see `site.collections`
+      type: tabs # see `site.collections`
     values:
       layout: page
       permalink: /:title/
@@ -186,14 +208,15 @@ compress_html:
     envs: [development]
 
 exclude:
-  - '*.gem'
-  - '*.gemspec'
+  - "*.gem"
+  - "*.gemspec"
   - docs
   - tools
   - README.md
   - LICENSE
-  - rollup.config.js
-  - package*.json
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]
