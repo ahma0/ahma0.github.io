@@ -1,7 +1,7 @@
 ---
 title: Spring AOP와 Transactional의 관계
 author: dnya0
-date:   2025-09-01 23:59:00 +0900
+date: 2025-09-01 23:59:00 +0900
 categories: [Study, Spring]
 tag: [Study, Spring, Java, Transactional, AOP]
 math: true
@@ -32,19 +32,19 @@ AOP 없이 흩어진 관심사를 처리하면 다음과 같은 문제가 발생
 ### 주요 개념
 
 - Aspect
-    - 흩어진 관심사를 모듈화한 것
-    - 주로 부가 기능을 모듈화 함.
+  - 흩어진 관심사를 모듈화한 것
+  - 주로 부가 기능을 모듈화 함.
 - Target
-    - Aspect를 적용하는 곳 (클래스, 메서드, ...)
+  - Aspect를 적용하는 곳 (클래스, 메서드, ...)
 - Advice
-    - 실질적으로 어떤 일을 해야할 지에 대한 것
-    - 실질적인 부가 기능을 담은. 구현체
+  - 실질적으로 어떤 일을 해야할 지에 대한 것
+  - 실질적인 부가 기능을 담은. 구현체
 - JointPoint
-    - Advice가 적용될 위치, 끼어들 수 있는 지점
-    - 메서드 진입 지점, 생성자 호출 시점, 필드에서 값을 꺼내는 때 등 다양한 시점에 적용 가능
+  - Advice가 적용될 위치, 끼어들 수 있는 지점
+  - 메서드 진입 지점, 생성자 호출 시점, 필드에서 값을 꺼내는 때 등 다양한 시점에 적용 가능
 - PointCut
-    - JointPoint의 상세한 스펙을 정의한 것
-    - `A한 메서드의 진입 시점에 호출할 것`과 같이 구체적으로 Advice가 실행될 시점을 정할 수 있음.
+  - JointPoint의 상세한 스펙을 정의한 것
+  - `A한 메서드의 진입 시점에 호출할 것`과 같이 구체적으로 Advice가 실행될 시점을 정할 수 있음.
 
 <br>
 
@@ -54,7 +54,7 @@ AOP 없이 흩어진 관심사를 처리하면 다음과 같은 문제가 발생
 - 스프링 빈에만 AOP 적용 가능
 - 모든 AOP 기능을 제공하는 것이 아닌 IoC와 연동하여 *엔터프라이즈 애플리케이션에서 가장 흔한 문제*에 대한 해결첵을 지원하는 것이 목적
 
-> *엔터프라이즈 애플리케이션에서 가장 흔한 문제*: 중복 코드, 프록시 클래스 작성의 번거로움, 객체들간의 관계 복잡도 증가.
+> _엔터프라이즈 애플리케이션에서 가장 흔한 문제_: 중복 코드, 프록시 클래스 작성의 번거로움, 객체들간의 관계 복잡도 증가.
 
 <br>
 
@@ -82,30 +82,31 @@ public interface TargetService{
     void logic();
 }
 
-@Service 
+@Service
 public class TargetServiceImpl implements TargetService{
-    @Override 
-		public void logic() {
+    @Override
+    public void logic() {
         ...
-}}
+    }
+}
 
 ```
 
 Proxy에서 Target 전/후에 부가 기능을 처리하고 Target을 호출한다.
 
 ```java
-@Service 
-public class TargetServiceProxy implements TargetService{ 
-		// 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
-		TargetService targetService = new TargetServiceImpl();
-		...
+@Service
+public class TargetServiceProxy implements TargetService{
+    // 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
+    TargetService targetService = new TargetServiceImpl();
+	...
 
-		@Override 
-		public void logic() {
+    @Override
+    public void logic() {
         // Target 호출 이전에 처리해야하는 부가 기능
-				
+
         // Target 호출
-		targetService.logic();
+        targetService.logic();
 
         // Target 호출 이후에 처리해야하는 부가 기능
     }
@@ -115,15 +116,15 @@ public class TargetServiceProxy implements TargetService{
 사용하는 입장에서는 Target 객체를 사용하는 것처럼 Proxy 객체를 사용할 수 있다.
 
 ```java
-@Service 
-public class UseService{ 
-		// 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
-		TargetService targetService = new TargetServiceProxy();
-		...
-		
-		public void useLogic() {
+@Service
+public class UseService{
+	// 지금은 구현체를 직접 생성했지만, 외부에서 의존성을 주입 받도록 할 수 있다.
+    TargetService targetService = new TargetServiceProxy();
+	...
+
+    public void useLogic() {
         // Target 호출하는 것처럼 부가 기능이 추가된 Proxy를 호출한다.
-				targetService.logic();
+        targetService.logic();
     }
 }
 ```
@@ -139,16 +140,17 @@ Spring에서는 몇 가지 설정을 하면 자동으로 Target의 프록시 객
 ![](/assets/img/posts-image/2025-09-01-02.png)
 
 - JDK Proxy
-    - Target의 상위 인터페이스를 상속 받아 프록시를 만듦
-    - 인터페이스를 구현한 클래스가 아니면 의존할 수 없음
-    - Target에서 다른 구체 클래스에 의존하고 있다면, JDK 방식에서는 그 클래스(빈)를 찾을 수 없어 런타임 에러가 발생
-    - 내부적으로 Reflection을 사용해서 추가적인 비용
+
+  - Target의 상위 인터페이스를 상속 받아 프록시를 만듦
+  - 인터페이스를 구현한 클래스가 아니면 의존할 수 없음
+  - Target에서 다른 구체 클래스에 의존하고 있다면, JDK 방식에서는 그 클래스(빈)를 찾을 수 없어 런타임 에러가 발생
+  - 내부적으로 Reflection을 사용해서 추가적인 비용
 
 - CGLib Proxy
-    - Target 클래스를 상속 받아 프록시를 만듦
-    - JDK 방식과는 달리 인터페이스를 구현하지 않아도 되고, 구체 클래스에 의존하기 때문에 런타임 에러가 발생할 확률도 상대적으로 적다.
-    - 내부적으로 Reflection을 사용하지 않아 추가적인 비용 없음
-    - Spring Boot에서는 기본으로 채택
+  - Target 클래스를 상속 받아 프록시를 만듦
+  - JDK 방식과는 달리 인터페이스를 구현하지 않아도 되고, 구체 클래스에 의존하기 때문에 런타임 에러가 발생할 확률도 상대적으로 적다.
+  - 내부적으로 Reflection을 사용하지 않아 추가적인 비용 없음
+  - Spring Boot에서는 기본으로 채택
 
 <br>
 
@@ -172,12 +174,12 @@ public class TransactionProxy{
     public void transactionLogic() {
         try {
             // 트랜잭션 전처리(트랜잭션 시작, autoCommit(false) 등)
-			manager.begin();
+            manager.begin();
 
-			// 다음 처리 로직(타겟 비스니스 로직, 다른 부가 기능 처리 등)
-			target.logic();
-            
-			// 트랜잭션 후처리(트랜잭션 커밋 등)
+            // 다음 처리 로직(타겟 비스니스 로직, 다른 부가 기능 처리 등)
+            target.logic();
+
+            // 트랜잭션 후처리(트랜잭션 커밋 등)
             manager.commit();
         } catch ( Exception e ) {
 			// 트랜잭션 오류 발생 시 롤백
@@ -204,7 +206,6 @@ public class TransactionProxy{
 - C 메서드를 호출하면, TestService가 아닌 TestService의 프록시에 구현된 C 메서드가 대신 호출된다. 따라서 C와 C에서 호출하는 A 모두 프록시 객체에서 트랜잭션 처리를 해준다.
 
 - 하지만 B 메서드를 호출하는 것은 트랜잭션 처리가 되어 있지 않은 순수 B 메서드를 호출하는 것과 같다. 이때 B에서 호출하는 A 역시 트랜잭션 처리가 되어 있지 않다.
-
 
 <br>
 
