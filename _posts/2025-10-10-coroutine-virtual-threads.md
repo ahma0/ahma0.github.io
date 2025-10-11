@@ -186,7 +186,7 @@ suspend function인 createPost를 살펴보자. 이 함수가 JVM에 의해 바�
 
 ```kotlin
 Object createPost(Token token, Item item, Continuation<Post> cont) {
-	…
+    ...
 }
 ```
 
@@ -195,15 +195,15 @@ Object createPost(Token token, Item item, Continuation<Post> cont) {
 이어서, postItem을 보면 코틀린 컴파일러가 내부적으로 switch문을 통해 멈추고 실행할 곳에 대해  라벨로 케이스를 나누어 놓는다.
 
 ```kotlin
-suspend fun postItem(item: Item) { 
-	switch (label) { 
-		case 0: 
-			val token = requestToken() 
-		case 1: 
-			val post = createPost(token, item) 
-		case 2: 
-			processPost(post) 
-	}
+suspend fun postItem(item: Item) {
+    switch(label) {
+        case 0:
+        	val token = requestToken()
+        case 1:
+        	val post = createPost(token, item)
+        case 2:
+        	processPost(post)
+    }
 }
 ```
 
