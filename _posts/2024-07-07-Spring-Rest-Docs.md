@@ -535,6 +535,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 #### query-parameters.snippet
 
 ```
+{% raw %}
 |===
 |Parameter|Type|Description|Optional
 
@@ -546,6 +547,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 
 {{/parameters}}
 |===
+{% endraw %}
 ```
 
 ![query-parameters](https://github.com/user-attachments/assets/a832a6bc-add9-4bed-a99f-38f8d2620168)
@@ -553,6 +555,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 #### request-fields.snippet
 
 ```
+{% raw %}
 |===
 |필드명|타입|필수여부|제약조건|설명
 {{#fields}}
@@ -563,6 +566,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 |{{#tableCellContent}}{{description}}{{/tableCellContent}}
 {{/fields}}
 |===
+{% endraw %}
 ```
 
 ![request-fields](https://github.com/user-attachments/assets/25b5f127-c279-486c-8f34-53da407c4c73)
@@ -570,6 +574,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 #### response-fields.snippet
 
 ```
+{% raw %}
 |===
 |필드명|타입|제약조건|설명
 {{#fields}}
@@ -579,6 +584,7 @@ public class CharacterControllerTest extends AbstractRestDocsTests {
 |{{#tableCellContent}}{{description}}{{/tableCellContent}}
 {{/fields}}
 |===
+{% endraw %}
 ```
 
 ![response-fields](https://github.com/user-attachments/assets/c1fd2dd3-642f-48bc-97a1-c0628499a6b0)
