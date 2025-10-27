@@ -3,7 +3,7 @@ title: Spring AnnotationException - Illegal attempt to map a non collection as a
 author: dnya0
 date:   2022-11-09 17:49:00 +0900
 categories: [Study, JPA]
-tag: [Spring, Springoot, Study, JPA, JAVA, ERROR]
+tag: [Spring, Springoot, Study, JPA, Java, ERROR]
 ---
 
 > [에러 메시지] AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements

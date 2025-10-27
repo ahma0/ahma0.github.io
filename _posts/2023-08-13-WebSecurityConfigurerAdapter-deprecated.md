@@ -3,7 +3,7 @@ title: Spring Security - WebSecurityConfigurerAdapter deprecated 대응
 author: dnya0
 date:   2023-08-13 23:39:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
+tag: [StudyGroup, Spring, Study, Java, KNU-Spring-Study]
 math: true
 mermaid: true
 image:

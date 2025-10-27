@@ -3,7 +3,7 @@ title: Spring Study Group Week2 - 의존관계(의존성)
 author: dnya0
 date:   2023-02-14 21:52:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
+tag: [StudyGroup, Spring, Study, Java, KNU-Spring-Study]
 math: true
 mermaid: true
 image:

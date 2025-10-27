@@ -3,7 +3,7 @@ title: Spring Study Group Week1 - 객체지향 특징, 원칙과 IoC, DI
 author: dnya0
 date:   2023-02-03 22:56:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
+tag: [StudyGroup, Spring, Study, Java, KNU-Spring-Study]
 math: true
 mermaid: true
 image:

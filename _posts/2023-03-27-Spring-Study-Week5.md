@@ -3,7 +3,7 @@ title: Spring Study Group Week5 - GET, POST, PUT, DELETE, Entity, Repository, DA
 author: dnya0
 date:   2023-03-27 13:56:00 +0900
 categories: [StudyGroup, Spring]
-tag: [StudyGroup, Spring, Study, JAVA, KNU-Spring-Study]
+tag: [StudyGroup, Spring, Study, Java, KNU-Spring-Study]
 math: true
 mermaid: true
 image:
